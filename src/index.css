@@ -1388,21 +1388,16 @@ sub {
   }
 }
 
-/* Ponsel: sebar keempat chip kondisi merata selebar layar dengan celah sama. */
+/* Ponsel: grup chip kondisi dipusatkan dengan gap tetap 8px. */
 @media (max-width: 480px) {
   .conditions {
-    justify-content: space-between;
+    justify-content: center;
   }
 }
 
 /* Di layar sangat sempit (≤379px) rapatkan chip kondisi agar keempatnya
-   tetap sejajar satu baris: 271px chip + gap masih muat di 296px. */
+   tetap sejajar satu baris: 271px chip + gap 8px masih muat di 296px. */
 @media (max-width: 379px) {
-  .conditions {
-    gap: 6px;
-    justify-content: space-between;
-  }
-
   .conditions .chip--condition {
     padding: 6px 8px;
     font-size: 11px;
