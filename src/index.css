@@ -1388,6 +1388,13 @@ sub {
   }
 }
 
+/* Ponsel: sebar keempat chip kondisi merata selebar layar dengan celah sama. */
+@media (max-width: 480px) {
+  .conditions {
+    justify-content: space-between;
+  }
+}
+
 /* Di layar sangat sempit (≤379px) rapatkan chip kondisi agar keempatnya
    tetap sejajar satu baris: 271px chip + gap masih muat di 296px. */
 @media (max-width: 379px) {
@@ -1400,6 +1407,11 @@ sub {
     padding: 6px 8px;
     font-size: 11px;
   }
+}
+
+.chip--condition {
+  /* Tombol kondisi tidak lagi berbentuk kapsul penuh. */
+  border-radius: 10px;
 }
 
 .chip--condition.is-active {
