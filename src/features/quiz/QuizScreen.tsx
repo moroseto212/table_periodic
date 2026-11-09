@@ -5,7 +5,7 @@ import {
   type QuizItem,
   type QuizLevel,
 } from '../../core/data/quiz';
-import { navigate, segments } from '../../app/router';
+import { navigate, segments, withBase } from '../../app/router';
 import { useAppStore } from '../../app/store';
 
 const SESSION_KEY = 'periodic-lab.quiz-session';
@@ -168,7 +168,7 @@ export default function QuizScreen({
   const shareResult = () => {
     const correct = results.filter((r) => r.correct).length;
     const text = `Tantangan PeriodikLab — ${correct}/${queue.length} benar (${level}).`;
-    const url = `${window.location.origin}/tantangan`;
+    const url = `${window.location.origin}${withBase('/tantangan')}`;
     navigator.clipboard
       ?.writeText(`${text} ${url}`)
       .then(() => {

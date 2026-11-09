@@ -138,6 +138,24 @@ Hosting statis harus mengarahkan rute yang tidak punya file ke `index.html`
 - `dist/sitemap.xml`, `dist/robots.txt`, `dist/404.html`
 - `dist/manifest.webmanifest`, `dist/sw.js`
 
+### GitHub Pages
+
+Situs dipublikasikan di <https://moroseto212.github.io/table_periodic/> lewat
+`.github/workflows/deploy-pages.yml`. Workflow membangun dengan base path
+`/table_periodic/`, menulis `dist/.nojekyll`, lalu mengunggah artefak ke Pages.
+
+Untuk build lokal yang meniru Pages:
+
+```bash
+BASE_PATH=/table_periodic/ \
+SITE_URL=https://moroseto212.github.io/table_periodic \
+npm run build
+BASE_PATH=/table_periodic/ npm run preview   # http://localhost:4173/table_periodic/
+```
+
+Router, tautan bagikan, manifest, dan service worker semuanya mengikuti
+`BASE_PATH`; tanpa variabel itu build tetap berjalan di `/` untuk dev.
+
 ## Batasan yang disadari
 
 - Bank reaksi berisi 128 reaksi terkurasi (target v1 120–180). Mesin generatif untuk

@@ -3,8 +3,14 @@ import { defineConfig } from 'vite';
 import { VitePWA } from 'vite-plugin-pwa';
 import { prerenderPlugin } from './scripts/prerender-plugin.ts';
 
+// Base deployment (mis. "/table_periodic/" untuk GitHub Pages). Kosong = "/".
+const rawBase = process.env.BASE_PATH?.trim() || '/';
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+const asset = (path: string) => `${base}${path.replace(/^\/+/, '')}`;
+
 // https://vite.dev/config/
 export default defineConfig({
+  base,
   plugins: [
     react(),
     prerenderPlugin(),
@@ -13,15 +19,15 @@ export default defineConfig({
       injectRegister: false,
       includeAssets: ['favicon.svg', 'icons/apple-touch-icon.png'],
       manifest: {
-        id: '/',
+        id: base,
         name: 'PeriodikLab — Tabel Periodik & Lab Kimia',
         short_name: 'PeriodikLab',
         description:
           'Tabel periodik interaktif, laboratorium reaksi, dan tantangan kimia berbahasa Indonesia.',
         lang: 'id',
         dir: 'ltr',
-        start_url: '/',
-        scope: '/',
+        start_url: base,
+        scope: base,
         display: 'standalone',
         orientation: 'any',
         background_color: '#0F1016',
@@ -29,19 +35,19 @@ export default defineConfig({
         categories: ['education', 'science'],
         icons: [
           {
-            src: '/icons/icon-192.png',
+            src: asset('icons/icon-192.png'),
             sizes: '192x192',
             type: 'image/png',
             purpose: 'any',
           },
           {
-            src: '/icons/icon-512.png',
+            src: asset('icons/icon-512.png'),
             sizes: '512x512',
             type: 'image/png',
             purpose: 'any',
           },
           {
-            src: '/icons/icon-maskable-512.png',
+            src: asset('icons/icon-maskable-512.png'),
             sizes: '512x512',
             type: 'image/png',
             purpose: 'maskable',
@@ -52,21 +58,21 @@ export default defineConfig({
             name: 'Laboratorium',
             short_name: 'Lab',
             description: 'Buka baki unsur dan mulai reaksi',
-            url: '/lab',
-            icons: [{ src: '/icons/icon-192.png', sizes: '192x192' }],
+            url: asset('lab'),
+            icons: [{ src: asset('icons/icon-192.png'), sizes: '192x192' }],
           },
           {
             name: 'Tantangan',
             short_name: 'Kuis',
             description: 'Latihan kimia tiga tingkat',
-            url: '/tantangan',
-            icons: [{ src: '/icons/icon-192.png', sizes: '192x192' }],
+            url: asset('tantangan'),
+            icons: [{ src: asset('icons/icon-192.png'), sizes: '192x192' }],
           },
         ],
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,svg,png,json,woff2}'],
-        navigateFallback: '/index.html',
+        navigateFallback: asset('index.html'),
         navigateFallbackDenylist: [/^\/api\//],
         cleanupOutdatedCaches: true,
         maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,

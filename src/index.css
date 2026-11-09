@@ -293,7 +293,7 @@ sub {
   background: var(--topbar-bg);
   border-bottom: 1px solid var(--border);
   backdrop-filter: blur(18px);
-  padding: 10px 16px 0;
+  padding: 10px 16px 10px;
   padding-top: max(10px, env(safe-area-inset-top));
 }
 
@@ -1168,11 +1168,17 @@ sub {
   height: 100%;
   overflow-y: auto;
   display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  /* Satu kolom penuh: meja kerja di atas, hasil reaksi di bawah dengan lebar penuh. */
+  grid-template-columns: minmax(0, 1fr);
   gap: 18px;
   padding: 20px;
   padding-bottom: max(20px, env(safe-area-inset-bottom));
   align-content: start;
+}
+
+/* Hasil reaksi selalu di baris bawah dan mengambil seluruh lebar. */
+.lab__result {
+  grid-column: 1 / -1;
 }
 
 .lab__bench,
@@ -1374,6 +1380,12 @@ sub {
   letter-spacing: 0.08em;
   color: var(--muted);
   margin-right: 2px;
+}
+
+@media (max-width: 1023px) {
+  .conditions__label {
+    display: none;
+  }
 }
 
 .chip--condition.is-active {
@@ -2075,7 +2087,7 @@ sub {
 
 @media (max-width: 720px) {
   .topbar {
-    padding: 8px 12px 0;
+    padding: 8px 12px 10px;
   }
 
   .topbar__row {

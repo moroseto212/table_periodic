@@ -11,6 +11,8 @@ import { MAX_ATOMS_PER_ELEMENT, MAX_ATOMS_TOTAL } from '../../core/chemistry/typ
 import { categoryColors, categoryInkColors, categoryLabels } from '../../ui/tokens';
 import Formula, { formatCoeff } from '../../ui/Formula';
 
+import { withBase } from '../../app/router';
+
 const LAST_KEY = 'periodic-lab.last-experiment';
 
 const CONDITION_LABELS: Record<Condition, string> = {
@@ -307,8 +309,9 @@ export default function LabScreen({ initial }: { initial: string | null }) {
 
   const share = () => {
     const encoded = encodeChamber(chamber);
-    const url = `${window.location.origin}/lab?s=${encodeURIComponent(encoded)}`;
-    window.history.replaceState({}, '', `/lab?s=${encodeURIComponent(encoded)}`);
+    const target = withBase(`/lab?s=${encodeURIComponent(encoded)}`);
+    const url = `${window.location.origin}${target}`;
+    window.history.replaceState({}, '', target);
     navigator.clipboard
       ?.writeText(url)
       .then(() => {

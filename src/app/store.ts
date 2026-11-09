@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import type { ElementCategory } from '../core/chemistry/types';
-import { navigate } from './router';
+import { currentPath, navigate } from './router';
 import { initialTheme, persistTheme, type Theme } from './theme';
 
 export type CategoryFilter = ElementCategory | 'all';
@@ -32,10 +32,11 @@ export const useAppStore = create<AppState>((set) => ({
     set({ selected: symbol, panelOpen: symbol !== null });
     if (symbol) {
       const path = `/unsur/${symbol}`;
-      if (window.location.pathname !== path) {
+      const current = currentPath();
+      if (current !== path) {
         // Ganti entri riwayat saat berpindah antar-unsur agar tombol kembali
         // tidak membuka ulang panel unsur sebelumnya.
-        navigate(path, { replace: window.location.pathname.startsWith('/unsur/') });
+        navigate(path, { replace: current.startsWith('/unsur/') });
       }
     }
   },
@@ -44,7 +45,7 @@ export const useAppStore = create<AppState>((set) => ({
   setCategory: (category) => set({ category }),
   closePanel: () => {
     set({ panelOpen: false, selected: null, hovered: null });
-    if (window.location.pathname.startsWith('/unsur/')) {
+    if (currentPath().startsWith('/unsur/')) {
       // Kembali ke tabel tanpa menumpuk riwayat, sehingga panel tidak
       // terbuka lagi saat pengguna menekan tombol kembali.
       navigate('/', { replace: true });

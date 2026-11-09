@@ -25,7 +25,13 @@ let totalRaw = 0;
 const rows = [];
 
 for (const ref of refs) {
-  const file = resolve(dist, ref.replace(/^\//, ''));
+  // Abaikan prefix base deployment (mis. "/table_periodic/assets/x.js")
+  // agar file tetap dicari relatif terhadap dist.
+  const clean = ref.split('?')[0];
+  const assetsAt = clean.indexOf('/assets/');
+  const rel =
+    assetsAt >= 0 ? clean.slice(assetsAt + 1) : clean.replace(/^\.?\//, '');
+  const file = resolve(dist, rel);
   const source = readFileSync(file);
   const gzip = gzipSync(source, { level: 9 }).length;
   totalGzip += gzip;
