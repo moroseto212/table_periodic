@@ -1,0 +1,4339 @@
+[
+  {
+    "z": 1,
+    "symbol": "H",
+    "name": "Hidrogen",
+    "category": "nonmetal",
+    "group": 1,
+    "period": 1,
+    "block": "s",
+    "mass": 1.008,
+    "electronConfig": "1s1",
+    "shells": [
+      1
+    ],
+    "stateSTP": "gas",
+    "meltingK": 14.01,
+    "boilingK": 20.28,
+    "densityGcm3": 0.00008988,
+    "electronegativity": 2.2,
+    "atomicRadiusPm": 53,
+    "ionizationKJmol": 1312,
+    "oxidationStates": [
+      -1,
+      1
+    ],
+    "isotopes": [
+      {
+        "massNumber": 1,
+        "abundancePct": 99.985,
+        "stable": true
+      },
+      {
+        "massNumber": 2,
+        "abundancePct": 0.015,
+        "stable": true
+      }
+    ],
+    "discoveredYear": 1766,
+    "summary": "Unsur paling ringan dan paling melimpah di alam semesta; bahan bakar utama reaksi fusi bintang.",
+    "hazards": [
+      "GHS02",
+      "GHS04"
+    ],
+    "sources": [
+      "NIST",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 2,
+    "symbol": "He",
+    "name": "Helium",
+    "category": "noble",
+    "group": 18,
+    "period": 1,
+    "block": "s",
+    "mass": 4.0026,
+    "electronConfig": "1s2",
+    "shells": [
+      2
+    ],
+    "stateSTP": "gas",
+    "meltingK": null,
+    "boilingK": 4.22,
+    "densityGcm3": 0.0001785,
+    "electronegativity": null,
+    "atomicRadiusPm": 31,
+    "ionizationKJmol": 2372.3,
+    "oxidationStates": [
+      0
+    ],
+    "isotopes": [
+      {
+        "massNumber": 4,
+        "abundancePct": 99.99986,
+        "stable": true
+      },
+      {
+        "massNumber": 3,
+        "abundancePct": 0.000137,
+        "stable": true
+      }
+    ],
+    "discoveredYear": 1868,
+    "summary": "Gas mulia yang sangat stabil; digunakan untuk pendingin kriogenik dan balon udara.",
+    "hazards": [
+      "GHS04"
+    ],
+    "sources": [
+      "NIST"
+    ]
+  },
+  {
+    "z": 3,
+    "symbol": "Li",
+    "name": "Litium",
+    "category": "alkali",
+    "group": 1,
+    "period": 2,
+    "block": "s",
+    "mass": 6.94,
+    "electronConfig": "[He] 2s1",
+    "shells": [
+      2,
+      1
+    ],
+    "stateSTP": "solid",
+    "meltingK": 453.65,
+    "boilingK": 1615,
+    "densityGcm3": 0.534,
+    "electronegativity": 0.98,
+    "atomicRadiusPm": 167,
+    "ionizationKJmol": 520.2,
+    "oxidationStates": [
+      1
+    ],
+    "isotopes": [
+      {
+        "massNumber": 7,
+        "abundancePct": 92.41,
+        "stable": true
+      },
+      {
+        "massNumber": 6,
+        "abundancePct": 7.59,
+        "stable": true
+      }
+    ],
+    "discoveredYear": 1817,
+    "summary": "Logam paling ringan; inti utamanya adalah baterai litium-ion.",
+    "hazards": [
+      "GHS02",
+      "GHS05"
+    ],
+    "sources": [
+      "PubChem"
+    ]
+  },
+  {
+    "z": 4,
+    "symbol": "Be",
+    "name": "Berilium",
+    "category": "alkaline",
+    "group": 2,
+    "period": 2,
+    "block": "s",
+    "mass": 9.0122,
+    "electronConfig": "[He] 2s2",
+    "shells": [
+      2,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 1560,
+    "boilingK": 2742,
+    "densityGcm3": 1.85,
+    "electronegativity": 1.57,
+    "atomicRadiusPm": 112,
+    "ionizationKJmol": 899.5,
+    "oxidationStates": [
+      2
+    ],
+    "isotopes": [
+      {
+        "massNumber": 9,
+        "abundancePct": 100,
+        "stable": true
+      }
+    ],
+    "discoveredYear": 1798,
+    "summary": "Logam ringan dan kaku; beracun dalam bentuk debu dan asap.",
+    "hazards": [
+      "GHS06",
+      "GHS08"
+    ],
+    "sources": [
+      "PubChem"
+    ]
+  },
+  {
+    "z": 5,
+    "symbol": "B",
+    "name": "Boron",
+    "category": "metalloid",
+    "group": 13,
+    "period": 2,
+    "block": "p",
+    "mass": 10.81,
+    "electronConfig": "[He] 2s2 2p1",
+    "shells": [
+      2,
+      3
+    ],
+    "stateSTP": "solid",
+    "meltingK": 2349,
+    "boilingK": 4200,
+    "densityGcm3": 2.34,
+    "electronegativity": 2.04,
+    "atomicRadiusPm": 87,
+    "ionizationKJmol": 800.6,
+    "oxidationStates": [
+      3
+    ],
+    "isotopes": [
+      {
+        "massNumber": 11,
+        "abundancePct": 80,
+        "stable": true
+      },
+      {
+        "massNumber": 10,
+        "abundancePct": 20,
+        "stable": true
+      }
+    ],
+    "discoveredYear": 1808,
+    "summary": "Metaloid keras yang dipakai pada kaca borosilikat dan serat komposit.",
+    "hazards": [
+      "GHS07"
+    ],
+    "sources": [
+      "PubChem"
+    ]
+  },
+  {
+    "z": 6,
+    "symbol": "C",
+    "name": "Karbon",
+    "category": "nonmetal",
+    "group": 14,
+    "period": 2,
+    "block": "p",
+    "mass": 12.011,
+    "electronConfig": "[He] 2s2 2p2",
+    "shells": [
+      2,
+      4
+    ],
+    "stateSTP": "solid",
+    "meltingK": 3823,
+    "boilingK": 4098,
+    "densityGcm3": 2.267,
+    "electronegativity": 2.55,
+    "atomicRadiusPm": 67,
+    "ionizationKJmol": 1086.5,
+    "oxidationStates": [
+      -4,
+      2,
+      4
+    ],
+    "isotopes": [
+      {
+        "massNumber": 12,
+        "abundancePct": 98.93,
+        "stable": true
+      },
+      {
+        "massNumber": 13,
+        "abundancePct": 1.07,
+        "stable": true
+      }
+    ],
+    "discoveredYear": null,
+    "summary": "Kerangka dasar seluruh kimia organik; intan dan grafit adalah alotropnya.",
+    "hazards": [],
+    "sources": [
+      "NIST"
+    ]
+  },
+  {
+    "z": 7,
+    "symbol": "N",
+    "name": "Nitrogen",
+    "category": "nonmetal",
+    "group": 15,
+    "period": 2,
+    "block": "p",
+    "mass": 14.007,
+    "electronConfig": "[He] 2s2 2p3",
+    "shells": [
+      2,
+      5
+    ],
+    "stateSTP": "gas",
+    "meltingK": 63.15,
+    "boilingK": 77.36,
+    "densityGcm3": 0.001251,
+    "electronegativity": 3.04,
+    "atomicRadiusPm": 56,
+    "ionizationKJmol": 1402.3,
+    "oxidationStates": [
+      -3,
+      3,
+      5
+    ],
+    "isotopes": [
+      {
+        "massNumber": 14,
+        "abundancePct": 99.636,
+        "stable": true
+      },
+      {
+        "massNumber": 15,
+        "abundancePct": 0.364,
+        "stable": true
+      }
+    ],
+    "discoveredYear": 1772,
+    "summary": "Menyusun sekitar 78 persen atmosfer Bumi dalam bentuk gas N2 yang sangat stabil.",
+    "hazards": [
+      "GHS04"
+    ],
+    "sources": [
+      "NIST"
+    ]
+  },
+  {
+    "z": 8,
+    "symbol": "O",
+    "name": "Oksigen",
+    "category": "nonmetal",
+    "group": 16,
+    "period": 2,
+    "block": "p",
+    "mass": 15.999,
+    "electronConfig": "[He] 2s2 2p4",
+    "shells": [
+      2,
+      6
+    ],
+    "stateSTP": "gas",
+    "meltingK": 54.36,
+    "boilingK": 90.2,
+    "densityGcm3": 0.001429,
+    "electronegativity": 3.44,
+    "atomicRadiusPm": 48,
+    "ionizationKJmol": 1313.9,
+    "oxidationStates": [
+      -2
+    ],
+    "isotopes": [
+      {
+        "massNumber": 16,
+        "abundancePct": 99.757,
+        "stable": true
+      },
+      {
+        "massNumber": 18,
+        "abundancePct": 0.205,
+        "stable": true
+      },
+      {
+        "massNumber": 17,
+        "abundancePct": 0.038,
+        "stable": true
+      }
+    ],
+    "discoveredYear": 1774,
+    "summary": "Pendukung pembakaran dan kunci respirasi sel; unsur paling melimpah di kerak Bumi.",
+    "hazards": [
+      "GHS03",
+      "GHS04"
+    ],
+    "sources": [
+      "NIST"
+    ]
+  },
+  {
+    "z": 9,
+    "symbol": "F",
+    "name": "Fluor",
+    "category": "halogen",
+    "group": 17,
+    "period": 2,
+    "block": "p",
+    "mass": 18.998,
+    "electronConfig": "[He] 2s2 2p5",
+    "shells": [
+      2,
+      7
+    ],
+    "stateSTP": "gas",
+    "meltingK": 53.53,
+    "boilingK": 85.03,
+    "densityGcm3": 0.001696,
+    "electronegativity": 3.98,
+    "atomicRadiusPm": 42,
+    "ionizationKJmol": 1681,
+    "oxidationStates": [
+      -1
+    ],
+    "isotopes": [
+      {
+        "massNumber": 19,
+        "abundancePct": 100,
+        "stable": true
+      }
+    ],
+    "discoveredYear": 1886,
+    "summary": "Unsur paling elektronegatif; sangat reaktif dan korosif.",
+    "hazards": [
+      "GHS03",
+      "GHS04",
+      "GHS06"
+    ],
+    "sources": [
+      "PubChem"
+    ]
+  },
+  {
+    "z": 10,
+    "symbol": "Ne",
+    "name": "Neon",
+    "category": "noble",
+    "group": 18,
+    "period": 2,
+    "block": "p",
+    "mass": 20.18,
+    "electronConfig": "[He] 2s2 2p6",
+    "shells": [
+      2,
+      8
+    ],
+    "stateSTP": "gas",
+    "meltingK": 24.56,
+    "boilingK": 27.07,
+    "densityGcm3": 0.0008999,
+    "electronegativity": null,
+    "atomicRadiusPm": 38,
+    "ionizationKJmol": 2080.7,
+    "oxidationStates": [
+      0
+    ],
+    "isotopes": [
+      {
+        "massNumber": 20,
+        "abundancePct": 90.48,
+        "stable": true
+      },
+      {
+        "massNumber": 22,
+        "abundancePct": 9.25,
+        "stable": true
+      },
+      {
+        "massNumber": 21,
+        "abundancePct": 0.27,
+        "stable": true
+      }
+    ],
+    "discoveredYear": 1898,
+    "summary": "Gas mulia yang menyala oranye-merah pada tabung lucutan listrik.",
+    "hazards": [
+      "GHS04"
+    ],
+    "sources": [
+      "NIST"
+    ]
+  },
+  {
+    "z": 11,
+    "symbol": "Na",
+    "name": "Natrium",
+    "category": "alkali",
+    "group": 1,
+    "period": 3,
+    "block": "s",
+    "mass": 22.99,
+    "electronConfig": "[Ne] 3s1",
+    "shells": [
+      2,
+      8,
+      1
+    ],
+    "stateSTP": "solid",
+    "meltingK": 370.94,
+    "boilingK": 1156,
+    "densityGcm3": 0.968,
+    "electronegativity": 0.93,
+    "atomicRadiusPm": 190,
+    "ionizationKJmol": 495.8,
+    "oxidationStates": [
+      1
+    ],
+    "isotopes": [
+      {
+        "massNumber": 23,
+        "abundancePct": 100,
+        "stable": true
+      }
+    ],
+    "discoveredYear": 1807,
+    "summary": "Logam alkali lunak yang bereaksi hebat dengan air; komponen garam dapur.",
+    "hazards": [
+      "GHS02",
+      "GHS05"
+    ],
+    "sources": [
+      "PubChem"
+    ]
+  },
+  {
+    "z": 12,
+    "symbol": "Mg",
+    "name": "Magnesium",
+    "category": "alkaline",
+    "group": 2,
+    "period": 3,
+    "block": "s",
+    "mass": 24.305,
+    "electronConfig": "[Ne] 3s2",
+    "shells": [
+      2,
+      8,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 923,
+    "boilingK": 1363,
+    "densityGcm3": 1.738,
+    "electronegativity": 1.31,
+    "atomicRadiusPm": 145,
+    "ionizationKJmol": 737.7,
+    "oxidationStates": [
+      2
+    ],
+    "isotopes": [
+      {
+        "massNumber": 24,
+        "abundancePct": 78.99,
+        "stable": true
+      },
+      {
+        "massNumber": 25,
+        "abundancePct": 10,
+        "stable": true
+      },
+      {
+        "massNumber": 26,
+        "abundancePct": 11.01,
+        "stable": true
+      }
+    ],
+    "discoveredYear": 1755,
+    "summary": "Logam ringan yang terbakar dengan nyala putih terang; pusat molekul klorofil.",
+    "hazards": [
+      "GHS02"
+    ],
+    "sources": [
+      "PubChem"
+    ]
+  },
+  {
+    "z": 13,
+    "symbol": "Al",
+    "name": "Aluminium",
+    "category": "post-transition",
+    "group": 13,
+    "period": 3,
+    "block": "p",
+    "mass": 26.982,
+    "electronConfig": "[Ne] 3s2 3p1",
+    "shells": [
+      2,
+      8,
+      3
+    ],
+    "stateSTP": "solid",
+    "meltingK": 933.47,
+    "boilingK": 2792,
+    "densityGcm3": 2.7,
+    "electronegativity": 1.61,
+    "atomicRadiusPm": 118,
+    "ionizationKJmol": 577.5,
+    "oxidationStates": [
+      3
+    ],
+    "isotopes": [
+      {
+        "massNumber": 27,
+        "abundancePct": 100,
+        "stable": true
+      }
+    ],
+    "discoveredYear": 1825,
+    "summary": "Logam paling melimpah di kerak Bumi; ringan dan tahan korosi karena lapisan oksida.",
+    "hazards": [
+      "GHS02"
+    ],
+    "sources": [
+      "PubChem"
+    ]
+  },
+  {
+    "z": 14,
+    "symbol": "Si",
+    "name": "Silikon",
+    "category": "metalloid",
+    "group": 14,
+    "period": 3,
+    "block": "p",
+    "mass": 28.085,
+    "electronConfig": "[Ne] 3s2 3p2",
+    "shells": [
+      2,
+      8,
+      4
+    ],
+    "stateSTP": "solid",
+    "meltingK": 1687,
+    "boilingK": 3538,
+    "densityGcm3": 2.33,
+    "electronegativity": 1.9,
+    "atomicRadiusPm": 111,
+    "ionizationKJmol": 786.5,
+    "oxidationStates": [
+      -4,
+      4
+    ],
+    "isotopes": [
+      {
+        "massNumber": 28,
+        "abundancePct": 92.22,
+        "stable": true
+      },
+      {
+        "massNumber": 29,
+        "abundancePct": 4.69,
+        "stable": true
+      },
+      {
+        "massNumber": 30,
+        "abundancePct": 3.09,
+        "stable": true
+      }
+    ],
+    "discoveredYear": 1824,
+    "summary": "Semikonduktor utama industri chip; unsur kedua paling melimpah di kerak Bumi.",
+    "hazards": [],
+    "sources": [
+      "PubChem"
+    ]
+  },
+  {
+    "z": 15,
+    "symbol": "P",
+    "name": "Fosfor",
+    "category": "nonmetal",
+    "group": 15,
+    "period": 3,
+    "block": "p",
+    "mass": 30.974,
+    "electronConfig": "[Ne] 3s2 3p3",
+    "shells": [
+      2,
+      8,
+      5
+    ],
+    "stateSTP": "solid",
+    "meltingK": 317.3,
+    "boilingK": 553.7,
+    "densityGcm3": 1.823,
+    "electronegativity": 2.19,
+    "atomicRadiusPm": 98,
+    "ionizationKJmol": 1011.8,
+    "oxidationStates": [
+      -3,
+      3,
+      5
+    ],
+    "isotopes": [
+      {
+        "massNumber": 31,
+        "abundancePct": 100,
+        "stable": true
+      }
+    ],
+    "discoveredYear": 1669,
+    "summary": "Penting untuk DNA dan ATP; fosfor putih menyala sendiri di udara.",
+    "hazards": [
+      "GHS02",
+      "GHS06"
+    ],
+    "sources": [
+      "PubChem"
+    ]
+  },
+  {
+    "z": 16,
+    "symbol": "S",
+    "name": "Belerang",
+    "category": "nonmetal",
+    "group": 16,
+    "period": 3,
+    "block": "p",
+    "mass": 32.06,
+    "electronConfig": "[Ne] 3s2 3p4",
+    "shells": [
+      2,
+      8,
+      6
+    ],
+    "stateSTP": "solid",
+    "meltingK": 388.36,
+    "boilingK": 717.8,
+    "densityGcm3": 2.07,
+    "electronegativity": 2.58,
+    "atomicRadiusPm": 88,
+    "ionizationKJmol": 999.6,
+    "oxidationStates": [
+      -2,
+      4,
+      6
+    ],
+    "isotopes": [
+      {
+        "massNumber": 32,
+        "abundancePct": 94.99,
+        "stable": true
+      },
+      {
+        "massNumber": 34,
+        "abundancePct": 4.25,
+        "stable": true
+      },
+      {
+        "massNumber": 33,
+        "abundancePct": 0.75,
+        "stable": true
+      }
+    ],
+    "discoveredYear": null,
+    "summary": "Unsur kuning yang dikenal sejak zaman kuno; bahan baku asam sulfat.",
+    "hazards": [
+      "GHS07"
+    ],
+    "sources": [
+      "NIST"
+    ]
+  },
+  {
+    "z": 17,
+    "symbol": "Cl",
+    "name": "Klor",
+    "category": "halogen",
+    "group": 17,
+    "period": 3,
+    "block": "p",
+    "mass": 35.45,
+    "electronConfig": "[Ne] 3s2 3p5",
+    "shells": [
+      2,
+      8,
+      7
+    ],
+    "stateSTP": "gas",
+    "meltingK": 171.6,
+    "boilingK": 239.11,
+    "densityGcm3": 0.003214,
+    "electronegativity": 3.16,
+    "atomicRadiusPm": 79,
+    "ionizationKJmol": 1251.2,
+    "oxidationStates": [
+      -1,
+      1,
+      3,
+      5,
+      7
+    ],
+    "isotopes": [
+      {
+        "massNumber": 35,
+        "abundancePct": 75.76,
+        "stable": true
+      },
+      {
+        "massNumber": 37,
+        "abundancePct": 24.24,
+        "stable": true
+      }
+    ],
+    "discoveredYear": 1774,
+    "summary": "Gas hijau kekuningan beracun; dipakai untuk disinfeksi air.",
+    "hazards": [
+      "GHS03",
+      "GHS04",
+      "GHS06"
+    ],
+    "sources": [
+      "PubChem"
+    ]
+  },
+  {
+    "z": 18,
+    "symbol": "Ar",
+    "name": "Argon",
+    "category": "noble",
+    "group": 18,
+    "period": 3,
+    "block": "p",
+    "mass": 39.948,
+    "electronConfig": "[Ne] 3s2 3p6",
+    "shells": [
+      2,
+      8,
+      8
+    ],
+    "stateSTP": "gas",
+    "meltingK": 83.81,
+    "boilingK": 87.3,
+    "densityGcm3": 0.001784,
+    "electronegativity": null,
+    "atomicRadiusPm": 71,
+    "ionizationKJmol": 1520.6,
+    "oxidationStates": [
+      0
+    ],
+    "isotopes": [
+      {
+        "massNumber": 40,
+        "abundancePct": 99.604,
+        "stable": true
+      },
+      {
+        "massNumber": 36,
+        "abundancePct": 0.334,
+        "stable": true
+      },
+      {
+        "massNumber": 38,
+        "abundancePct": 0.063,
+        "stable": true
+      }
+    ],
+    "discoveredYear": 1894,
+    "summary": "Gas mulia paling melimpah di atmosfer; dipakai sebagai atmosfer pelindung las.",
+    "hazards": [
+      "GHS04"
+    ],
+    "sources": [
+      "NIST"
+    ]
+  },
+  {
+    "z": 19,
+    "symbol": "K",
+    "name": "Kalium",
+    "category": "alkali",
+    "group": 1,
+    "period": 4,
+    "block": "s",
+    "mass": 39.09831,
+    "electronConfig": "[Ar] 4s1",
+    "shells": [
+      2,
+      8,
+      8,
+      1
+    ],
+    "stateSTP": "solid",
+    "meltingK": 336.7,
+    "boilingK": 1032,
+    "densityGcm3": 0.862,
+    "electronegativity": 0.82,
+    "atomicRadiusPm": 220,
+    "ionizationKJmol": 418.8,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam alkali dengan simbol K dan nomor atom 19. Berada pada periode 4, golongan 1. Massa atom 39.09831 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 20,
+    "symbol": "Ca",
+    "name": "Kalsium",
+    "category": "alkaline",
+    "group": 2,
+    "period": 4,
+    "block": "s",
+    "mass": 40.0784,
+    "electronConfig": "[Ar] 4s2",
+    "shells": [
+      2,
+      8,
+      8,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 1115,
+    "boilingK": 1757,
+    "densityGcm3": 1.55,
+    "electronegativity": 1,
+    "atomicRadiusPm": 180,
+    "ionizationKJmol": 589.8,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam alkali tanah dengan simbol Ca dan nomor atom 20. Berada pada periode 4, golongan 2. Massa atom 40.0784 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 21,
+    "symbol": "Sc",
+    "name": "Skandium",
+    "category": "transition",
+    "group": 3,
+    "period": 4,
+    "block": "d",
+    "mass": 44.9559085,
+    "electronConfig": "[Ar] 3d1 4s2",
+    "shells": [
+      2,
+      8,
+      9,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 1814,
+    "boilingK": 3109,
+    "densityGcm3": 2.985,
+    "electronegativity": 1.36,
+    "atomicRadiusPm": 160,
+    "ionizationKJmol": 633.1,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam transisi dengan simbol Sc dan nomor atom 21. Berada pada periode 4, golongan 3. Massa atom 44.9559085 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 22,
+    "symbol": "Ti",
+    "name": "Titanium",
+    "category": "transition",
+    "group": 4,
+    "period": 4,
+    "block": "d",
+    "mass": 47.8671,
+    "electronConfig": "[Ar] 3d2 4s2",
+    "shells": [
+      2,
+      8,
+      10,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 1941,
+    "boilingK": 3560,
+    "densityGcm3": 4.506,
+    "electronegativity": 1.54,
+    "atomicRadiusPm": 140,
+    "ionizationKJmol": 658.8,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam transisi dengan simbol Ti dan nomor atom 22. Berada pada periode 4, golongan 4. Massa atom 47.8671 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 23,
+    "symbol": "V",
+    "name": "Vanadium",
+    "category": "transition",
+    "group": 5,
+    "period": 4,
+    "block": "d",
+    "mass": 50.94151,
+    "electronConfig": "[Ar] 3d3 4s2",
+    "shells": [
+      2,
+      8,
+      11,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 2183,
+    "boilingK": 3680,
+    "densityGcm3": 6,
+    "electronegativity": 1.63,
+    "atomicRadiusPm": 135,
+    "ionizationKJmol": 650.9,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam transisi dengan simbol V dan nomor atom 23. Berada pada periode 4, golongan 5. Massa atom 50.94151 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 24,
+    "symbol": "Cr",
+    "name": "Kromium",
+    "category": "transition",
+    "group": 6,
+    "period": 4,
+    "block": "d",
+    "mass": 51.99616,
+    "electronConfig": "[Ar] 3d5 4s1",
+    "shells": [
+      2,
+      8,
+      13,
+      1
+    ],
+    "stateSTP": "solid",
+    "meltingK": 2180,
+    "boilingK": 2944,
+    "densityGcm3": 7.19,
+    "electronegativity": 1.66,
+    "atomicRadiusPm": 140,
+    "ionizationKJmol": 652.9,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam transisi dengan simbol Cr dan nomor atom 24. Berada pada periode 4, golongan 6. Massa atom 51.99616 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 25,
+    "symbol": "Mn",
+    "name": "Mangan",
+    "category": "transition",
+    "group": 7,
+    "period": 4,
+    "block": "d",
+    "mass": 54.9380443,
+    "electronConfig": "[Ar] 3d5 4s2",
+    "shells": [
+      2,
+      8,
+      13,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 1519,
+    "boilingK": 2334,
+    "densityGcm3": 7.21,
+    "electronegativity": 1.55,
+    "atomicRadiusPm": 140,
+    "ionizationKJmol": 717.3,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam transisi dengan simbol Mn dan nomor atom 25. Berada pada periode 4, golongan 7. Massa atom 54.9380443 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 26,
+    "symbol": "Fe",
+    "name": "Besi",
+    "category": "transition",
+    "group": 8,
+    "period": 4,
+    "block": "d",
+    "mass": 55.845,
+    "electronConfig": "[Ar] 3d6 4s2",
+    "shells": [
+      2,
+      8,
+      14,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 1811,
+    "boilingK": 3134,
+    "densityGcm3": 7.874,
+    "electronegativity": 1.83,
+    "atomicRadiusPm": 126,
+    "ionizationKJmol": 762.5,
+    "oxidationStates": [
+      2,
+      3
+    ],
+    "isotopes": [
+      {
+        "massNumber": 56,
+        "abundancePct": 91.754,
+        "stable": true
+      },
+      {
+        "massNumber": 54,
+        "abundancePct": 5.845,
+        "stable": true
+      },
+      {
+        "massNumber": 57,
+        "abundancePct": 2.119,
+        "stable": true
+      }
+    ],
+    "discoveredYear": null,
+    "summary": "Logam transisi paling banyak dipakai manusia; inti hemoglobin dan baja.",
+    "hazards": [],
+    "sources": [
+      "PubChem"
+    ]
+  },
+  {
+    "z": 27,
+    "symbol": "Co",
+    "name": "Kobalt",
+    "category": "transition",
+    "group": 9,
+    "period": 4,
+    "block": "d",
+    "mass": 58.9331944,
+    "electronConfig": "[Ar] 3d7 4s2",
+    "shells": [
+      2,
+      8,
+      15,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 1768,
+    "boilingK": 3200,
+    "densityGcm3": 8.9,
+    "electronegativity": 1.88,
+    "atomicRadiusPm": 135,
+    "ionizationKJmol": 760.4,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam transisi dengan simbol Co dan nomor atom 27. Berada pada periode 4, golongan 9. Massa atom 58.9331944 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 28,
+    "symbol": "Ni",
+    "name": "Nikel",
+    "category": "transition",
+    "group": 10,
+    "period": 4,
+    "block": "d",
+    "mass": 58.69344,
+    "electronConfig": "[Ar] 3d8 4s2",
+    "shells": [
+      2,
+      8,
+      16,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 1728,
+    "boilingK": 3003,
+    "densityGcm3": 8.908,
+    "electronegativity": 1.91,
+    "atomicRadiusPm": 135,
+    "ionizationKJmol": 737.1,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam transisi dengan simbol Ni dan nomor atom 28. Berada pada periode 4, golongan 10. Massa atom 58.69344 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 29,
+    "symbol": "Cu",
+    "name": "Tembaga",
+    "category": "transition",
+    "group": 11,
+    "period": 4,
+    "block": "d",
+    "mass": 63.5463,
+    "electronConfig": "[Ar] 3d10 4s1",
+    "shells": [
+      2,
+      8,
+      18,
+      1
+    ],
+    "stateSTP": "solid",
+    "meltingK": 1357.77,
+    "boilingK": 2835,
+    "densityGcm3": 8.96,
+    "electronegativity": 1.9,
+    "atomicRadiusPm": 135,
+    "ionizationKJmol": 745.5,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam transisi dengan simbol Cu dan nomor atom 29. Berada pada periode 4, golongan 11. Massa atom 63.5463 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 30,
+    "symbol": "Zn",
+    "name": "Zink",
+    "category": "transition",
+    "group": 12,
+    "period": 4,
+    "block": "d",
+    "mass": 65.382,
+    "electronConfig": "[Ar] 3d10 4s2",
+    "shells": [
+      2,
+      8,
+      18,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 692.68,
+    "boilingK": 1180,
+    "densityGcm3": 7.14,
+    "electronegativity": 1.65,
+    "atomicRadiusPm": 135,
+    "ionizationKJmol": 906.4,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam transisi dengan simbol Zn dan nomor atom 30. Berada pada periode 4, golongan 12. Massa atom 65.382 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 31,
+    "symbol": "Ga",
+    "name": "Galium",
+    "category": "post-transition",
+    "group": 13,
+    "period": 4,
+    "block": "p",
+    "mass": 69.7231,
+    "electronConfig": "[Ar] 3d10 4s2 4p1",
+    "shells": [
+      2,
+      8,
+      18,
+      3
+    ],
+    "stateSTP": "solid",
+    "meltingK": 302.9146,
+    "boilingK": 2673,
+    "densityGcm3": 5.91,
+    "electronegativity": 1.81,
+    "atomicRadiusPm": 130,
+    "ionizationKJmol": 578.8,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam pascatransisi dengan simbol Ga dan nomor atom 31. Berada pada periode 4, golongan 13. Massa atom 69.7231 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 32,
+    "symbol": "Ge",
+    "name": "Germanium",
+    "category": "metalloid",
+    "group": 14,
+    "period": 4,
+    "block": "p",
+    "mass": 72.6308,
+    "electronConfig": "[Ar] 3d10 4s2 4p2",
+    "shells": [
+      2,
+      8,
+      18,
+      4
+    ],
+    "stateSTP": "solid",
+    "meltingK": 1211.4,
+    "boilingK": 3106,
+    "densityGcm3": 5.323,
+    "electronegativity": 2.01,
+    "atomicRadiusPm": 125,
+    "ionizationKJmol": 762,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur metaloid dengan simbol Ge dan nomor atom 32. Berada pada periode 4, golongan 14. Massa atom 72.6308 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 33,
+    "symbol": "As",
+    "name": "Arsen",
+    "category": "metalloid",
+    "group": 15,
+    "period": 4,
+    "block": "p",
+    "mass": 74.9215956,
+    "electronConfig": "[Ar] 3d10 4s2 4p3",
+    "shells": [
+      2,
+      8,
+      18,
+      5
+    ],
+    "stateSTP": "solid",
+    "meltingK": 1090,
+    "boilingK": null,
+    "densityGcm3": 5.727,
+    "electronegativity": 2.18,
+    "atomicRadiusPm": 115,
+    "ionizationKJmol": 947,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur metaloid dengan simbol As dan nomor atom 33. Berada pada periode 4, golongan 15. Massa atom 74.9215956 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 34,
+    "symbol": "Se",
+    "name": "Selenium",
+    "category": "nonmetal",
+    "group": 16,
+    "period": 4,
+    "block": "p",
+    "mass": 78.9718,
+    "electronConfig": "[Ar] 3d10 4s2 4p4",
+    "shells": [
+      2,
+      8,
+      18,
+      6
+    ],
+    "stateSTP": "solid",
+    "meltingK": 494,
+    "boilingK": 958,
+    "densityGcm3": 4.81,
+    "electronegativity": 2.55,
+    "atomicRadiusPm": 115,
+    "ionizationKJmol": 941,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur nonlogam dengan simbol Se dan nomor atom 34. Berada pada periode 4, golongan 16. Massa atom 78.9718 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 35,
+    "symbol": "Br",
+    "name": "Bromin",
+    "category": "nonmetal",
+    "group": 17,
+    "period": 4,
+    "block": "p",
+    "mass": 79.904,
+    "electronConfig": "[Ar] 3d10 4s2 4p5",
+    "shells": [
+      2,
+      8,
+      18,
+      7
+    ],
+    "stateSTP": "liquid",
+    "meltingK": 265.8,
+    "boilingK": 332,
+    "densityGcm3": 3.1028,
+    "electronegativity": 2.96,
+    "atomicRadiusPm": 115,
+    "ionizationKJmol": 1139.9,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur nonlogam dengan simbol Br dan nomor atom 35. Berada pada periode 4, golongan 17. Massa atom 79.904 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 36,
+    "symbol": "Kr",
+    "name": "Kripton",
+    "category": "noble",
+    "group": 18,
+    "period": 4,
+    "block": "p",
+    "mass": 83.7982,
+    "electronConfig": "[Ar] 3d10 4s2 4p6",
+    "shells": [
+      2,
+      8,
+      18,
+      8
+    ],
+    "stateSTP": "gas",
+    "meltingK": 115.78,
+    "boilingK": 119.93,
+    "densityGcm3": 0.003749,
+    "electronegativity": 3,
+    "atomicRadiusPm": 88,
+    "ionizationKJmol": 1350.8,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur gas mulia dengan simbol Kr dan nomor atom 36. Berada pada periode 4, golongan 18. Massa atom 83.7982 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 37,
+    "symbol": "Rb",
+    "name": "Rubidium",
+    "category": "alkali",
+    "group": 1,
+    "period": 5,
+    "block": "s",
+    "mass": 85.46783,
+    "electronConfig": "[Kr] 5s1",
+    "shells": [
+      2,
+      8,
+      18,
+      8,
+      1
+    ],
+    "stateSTP": "solid",
+    "meltingK": 312.45,
+    "boilingK": 961,
+    "densityGcm3": 1.532,
+    "electronegativity": 0.82,
+    "atomicRadiusPm": 235,
+    "ionizationKJmol": 403,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam alkali dengan simbol Rb dan nomor atom 37. Berada pada periode 5, golongan 1. Massa atom 85.46783 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 38,
+    "symbol": "Sr",
+    "name": "Stronsium",
+    "category": "alkaline",
+    "group": 2,
+    "period": 5,
+    "block": "s",
+    "mass": 87.621,
+    "electronConfig": "[Kr] 5s2",
+    "shells": [
+      2,
+      8,
+      18,
+      8,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 1050,
+    "boilingK": 1650,
+    "densityGcm3": 2.64,
+    "electronegativity": 0.95,
+    "atomicRadiusPm": 200,
+    "ionizationKJmol": 549.5,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam alkali tanah dengan simbol Sr dan nomor atom 38. Berada pada periode 5, golongan 2. Massa atom 87.621 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 39,
+    "symbol": "Y",
+    "name": "Yttrium",
+    "category": "transition",
+    "group": 3,
+    "period": 5,
+    "block": "d",
+    "mass": 88.905842,
+    "electronConfig": "[Kr] 4d1 5s2",
+    "shells": [
+      2,
+      8,
+      18,
+      9,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 1799,
+    "boilingK": 3203,
+    "densityGcm3": 4.472,
+    "electronegativity": 1.22,
+    "atomicRadiusPm": 180,
+    "ionizationKJmol": 600,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam transisi dengan simbol Y dan nomor atom 39. Berada pada periode 5, golongan 3. Massa atom 88.905842 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 40,
+    "symbol": "Zr",
+    "name": "Zirkonium",
+    "category": "transition",
+    "group": 4,
+    "period": 5,
+    "block": "d",
+    "mass": 91.2242,
+    "electronConfig": "[Kr] 4d2 5s2",
+    "shells": [
+      2,
+      8,
+      18,
+      10,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 2128,
+    "boilingK": 4650,
+    "densityGcm3": 6.52,
+    "electronegativity": 1.33,
+    "atomicRadiusPm": 155,
+    "ionizationKJmol": 640.1,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam transisi dengan simbol Zr dan nomor atom 40. Berada pada periode 5, golongan 4. Massa atom 91.2242 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 41,
+    "symbol": "Nb",
+    "name": "Niobium",
+    "category": "transition",
+    "group": 5,
+    "period": 5,
+    "block": "d",
+    "mass": 92.906372,
+    "electronConfig": "[Kr] 4d4 5s1",
+    "shells": [
+      2,
+      8,
+      18,
+      12,
+      1
+    ],
+    "stateSTP": "solid",
+    "meltingK": 2750,
+    "boilingK": 5017,
+    "densityGcm3": 8.57,
+    "electronegativity": 1.6,
+    "atomicRadiusPm": 145,
+    "ionizationKJmol": 652.1,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam transisi dengan simbol Nb dan nomor atom 41. Berada pada periode 5, golongan 5. Massa atom 92.906372 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 42,
+    "symbol": "Mo",
+    "name": "Molibdenum",
+    "category": "transition",
+    "group": 6,
+    "period": 5,
+    "block": "d",
+    "mass": 95.951,
+    "electronConfig": "[Kr] 4d5 5s1",
+    "shells": [
+      2,
+      8,
+      18,
+      13,
+      1
+    ],
+    "stateSTP": "solid",
+    "meltingK": 2896,
+    "boilingK": 4912,
+    "densityGcm3": 10.28,
+    "electronegativity": 2.16,
+    "atomicRadiusPm": 145,
+    "ionizationKJmol": 684.3,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam transisi dengan simbol Mo dan nomor atom 42. Berada pada periode 5, golongan 6. Massa atom 95.951 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 43,
+    "symbol": "Tc",
+    "name": "Teknesium",
+    "category": "transition",
+    "group": 7,
+    "period": 5,
+    "block": "d",
+    "mass": 98,
+    "electronConfig": "[Kr] 4d5 5s2",
+    "shells": [
+      2,
+      8,
+      18,
+      13,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 2430,
+    "boilingK": 4538,
+    "densityGcm3": 11,
+    "electronegativity": 1.9,
+    "atomicRadiusPm": 135,
+    "ionizationKJmol": 702,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam transisi dengan simbol Tc dan nomor atom 43. Berada pada periode 5, golongan 7. Massa atom 98 u. Unsur ini hanya dapat dibuat di laboratorium.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 44,
+    "symbol": "Ru",
+    "name": "Rutenium",
+    "category": "transition",
+    "group": 8,
+    "period": 5,
+    "block": "d",
+    "mass": 101.072,
+    "electronConfig": "[Kr] 4d7 5s1",
+    "shells": [
+      2,
+      8,
+      18,
+      15,
+      1
+    ],
+    "stateSTP": "solid",
+    "meltingK": 2607,
+    "boilingK": 4423,
+    "densityGcm3": 12.45,
+    "electronegativity": 2.2,
+    "atomicRadiusPm": 130,
+    "ionizationKJmol": 710.2,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam transisi dengan simbol Ru dan nomor atom 44. Berada pada periode 5, golongan 8. Massa atom 101.072 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 45,
+    "symbol": "Rh",
+    "name": "Rodium",
+    "category": "transition",
+    "group": 9,
+    "period": 5,
+    "block": "d",
+    "mass": 102.905502,
+    "electronConfig": "[Kr] 4d8 5s1",
+    "shells": [
+      2,
+      8,
+      18,
+      16,
+      1
+    ],
+    "stateSTP": "solid",
+    "meltingK": 2237,
+    "boilingK": 3968,
+    "densityGcm3": 12.41,
+    "electronegativity": 2.28,
+    "atomicRadiusPm": 135,
+    "ionizationKJmol": 719.7,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam transisi dengan simbol Rh dan nomor atom 45. Berada pada periode 5, golongan 9. Massa atom 102.905502 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 46,
+    "symbol": "Pd",
+    "name": "Paladium",
+    "category": "transition",
+    "group": 10,
+    "period": 5,
+    "block": "d",
+    "mass": 106.421,
+    "electronConfig": "[Kr] 4d10",
+    "shells": [
+      2,
+      8,
+      18,
+      18
+    ],
+    "stateSTP": "solid",
+    "meltingK": 1828.05,
+    "boilingK": 3236,
+    "densityGcm3": 12.023,
+    "electronegativity": 2.2,
+    "atomicRadiusPm": 140,
+    "ionizationKJmol": 804.4,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam transisi dengan simbol Pd dan nomor atom 46. Berada pada periode 5, golongan 10. Massa atom 106.421 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 47,
+    "symbol": "Ag",
+    "name": "Perak",
+    "category": "transition",
+    "group": 11,
+    "period": 5,
+    "block": "d",
+    "mass": 107.86822,
+    "electronConfig": "[Kr] 4d10 5s1",
+    "shells": [
+      2,
+      8,
+      18,
+      18,
+      1
+    ],
+    "stateSTP": "solid",
+    "meltingK": 1234.93,
+    "boilingK": 2435,
+    "densityGcm3": 10.49,
+    "electronegativity": 1.93,
+    "atomicRadiusPm": 160,
+    "ionizationKJmol": 731,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam transisi dengan simbol Ag dan nomor atom 47. Berada pada periode 5, golongan 11. Massa atom 107.86822 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 48,
+    "symbol": "Cd",
+    "name": "Kadmium",
+    "category": "transition",
+    "group": 12,
+    "period": 5,
+    "block": "d",
+    "mass": 112.4144,
+    "electronConfig": "[Kr] 4d10 5s2",
+    "shells": [
+      2,
+      8,
+      18,
+      18,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 594.22,
+    "boilingK": 1040,
+    "densityGcm3": 8.65,
+    "electronegativity": 1.69,
+    "atomicRadiusPm": 155,
+    "ionizationKJmol": 867.8,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam transisi dengan simbol Cd dan nomor atom 48. Berada pada periode 5, golongan 12. Massa atom 112.4144 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 49,
+    "symbol": "In",
+    "name": "Indium",
+    "category": "post-transition",
+    "group": 13,
+    "period": 5,
+    "block": "p",
+    "mass": 114.8181,
+    "electronConfig": "[Kr] 4d10 5s2 5p1",
+    "shells": [
+      2,
+      8,
+      18,
+      18,
+      3
+    ],
+    "stateSTP": "solid",
+    "meltingK": 429.7485,
+    "boilingK": 2345,
+    "densityGcm3": 7.31,
+    "electronegativity": 1.78,
+    "atomicRadiusPm": 155,
+    "ionizationKJmol": 558.3,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam pascatransisi dengan simbol In dan nomor atom 49. Berada pada periode 5, golongan 13. Massa atom 114.8181 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 50,
+    "symbol": "Sn",
+    "name": "Timah",
+    "category": "post-transition",
+    "group": 14,
+    "period": 5,
+    "block": "p",
+    "mass": 118.7107,
+    "electronConfig": "[Kr] 4d10 5s2 5p2",
+    "shells": [
+      2,
+      8,
+      18,
+      18,
+      4
+    ],
+    "stateSTP": "solid",
+    "meltingK": 505.08,
+    "boilingK": 2875,
+    "densityGcm3": 7.365,
+    "electronegativity": 1.96,
+    "atomicRadiusPm": 145,
+    "ionizationKJmol": 708.6,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam pascatransisi dengan simbol Sn dan nomor atom 50. Berada pada periode 5, golongan 14. Massa atom 118.7107 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 51,
+    "symbol": "Sb",
+    "name": "Antimon",
+    "category": "metalloid",
+    "group": 15,
+    "period": 5,
+    "block": "p",
+    "mass": 121.7601,
+    "electronConfig": "[Kr] 4d10 5s2 5p3",
+    "shells": [
+      2,
+      8,
+      18,
+      18,
+      5
+    ],
+    "stateSTP": "solid",
+    "meltingK": 903.78,
+    "boilingK": 1908,
+    "densityGcm3": 6.697,
+    "electronegativity": 2.05,
+    "atomicRadiusPm": 145,
+    "ionizationKJmol": 834,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur metaloid dengan simbol Sb dan nomor atom 51. Berada pada periode 5, golongan 15. Massa atom 121.7601 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 52,
+    "symbol": "Te",
+    "name": "Telurium",
+    "category": "metalloid",
+    "group": 16,
+    "period": 5,
+    "block": "p",
+    "mass": 127.603,
+    "electronConfig": "[Kr] 4d10 5s2 5p4",
+    "shells": [
+      2,
+      8,
+      18,
+      18,
+      6
+    ],
+    "stateSTP": "solid",
+    "meltingK": 722.66,
+    "boilingK": 1261,
+    "densityGcm3": 6.24,
+    "electronegativity": 2.1,
+    "atomicRadiusPm": 140,
+    "ionizationKJmol": 869.3,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur metaloid dengan simbol Te dan nomor atom 52. Berada pada periode 5, golongan 16. Massa atom 127.603 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 53,
+    "symbol": "I",
+    "name": "Iodin",
+    "category": "nonmetal",
+    "group": 17,
+    "period": 5,
+    "block": "p",
+    "mass": 126.904473,
+    "electronConfig": "[Kr] 4d10 5s2 5p5",
+    "shells": [
+      2,
+      8,
+      18,
+      18,
+      7
+    ],
+    "stateSTP": "solid",
+    "meltingK": 386.85,
+    "boilingK": 457.4,
+    "densityGcm3": 4.933,
+    "electronegativity": 2.66,
+    "atomicRadiusPm": 140,
+    "ionizationKJmol": 1008.4,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur nonlogam dengan simbol I dan nomor atom 53. Berada pada periode 5, golongan 17. Massa atom 126.904473 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 54,
+    "symbol": "Xe",
+    "name": "Xenon",
+    "category": "noble",
+    "group": 18,
+    "period": 5,
+    "block": "p",
+    "mass": 131.2936,
+    "electronConfig": "[Kr] 4d10 5s2 5p6",
+    "shells": [
+      2,
+      8,
+      18,
+      18,
+      8
+    ],
+    "stateSTP": "gas",
+    "meltingK": 161.4,
+    "boilingK": 165.051,
+    "densityGcm3": 0.005894,
+    "electronegativity": 2.6,
+    "atomicRadiusPm": 108,
+    "ionizationKJmol": 1170.4,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur gas mulia dengan simbol Xe dan nomor atom 54. Berada pada periode 5, golongan 18. Massa atom 131.2936 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 55,
+    "symbol": "Cs",
+    "name": "Sesium",
+    "category": "alkali",
+    "group": 1,
+    "period": 6,
+    "block": "s",
+    "mass": 132.905451966,
+    "electronConfig": "[Xe] 6s1",
+    "shells": [
+      2,
+      8,
+      18,
+      18,
+      8,
+      1
+    ],
+    "stateSTP": "solid",
+    "meltingK": 301.7,
+    "boilingK": 944,
+    "densityGcm3": 1.93,
+    "electronegativity": 0.79,
+    "atomicRadiusPm": 260,
+    "ionizationKJmol": 375.7,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam alkali dengan simbol Cs dan nomor atom 55. Berada pada periode 6, golongan 1. Massa atom 132.905451966 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 56,
+    "symbol": "Ba",
+    "name": "Barium",
+    "category": "alkaline",
+    "group": 2,
+    "period": 6,
+    "block": "s",
+    "mass": 137.3277,
+    "electronConfig": "[Xe] 6s2",
+    "shells": [
+      2,
+      8,
+      18,
+      18,
+      8,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 1000,
+    "boilingK": 2118,
+    "densityGcm3": 3.51,
+    "electronegativity": 0.89,
+    "atomicRadiusPm": 215,
+    "ionizationKJmol": 502.9,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam alkali tanah dengan simbol Ba dan nomor atom 56. Berada pada periode 6, golongan 2. Massa atom 137.3277 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 57,
+    "symbol": "La",
+    "name": "Lantanum",
+    "category": "lanthanide",
+    "group": null,
+    "period": 6,
+    "block": "f",
+    "mass": 138.905477,
+    "electronConfig": "[Xe] 5d1 6s2",
+    "shells": [
+      2,
+      8,
+      18,
+      18,
+      9,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 1193,
+    "boilingK": 3737,
+    "densityGcm3": 6.162,
+    "electronegativity": 1.1,
+    "atomicRadiusPm": 195,
+    "ionizationKJmol": 538.1,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur lantanida dengan simbol La dan nomor atom 57. Berada pada periode 6 (blok-f). Massa atom 138.905477 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 58,
+    "symbol": "Ce",
+    "name": "Serium",
+    "category": "lanthanide",
+    "group": null,
+    "period": 6,
+    "block": "f",
+    "mass": 140.1161,
+    "electronConfig": "[Xe] 4f1 5d1 6s2",
+    "shells": [
+      2,
+      8,
+      18,
+      19,
+      9,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 1068,
+    "boilingK": 3716,
+    "densityGcm3": 6.77,
+    "electronegativity": 1.12,
+    "atomicRadiusPm": 185,
+    "ionizationKJmol": 534.4,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur lantanida dengan simbol Ce dan nomor atom 58. Berada pada periode 6 (blok-f). Massa atom 140.1161 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 59,
+    "symbol": "Pr",
+    "name": "Praseodimium",
+    "category": "lanthanide",
+    "group": null,
+    "period": 6,
+    "block": "f",
+    "mass": 140.907662,
+    "electronConfig": "[Xe] 4f3 6s2",
+    "shells": [
+      2,
+      8,
+      18,
+      21,
+      8,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 1208,
+    "boilingK": 3403,
+    "densityGcm3": 6.77,
+    "electronegativity": 1.13,
+    "atomicRadiusPm": 185,
+    "ionizationKJmol": 527,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur lantanida dengan simbol Pr dan nomor atom 59. Berada pada periode 6 (blok-f). Massa atom 140.907662 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 60,
+    "symbol": "Nd",
+    "name": "Neodimium",
+    "category": "lanthanide",
+    "group": null,
+    "period": 6,
+    "block": "f",
+    "mass": 144.2423,
+    "electronConfig": "[Xe] 4f4 6s2",
+    "shells": [
+      2,
+      8,
+      18,
+      22,
+      8,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 1297,
+    "boilingK": 3347,
+    "densityGcm3": 7.01,
+    "electronegativity": 1.14,
+    "atomicRadiusPm": 185,
+    "ionizationKJmol": 533.1,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur lantanida dengan simbol Nd dan nomor atom 60. Berada pada periode 6 (blok-f). Massa atom 144.2423 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 61,
+    "symbol": "Pm",
+    "name": "Prometium",
+    "category": "lanthanide",
+    "group": null,
+    "period": 6,
+    "block": "f",
+    "mass": 145,
+    "electronConfig": "[Xe] 4f5 6s2",
+    "shells": [
+      2,
+      8,
+      18,
+      23,
+      8,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 1315,
+    "boilingK": 3273,
+    "densityGcm3": 7.26,
+    "electronegativity": 1.13,
+    "atomicRadiusPm": 185,
+    "ionizationKJmol": 540,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur lantanida dengan simbol Pm dan nomor atom 61. Berada pada periode 6 (blok-f). Massa atom 145 u. Unsur ini hanya dapat dibuat di laboratorium.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 62,
+    "symbol": "Sm",
+    "name": "Samarium",
+    "category": "lanthanide",
+    "group": null,
+    "period": 6,
+    "block": "f",
+    "mass": 150.362,
+    "electronConfig": "[Xe] 4f6 6s2",
+    "shells": [
+      2,
+      8,
+      18,
+      24,
+      8,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 1345,
+    "boilingK": 2173,
+    "densityGcm3": 7.52,
+    "electronegativity": 1.17,
+    "atomicRadiusPm": 185,
+    "ionizationKJmol": 544.5,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur lantanida dengan simbol Sm dan nomor atom 62. Berada pada periode 6 (blok-f). Massa atom 150.362 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 63,
+    "symbol": "Eu",
+    "name": "Europium",
+    "category": "lanthanide",
+    "group": null,
+    "period": 6,
+    "block": "f",
+    "mass": 151.9641,
+    "electronConfig": "[Xe] 4f7 6s2",
+    "shells": [
+      2,
+      8,
+      18,
+      25,
+      8,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 1099,
+    "boilingK": 1802,
+    "densityGcm3": 5.264,
+    "electronegativity": 1.2,
+    "atomicRadiusPm": 185,
+    "ionizationKJmol": 547.1,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur lantanida dengan simbol Eu dan nomor atom 63. Berada pada periode 6 (blok-f). Massa atom 151.9641 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 64,
+    "symbol": "Gd",
+    "name": "Gadolinium",
+    "category": "lanthanide",
+    "group": null,
+    "period": 6,
+    "block": "f",
+    "mass": 157.253,
+    "electronConfig": "[Xe] 4f7 5d1 6s2",
+    "shells": [
+      2,
+      8,
+      18,
+      25,
+      9,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 1585,
+    "boilingK": 3273,
+    "densityGcm3": 7.9,
+    "electronegativity": 1.2,
+    "atomicRadiusPm": 180,
+    "ionizationKJmol": 593.4,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur lantanida dengan simbol Gd dan nomor atom 64. Berada pada periode 6 (blok-f). Massa atom 157.253 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 65,
+    "symbol": "Tb",
+    "name": "Terbium",
+    "category": "lanthanide",
+    "group": null,
+    "period": 6,
+    "block": "f",
+    "mass": 158.925352,
+    "electronConfig": "[Xe] 4f9 6s2",
+    "shells": [
+      2,
+      8,
+      18,
+      27,
+      8,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 1629,
+    "boilingK": 3396,
+    "densityGcm3": 8.23,
+    "electronegativity": 1.1,
+    "atomicRadiusPm": 175,
+    "ionizationKJmol": 565.8,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur lantanida dengan simbol Tb dan nomor atom 65. Berada pada periode 6 (blok-f). Massa atom 158.925352 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 66,
+    "symbol": "Dy",
+    "name": "Disprosium",
+    "category": "lanthanide",
+    "group": null,
+    "period": 6,
+    "block": "f",
+    "mass": 162.5001,
+    "electronConfig": "[Xe] 4f10 6s2",
+    "shells": [
+      2,
+      8,
+      18,
+      28,
+      8,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 1680,
+    "boilingK": 2840,
+    "densityGcm3": 8.54,
+    "electronegativity": 1.22,
+    "atomicRadiusPm": 175,
+    "ionizationKJmol": 573,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur lantanida dengan simbol Dy dan nomor atom 66. Berada pada periode 6 (blok-f). Massa atom 162.5001 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 67,
+    "symbol": "Ho",
+    "name": "Holmium",
+    "category": "lanthanide",
+    "group": null,
+    "period": 6,
+    "block": "f",
+    "mass": 164.930332,
+    "electronConfig": "[Xe] 4f11 6s2",
+    "shells": [
+      2,
+      8,
+      18,
+      29,
+      8,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 1734,
+    "boilingK": 2873,
+    "densityGcm3": 8.79,
+    "electronegativity": 1.23,
+    "atomicRadiusPm": 175,
+    "ionizationKJmol": 581,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur lantanida dengan simbol Ho dan nomor atom 67. Berada pada periode 6 (blok-f). Massa atom 164.930332 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 68,
+    "symbol": "Er",
+    "name": "Erbium",
+    "category": "lanthanide",
+    "group": null,
+    "period": 6,
+    "block": "f",
+    "mass": 167.2593,
+    "electronConfig": "[Xe] 4f12 6s2",
+    "shells": [
+      2,
+      8,
+      18,
+      30,
+      8,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 1802,
+    "boilingK": 3141,
+    "densityGcm3": 9.066,
+    "electronegativity": 1.24,
+    "atomicRadiusPm": 175,
+    "ionizationKJmol": 589.3,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur lantanida dengan simbol Er dan nomor atom 68. Berada pada periode 6 (blok-f). Massa atom 167.2593 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 69,
+    "symbol": "Tm",
+    "name": "Tulium",
+    "category": "lanthanide",
+    "group": null,
+    "period": 6,
+    "block": "f",
+    "mass": 168.934222,
+    "electronConfig": "[Xe] 4f13 6s2",
+    "shells": [
+      2,
+      8,
+      18,
+      31,
+      8,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 1818,
+    "boilingK": 2223,
+    "densityGcm3": 9.32,
+    "electronegativity": 1.25,
+    "atomicRadiusPm": 175,
+    "ionizationKJmol": 596.7,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur lantanida dengan simbol Tm dan nomor atom 69. Berada pada periode 6 (blok-f). Massa atom 168.934222 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 70,
+    "symbol": "Yb",
+    "name": "Iterbium",
+    "category": "lanthanide",
+    "group": null,
+    "period": 6,
+    "block": "f",
+    "mass": 173.0451,
+    "electronConfig": "[Xe] 4f14 6s2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      8,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 1097,
+    "boilingK": 1469,
+    "densityGcm3": 6.9,
+    "electronegativity": 1.1,
+    "atomicRadiusPm": 175,
+    "ionizationKJmol": 603.4,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur lantanida dengan simbol Yb dan nomor atom 70. Berada pada periode 6 (blok-f). Massa atom 173.0451 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 71,
+    "symbol": "Lu",
+    "name": "Lutesium",
+    "category": "lanthanide",
+    "group": null,
+    "period": 6,
+    "block": "d",
+    "mass": 174.96681,
+    "electronConfig": "[Xe] 4f14 5d1 6s2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      9,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 1925,
+    "boilingK": 3675,
+    "densityGcm3": 9.841,
+    "electronegativity": 1.27,
+    "atomicRadiusPm": 175,
+    "ionizationKJmol": 523.5,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur lantanida dengan simbol Lu dan nomor atom 71. Berada pada periode 6 (blok-f). Massa atom 174.96681 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 72,
+    "symbol": "Hf",
+    "name": "Hafnium",
+    "category": "transition",
+    "group": 4,
+    "period": 6,
+    "block": "d",
+    "mass": 178.492,
+    "electronConfig": "[Xe] 4f14 5d2 6s2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      10,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 2506,
+    "boilingK": 4876,
+    "densityGcm3": 13.31,
+    "electronegativity": 1.3,
+    "atomicRadiusPm": 155,
+    "ionizationKJmol": 658.5,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam transisi dengan simbol Hf dan nomor atom 72. Berada pada periode 6, golongan 4. Massa atom 178.492 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 73,
+    "symbol": "Ta",
+    "name": "Tantalum",
+    "category": "transition",
+    "group": 5,
+    "period": 6,
+    "block": "d",
+    "mass": 180.947882,
+    "electronConfig": "[Xe] 4f14 5d3 6s2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      11,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 3290,
+    "boilingK": 5731,
+    "densityGcm3": 16.69,
+    "electronegativity": 1.5,
+    "atomicRadiusPm": 145,
+    "ionizationKJmol": 761,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam transisi dengan simbol Ta dan nomor atom 73. Berada pada periode 6, golongan 5. Massa atom 180.947882 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 74,
+    "symbol": "W",
+    "name": "Wolfram",
+    "category": "transition",
+    "group": 6,
+    "period": 6,
+    "block": "d",
+    "mass": 183.841,
+    "electronConfig": "[Xe] 4f14 5d4 6s2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      12,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 3695,
+    "boilingK": 6203,
+    "densityGcm3": 19.25,
+    "electronegativity": 2.36,
+    "atomicRadiusPm": 135,
+    "ionizationKJmol": 770,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam transisi dengan simbol W dan nomor atom 74. Berada pada periode 6, golongan 6. Massa atom 183.841 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 75,
+    "symbol": "Re",
+    "name": "Renium",
+    "category": "transition",
+    "group": 7,
+    "period": 6,
+    "block": "d",
+    "mass": 186.2071,
+    "electronConfig": "[Xe] 4f14 5d5 6s2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      13,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 3459,
+    "boilingK": 5869,
+    "densityGcm3": 21.02,
+    "electronegativity": 1.9,
+    "atomicRadiusPm": 135,
+    "ionizationKJmol": 760,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam transisi dengan simbol Re dan nomor atom 75. Berada pada periode 6, golongan 7. Massa atom 186.2071 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 76,
+    "symbol": "Os",
+    "name": "Osmium",
+    "category": "transition",
+    "group": 8,
+    "period": 6,
+    "block": "d",
+    "mass": 190.233,
+    "electronConfig": "[Xe] 4f14 5d6 6s2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      14,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 3306,
+    "boilingK": 5285,
+    "densityGcm3": 22.59,
+    "electronegativity": 2.2,
+    "atomicRadiusPm": 130,
+    "ionizationKJmol": 840,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam transisi dengan simbol Os dan nomor atom 76. Berada pada periode 6, golongan 8. Massa atom 190.233 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 77,
+    "symbol": "Ir",
+    "name": "Iridium",
+    "category": "transition",
+    "group": 9,
+    "period": 6,
+    "block": "d",
+    "mass": 192.2173,
+    "electronConfig": "[Xe] 4f14 5d7 6s2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      15,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 2719,
+    "boilingK": 4403,
+    "densityGcm3": 22.56,
+    "electronegativity": 2.2,
+    "atomicRadiusPm": 135,
+    "ionizationKJmol": 880,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam transisi dengan simbol Ir dan nomor atom 77. Berada pada periode 6, golongan 9. Massa atom 192.2173 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 78,
+    "symbol": "Pt",
+    "name": "Platinum",
+    "category": "transition",
+    "group": 10,
+    "period": 6,
+    "block": "d",
+    "mass": 195.0849,
+    "electronConfig": "[Xe] 4f14 5d9 6s1",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      17,
+      1
+    ],
+    "stateSTP": "solid",
+    "meltingK": 2041.4,
+    "boilingK": 4098,
+    "densityGcm3": 21.45,
+    "electronegativity": 2.28,
+    "atomicRadiusPm": 135,
+    "ionizationKJmol": 870,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam transisi dengan simbol Pt dan nomor atom 78. Berada pada periode 6, golongan 10. Massa atom 195.0849 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 79,
+    "symbol": "Au",
+    "name": "Emas",
+    "category": "transition",
+    "group": 11,
+    "period": 6,
+    "block": "d",
+    "mass": 196.9665695,
+    "electronConfig": "[Xe] 4f14 5d10 6s1",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      18,
+      1
+    ],
+    "stateSTP": "solid",
+    "meltingK": 1337.33,
+    "boilingK": 3243,
+    "densityGcm3": 19.3,
+    "electronegativity": 2.54,
+    "atomicRadiusPm": 135,
+    "ionizationKJmol": 890.1,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam transisi dengan simbol Au dan nomor atom 79. Berada pada periode 6, golongan 11. Massa atom 196.9665695 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 80,
+    "symbol": "Hg",
+    "name": "Raksa",
+    "category": "transition",
+    "group": 12,
+    "period": 6,
+    "block": "d",
+    "mass": 200.5923,
+    "electronConfig": "[Xe] 4f14 5d10 6s2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      18,
+      2
+    ],
+    "stateSTP": "liquid",
+    "meltingK": 234.321,
+    "boilingK": 629.88,
+    "densityGcm3": 13.534,
+    "electronegativity": 2,
+    "atomicRadiusPm": 150,
+    "ionizationKJmol": 1007.1,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam transisi dengan simbol Hg dan nomor atom 80. Berada pada periode 6, golongan 12. Massa atom 200.5923 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 81,
+    "symbol": "Tl",
+    "name": "Talium",
+    "category": "post-transition",
+    "group": 13,
+    "period": 6,
+    "block": "p",
+    "mass": 204.38,
+    "electronConfig": "[Xe] 4f14 5d10 6s2 6p1",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      18,
+      3
+    ],
+    "stateSTP": "solid",
+    "meltingK": 577,
+    "boilingK": 1746,
+    "densityGcm3": 11.85,
+    "electronegativity": 1.62,
+    "atomicRadiusPm": 190,
+    "ionizationKJmol": 589.4,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam pascatransisi dengan simbol Tl dan nomor atom 81. Berada pada periode 6, golongan 13. Massa atom 204.38 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 82,
+    "symbol": "Pb",
+    "name": "Timbal",
+    "category": "post-transition",
+    "group": 14,
+    "period": 6,
+    "block": "p",
+    "mass": 207.21,
+    "electronConfig": "[Xe] 4f14 5d10 6s2 6p2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      18,
+      4
+    ],
+    "stateSTP": "solid",
+    "meltingK": 600.61,
+    "boilingK": 2022,
+    "densityGcm3": 11.34,
+    "electronegativity": 1.87,
+    "atomicRadiusPm": 180,
+    "ionizationKJmol": 715.6,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam pascatransisi dengan simbol Pb dan nomor atom 82. Berada pada periode 6, golongan 14. Massa atom 207.21 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 83,
+    "symbol": "Bi",
+    "name": "Bismut",
+    "category": "post-transition",
+    "group": 15,
+    "period": 6,
+    "block": "p",
+    "mass": 208.980401,
+    "electronConfig": "[Xe] 4f14 5d10 6s2 6p3",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      18,
+      5
+    ],
+    "stateSTP": "solid",
+    "meltingK": 544.7,
+    "boilingK": 1837,
+    "densityGcm3": 9.78,
+    "electronegativity": 2.02,
+    "atomicRadiusPm": 160,
+    "ionizationKJmol": 703,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam pascatransisi dengan simbol Bi dan nomor atom 83. Berada pada periode 6, golongan 15. Massa atom 208.980401 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 84,
+    "symbol": "Po",
+    "name": "Polonium",
+    "category": "post-transition",
+    "group": 16,
+    "period": 6,
+    "block": "p",
+    "mass": 209,
+    "electronConfig": "[Xe] 4f14 5d10 6s2 6p4",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      18,
+      6
+    ],
+    "stateSTP": "solid",
+    "meltingK": 527,
+    "boilingK": 1235,
+    "densityGcm3": 9.196,
+    "electronegativity": 2,
+    "atomicRadiusPm": 190,
+    "ionizationKJmol": 812.1,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam pascatransisi dengan simbol Po dan nomor atom 84. Berada pada periode 6, golongan 16. Massa atom 209 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 85,
+    "symbol": "At",
+    "name": "Astatin",
+    "category": "metalloid",
+    "group": 17,
+    "period": 6,
+    "block": "p",
+    "mass": 210,
+    "electronConfig": "[Xe] 4f14 5d10 6s2 6p5",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      18,
+      7
+    ],
+    "stateSTP": "solid",
+    "meltingK": 575,
+    "boilingK": 610,
+    "densityGcm3": 6.35,
+    "electronegativity": 2.2,
+    "atomicRadiusPm": 127,
+    "ionizationKJmol": 899.003,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur metaloid dengan simbol At dan nomor atom 85. Berada pada periode 6, golongan 17. Massa atom 210 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 86,
+    "symbol": "Rn",
+    "name": "Radon",
+    "category": "noble",
+    "group": 18,
+    "period": 6,
+    "block": "p",
+    "mass": 222,
+    "electronConfig": "[Xe] 4f14 5d10 6s2 6p6",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      18,
+      8
+    ],
+    "stateSTP": "gas",
+    "meltingK": 202,
+    "boilingK": 211.5,
+    "densityGcm3": 0.00973,
+    "electronegativity": 2.2,
+    "atomicRadiusPm": 120,
+    "ionizationKJmol": 1037,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur gas mulia dengan simbol Rn dan nomor atom 86. Berada pada periode 6, golongan 18. Massa atom 222 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 87,
+    "symbol": "Fr",
+    "name": "Fransium",
+    "category": "alkali",
+    "group": 1,
+    "period": 7,
+    "block": "s",
+    "mass": 223,
+    "electronConfig": "[Rn] 7s1",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      18,
+      8,
+      1
+    ],
+    "stateSTP": "solid",
+    "meltingK": 300,
+    "boilingK": 950,
+    "densityGcm3": 1.87,
+    "electronegativity": 0.79,
+    "atomicRadiusPm": 348,
+    "ionizationKJmol": 380,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam alkali dengan simbol Fr dan nomor atom 87. Berada pada periode 7, golongan 1. Massa atom 223 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 88,
+    "symbol": "Ra",
+    "name": "Radium",
+    "category": "alkaline",
+    "group": 2,
+    "period": 7,
+    "block": "s",
+    "mass": 226,
+    "electronConfig": "[Rn] 7s2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      18,
+      8,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 1233,
+    "boilingK": 2010,
+    "densityGcm3": 5.5,
+    "electronegativity": 0.9,
+    "atomicRadiusPm": 215,
+    "ionizationKJmol": 509.3,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam alkali tanah dengan simbol Ra dan nomor atom 88. Berada pada periode 7, golongan 2. Massa atom 226 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 89,
+    "symbol": "Ac",
+    "name": "Aktinium",
+    "category": "actinide",
+    "group": null,
+    "period": 7,
+    "block": "f",
+    "mass": 227,
+    "electronConfig": "[Rn] 6d1 7s2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      18,
+      9,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 1500,
+    "boilingK": 3500,
+    "densityGcm3": 10,
+    "electronegativity": 1.1,
+    "atomicRadiusPm": 195,
+    "ionizationKJmol": 499,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur aktinida dengan simbol Ac dan nomor atom 89. Berada pada periode 7 (blok-f). Massa atom 227 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 90,
+    "symbol": "Th",
+    "name": "Torium",
+    "category": "actinide",
+    "group": null,
+    "period": 7,
+    "block": "f",
+    "mass": 232.03774,
+    "electronConfig": "[Rn] 6d2 7s2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      18,
+      10,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 2023,
+    "boilingK": 5061,
+    "densityGcm3": 11.724,
+    "electronegativity": 1.3,
+    "atomicRadiusPm": 180,
+    "ionizationKJmol": 587,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur aktinida dengan simbol Th dan nomor atom 90. Berada pada periode 7 (blok-f). Massa atom 232.03774 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 91,
+    "symbol": "Pa",
+    "name": "Protaktinium",
+    "category": "actinide",
+    "group": null,
+    "period": 7,
+    "block": "f",
+    "mass": 231.035882,
+    "electronConfig": "[Rn] 5f2 6d1 7s2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      20,
+      9,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 1841,
+    "boilingK": 4300,
+    "densityGcm3": 15.37,
+    "electronegativity": 1.5,
+    "atomicRadiusPm": 180,
+    "ionizationKJmol": 568,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur aktinida dengan simbol Pa dan nomor atom 91. Berada pada periode 7 (blok-f). Massa atom 231.035882 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 92,
+    "symbol": "U",
+    "name": "Uranium",
+    "category": "actinide",
+    "group": null,
+    "period": 7,
+    "block": "f",
+    "mass": 238.028913,
+    "electronConfig": "[Rn] 5f3 6d1 7s2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      21,
+      9,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 1405.3,
+    "boilingK": 4404,
+    "densityGcm3": 19.1,
+    "electronegativity": 1.38,
+    "atomicRadiusPm": 175,
+    "ionizationKJmol": 597.6,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur aktinida dengan simbol U dan nomor atom 92. Berada pada periode 7 (blok-f). Massa atom 238.028913 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 93,
+    "symbol": "Np",
+    "name": "Neptunium",
+    "category": "actinide",
+    "group": null,
+    "period": 7,
+    "block": "f",
+    "mass": 237,
+    "electronConfig": "[Rn] 5f4 6d1 7s2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      22,
+      9,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 912,
+    "boilingK": 4447,
+    "densityGcm3": 20.45,
+    "electronegativity": 1.36,
+    "atomicRadiusPm": 175,
+    "ionizationKJmol": 604.5,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur aktinida dengan simbol Np dan nomor atom 93. Berada pada periode 7 (blok-f). Massa atom 237 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 94,
+    "symbol": "Pu",
+    "name": "Plutonium",
+    "category": "actinide",
+    "group": null,
+    "period": 7,
+    "block": "f",
+    "mass": 244,
+    "electronConfig": "[Rn] 5f6 7s2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      24,
+      8,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 912.5,
+    "boilingK": 3505,
+    "densityGcm3": 19.816,
+    "electronegativity": 1.28,
+    "atomicRadiusPm": 175,
+    "ionizationKJmol": 584.7,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur aktinida dengan simbol Pu dan nomor atom 94. Berada pada periode 7 (blok-f). Massa atom 244 u.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 95,
+    "symbol": "Am",
+    "name": "Amerisium",
+    "category": "actinide",
+    "group": null,
+    "period": 7,
+    "block": "f",
+    "mass": 243,
+    "electronConfig": "[Rn] 5f7 7s2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      25,
+      8,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 1449,
+    "boilingK": 2880,
+    "densityGcm3": 12,
+    "electronegativity": 1.13,
+    "atomicRadiusPm": 175,
+    "ionizationKJmol": 578,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur aktinida dengan simbol Am dan nomor atom 95. Berada pada periode 7 (blok-f). Massa atom 243 u. Unsur ini hanya dapat dibuat di laboratorium.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 96,
+    "symbol": "Cm",
+    "name": "Kurium",
+    "category": "actinide",
+    "group": null,
+    "period": 7,
+    "block": "f",
+    "mass": 247,
+    "electronConfig": "[Rn] 5f7 6d1 7s2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      25,
+      9,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 1613,
+    "boilingK": 3383,
+    "densityGcm3": 13.51,
+    "electronegativity": 1.28,
+    "atomicRadiusPm": 176,
+    "ionizationKJmol": 581,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur aktinida dengan simbol Cm dan nomor atom 96. Berada pada periode 7 (blok-f). Massa atom 247 u. Unsur ini hanya dapat dibuat di laboratorium.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 97,
+    "symbol": "Bk",
+    "name": "Berkelium",
+    "category": "actinide",
+    "group": null,
+    "period": 7,
+    "block": "f",
+    "mass": 247,
+    "electronConfig": "[Rn] 5f9 7s2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      27,
+      8,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 1259,
+    "boilingK": 2900,
+    "densityGcm3": 14.78,
+    "electronegativity": 1.3,
+    "atomicRadiusPm": null,
+    "ionizationKJmol": 601,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur aktinida dengan simbol Bk dan nomor atom 97. Berada pada periode 7 (blok-f). Massa atom 247 u. Unsur ini hanya dapat dibuat di laboratorium.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 98,
+    "symbol": "Cf",
+    "name": "Kalifornium",
+    "category": "actinide",
+    "group": null,
+    "period": 7,
+    "block": "f",
+    "mass": 251,
+    "electronConfig": "[Rn] 5f10 7s2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      28,
+      8,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 1173,
+    "boilingK": 1743,
+    "densityGcm3": 15.1,
+    "electronegativity": 1.3,
+    "atomicRadiusPm": null,
+    "ionizationKJmol": 608,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur aktinida dengan simbol Cf dan nomor atom 98. Berada pada periode 7 (blok-f). Massa atom 251 u. Unsur ini hanya dapat dibuat di laboratorium.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 99,
+    "symbol": "Es",
+    "name": "Einsteinium",
+    "category": "actinide",
+    "group": null,
+    "period": 7,
+    "block": "f",
+    "mass": 252,
+    "electronConfig": "[Rn] 5f11 7s2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      29,
+      8,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 1133,
+    "boilingK": 1269,
+    "densityGcm3": 8.84,
+    "electronegativity": 1.3,
+    "atomicRadiusPm": null,
+    "ionizationKJmol": 619,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur aktinida dengan simbol Es dan nomor atom 99. Berada pada periode 7 (blok-f). Massa atom 252 u. Unsur ini hanya dapat dibuat di laboratorium.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 100,
+    "symbol": "Fm",
+    "name": "Fermium",
+    "category": "actinide",
+    "group": null,
+    "period": 7,
+    "block": "f",
+    "mass": 257,
+    "electronConfig": "[Rn] 5f12 7s2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      30,
+      8,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 1800,
+    "boilingK": null,
+    "densityGcm3": null,
+    "electronegativity": 1.3,
+    "atomicRadiusPm": null,
+    "ionizationKJmol": 627,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur aktinida dengan simbol Fm dan nomor atom 100. Berada pada periode 7 (blok-f). Massa atom 257 u. Unsur ini hanya dapat dibuat di laboratorium.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 101,
+    "symbol": "Md",
+    "name": "Mendelevium",
+    "category": "actinide",
+    "group": null,
+    "period": 7,
+    "block": "f",
+    "mass": 258,
+    "electronConfig": "[Rn] 5f13 7s2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      31,
+      8,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 1100,
+    "boilingK": null,
+    "densityGcm3": null,
+    "electronegativity": 1.3,
+    "atomicRadiusPm": null,
+    "ionizationKJmol": 635,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur aktinida dengan simbol Md dan nomor atom 101. Berada pada periode 7 (blok-f). Massa atom 258 u. Unsur ini hanya dapat dibuat di laboratorium.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 102,
+    "symbol": "No",
+    "name": "Nobelium",
+    "category": "actinide",
+    "group": null,
+    "period": 7,
+    "block": "f",
+    "mass": 259,
+    "electronConfig": "[Rn] 5f14 7s2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      32,
+      8,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 1100,
+    "boilingK": null,
+    "densityGcm3": null,
+    "electronegativity": 1.3,
+    "atomicRadiusPm": null,
+    "ionizationKJmol": 642,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur aktinida dengan simbol No dan nomor atom 102. Berada pada periode 7 (blok-f). Massa atom 259 u. Unsur ini hanya dapat dibuat di laboratorium.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 103,
+    "symbol": "Lr",
+    "name": "Lawrensium",
+    "category": "actinide",
+    "group": null,
+    "period": 7,
+    "block": "d",
+    "mass": 266,
+    "electronConfig": "[Rn] 5f14 7s2 7p1",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      32,
+      8,
+      3
+    ],
+    "stateSTP": "solid",
+    "meltingK": 1900,
+    "boilingK": null,
+    "densityGcm3": null,
+    "electronegativity": 1.3,
+    "atomicRadiusPm": null,
+    "ionizationKJmol": 470,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur aktinida dengan simbol Lr dan nomor atom 103. Berada pada periode 7 (blok-f). Massa atom 266 u. Unsur ini hanya dapat dibuat di laboratorium.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 104,
+    "symbol": "Rf",
+    "name": "Rutherfordium",
+    "category": "transition",
+    "group": 4,
+    "period": 7,
+    "block": "d",
+    "mass": 267,
+    "electronConfig": "[Rn] 5f14 6d2 7s2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      32,
+      10,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": 2400,
+    "boilingK": 5800,
+    "densityGcm3": 23.2,
+    "electronegativity": null,
+    "atomicRadiusPm": null,
+    "ionizationKJmol": 580,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam transisi dengan simbol Rf dan nomor atom 104. Berada pada periode 7, golongan 4. Massa atom 267 u. Unsur ini hanya dapat dibuat di laboratorium.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 105,
+    "symbol": "Db",
+    "name": "Dubnium",
+    "category": "transition",
+    "group": 5,
+    "period": 7,
+    "block": "d",
+    "mass": 268,
+    "electronConfig": "*[Rn] 5f14 6d3 7s2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      32,
+      11,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": null,
+    "boilingK": null,
+    "densityGcm3": 29.3,
+    "electronegativity": null,
+    "atomicRadiusPm": null,
+    "ionizationKJmol": null,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam transisi dengan simbol Db dan nomor atom 105. Berada pada periode 7, golongan 5. Massa atom 268 u. Unsur ini hanya dapat dibuat di laboratorium.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 106,
+    "symbol": "Sg",
+    "name": "Seaborgium",
+    "category": "transition",
+    "group": 6,
+    "period": 7,
+    "block": "d",
+    "mass": 269,
+    "electronConfig": "*[Rn] 5f14 6d4 7s2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      32,
+      12,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": null,
+    "boilingK": null,
+    "densityGcm3": 35,
+    "electronegativity": null,
+    "atomicRadiusPm": null,
+    "ionizationKJmol": null,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam transisi dengan simbol Sg dan nomor atom 106. Berada pada periode 7, golongan 6. Massa atom 269 u. Unsur ini hanya dapat dibuat di laboratorium.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 107,
+    "symbol": "Bh",
+    "name": "Bohrium",
+    "category": "transition",
+    "group": 7,
+    "period": 7,
+    "block": "d",
+    "mass": 270,
+    "electronConfig": "*[Rn] 5f14 6d5 7s2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      32,
+      13,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": null,
+    "boilingK": null,
+    "densityGcm3": 37.1,
+    "electronegativity": null,
+    "atomicRadiusPm": null,
+    "ionizationKJmol": null,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam transisi dengan simbol Bh dan nomor atom 107. Berada pada periode 7, golongan 7. Massa atom 270 u. Unsur ini hanya dapat dibuat di laboratorium.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 108,
+    "symbol": "Hs",
+    "name": "Hasium",
+    "category": "transition",
+    "group": 8,
+    "period": 7,
+    "block": "d",
+    "mass": 269,
+    "electronConfig": "*[Rn] 5f14 6d6 7s2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      32,
+      14,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": null,
+    "boilingK": null,
+    "densityGcm3": 40.7,
+    "electronegativity": null,
+    "atomicRadiusPm": null,
+    "ionizationKJmol": null,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam transisi dengan simbol Hs dan nomor atom 108. Berada pada periode 7, golongan 8. Massa atom 269 u. Unsur ini hanya dapat dibuat di laboratorium.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 109,
+    "symbol": "Mt",
+    "name": "Meitnerium",
+    "category": "transition",
+    "group": 9,
+    "period": 7,
+    "block": "d",
+    "mass": 278,
+    "electronConfig": "*[Rn] 5f14 6d7 7s2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      32,
+      15,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": null,
+    "boilingK": null,
+    "densityGcm3": 37.4,
+    "electronegativity": null,
+    "atomicRadiusPm": null,
+    "ionizationKJmol": null,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam transisi dengan simbol Mt dan nomor atom 109. Berada pada periode 7, golongan 9. Massa atom 278 u. Unsur ini hanya dapat dibuat di laboratorium.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 110,
+    "symbol": "Ds",
+    "name": "Darmstadtium",
+    "category": "transition",
+    "group": 10,
+    "period": 7,
+    "block": "d",
+    "mass": 281,
+    "electronConfig": "*[Rn] 5f14 6d9 7s1",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      32,
+      16,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": null,
+    "boilingK": null,
+    "densityGcm3": 34.8,
+    "electronegativity": null,
+    "atomicRadiusPm": null,
+    "ionizationKJmol": null,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam transisi dengan simbol Ds dan nomor atom 110. Berada pada periode 7, golongan 10. Massa atom 281 u. Unsur ini hanya dapat dibuat di laboratorium.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 111,
+    "symbol": "Rg",
+    "name": "Rontgenium",
+    "category": "transition",
+    "group": 11,
+    "period": 7,
+    "block": "d",
+    "mass": 282,
+    "electronConfig": "*[Rn] 5f14 6d10 7s1",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      32,
+      17,
+      2
+    ],
+    "stateSTP": "solid",
+    "meltingK": null,
+    "boilingK": null,
+    "densityGcm3": 28.7,
+    "electronegativity": null,
+    "atomicRadiusPm": null,
+    "ionizationKJmol": null,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam transisi dengan simbol Rg dan nomor atom 111. Berada pada periode 7, golongan 11. Massa atom 282 u. Unsur ini hanya dapat dibuat di laboratorium.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 112,
+    "symbol": "Cn",
+    "name": "Kopernisium",
+    "category": "transition",
+    "group": 12,
+    "period": 7,
+    "block": "d",
+    "mass": 285,
+    "electronConfig": "*[Rn] 5f14 6d10 7s2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      32,
+      18,
+      2
+    ],
+    "stateSTP": "liquid",
+    "meltingK": 283,
+    "boilingK": 340,
+    "densityGcm3": 14,
+    "electronegativity": null,
+    "atomicRadiusPm": null,
+    "ionizationKJmol": null,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam transisi dengan simbol Cn dan nomor atom 112. Berada pada periode 7, golongan 12. Massa atom 285 u. Unsur ini hanya dapat dibuat di laboratorium.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 113,
+    "symbol": "Nh",
+    "name": "Nihonium",
+    "category": "transition",
+    "group": 13,
+    "period": 7,
+    "block": "p",
+    "mass": 286,
+    "electronConfig": "*[Rn] 5f14 6d10 7s2 7p1",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      32,
+      18,
+      3
+    ],
+    "stateSTP": "solid",
+    "meltingK": 700,
+    "boilingK": 1430,
+    "densityGcm3": 16,
+    "electronegativity": null,
+    "atomicRadiusPm": null,
+    "ionizationKJmol": null,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam transisi dengan simbol Nh dan nomor atom 113. Berada pada periode 7, golongan 13. Massa atom 286 u. Unsur ini hanya dapat dibuat di laboratorium.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 114,
+    "symbol": "Fl",
+    "name": "Flerovium",
+    "category": "post-transition",
+    "group": 14,
+    "period": 7,
+    "block": "p",
+    "mass": 289,
+    "electronConfig": "*[Rn] 5f14 6d10 7s2 7p2",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      32,
+      18,
+      4
+    ],
+    "stateSTP": "solid",
+    "meltingK": 340,
+    "boilingK": 420,
+    "densityGcm3": 14,
+    "electronegativity": null,
+    "atomicRadiusPm": null,
+    "ionizationKJmol": null,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam pascatransisi dengan simbol Fl dan nomor atom 114. Berada pada periode 7, golongan 14. Massa atom 289 u. Unsur ini hanya dapat dibuat di laboratorium.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 115,
+    "symbol": "Mc",
+    "name": "Moskovium",
+    "category": "post-transition",
+    "group": 15,
+    "period": 7,
+    "block": "p",
+    "mass": 289,
+    "electronConfig": "*[Rn] 5f14 6d10 7s2 7p3",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      32,
+      18,
+      5
+    ],
+    "stateSTP": "solid",
+    "meltingK": 670,
+    "boilingK": 1400,
+    "densityGcm3": 13.5,
+    "electronegativity": null,
+    "atomicRadiusPm": null,
+    "ionizationKJmol": null,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam pascatransisi dengan simbol Mc dan nomor atom 115. Berada pada periode 7, golongan 15. Massa atom 289 u. Unsur ini hanya dapat dibuat di laboratorium.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 116,
+    "symbol": "Lv",
+    "name": "Livermorium",
+    "category": "post-transition",
+    "group": 16,
+    "period": 7,
+    "block": "p",
+    "mass": 293,
+    "electronConfig": "*[Rn] 5f14 6d10 7s2 7p4",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      32,
+      18,
+      6
+    ],
+    "stateSTP": "solid",
+    "meltingK": 709,
+    "boilingK": 1085,
+    "densityGcm3": 12.9,
+    "electronegativity": null,
+    "atomicRadiusPm": null,
+    "ionizationKJmol": null,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur logam pascatransisi dengan simbol Lv dan nomor atom 116. Berada pada periode 7, golongan 16. Massa atom 293 u. Unsur ini hanya dapat dibuat di laboratorium.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 117,
+    "symbol": "Ts",
+    "name": "Tenesin",
+    "category": "metalloid",
+    "group": 17,
+    "period": 7,
+    "block": "p",
+    "mass": 294,
+    "electronConfig": "*[Rn] 5f14 6d10 7s2 7p5",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      32,
+      18,
+      7
+    ],
+    "stateSTP": "solid",
+    "meltingK": 723,
+    "boilingK": 883,
+    "densityGcm3": 7.17,
+    "electronegativity": null,
+    "atomicRadiusPm": null,
+    "ionizationKJmol": null,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur metaloid dengan simbol Ts dan nomor atom 117. Berada pada periode 7, golongan 17. Massa atom 294 u. Unsur ini hanya dapat dibuat di laboratorium.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  },
+  {
+    "z": 118,
+    "symbol": "Og",
+    "name": "Oganeson",
+    "category": "noble",
+    "group": 18,
+    "period": 7,
+    "block": "p",
+    "mass": 294,
+    "electronConfig": "*[Rn] 5f14 6d10 7s2 7p6",
+    "shells": [
+      2,
+      8,
+      18,
+      32,
+      32,
+      18,
+      8
+    ],
+    "stateSTP": "solid",
+    "meltingK": null,
+    "boilingK": 350,
+    "densityGcm3": 4.95,
+    "electronegativity": null,
+    "atomicRadiusPm": null,
+    "ionizationKJmol": null,
+    "oxidationStates": [],
+    "isotopes": [],
+    "discoveredYear": null,
+    "summary": "Unsur gas mulia dengan simbol Og dan nomor atom 118. Berada pada periode 7, golongan 18. Massa atom 294 u. Unsur ini hanya dapat dibuat di laboratorium.",
+    "hazards": [],
+    "sources": [
+      "IUPAC",
+      "PubChem"
+    ]
+  }
+]

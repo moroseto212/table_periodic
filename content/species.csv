@@ -1,0 +1,121 @@
+id,formula,name,composition,charge,stateSTP,hazards,sources
+H2,H2,Gas hidrogen,H:2,0,gas,GHS02|GHS04,NIST
+O2,O2,Gas oksigen,O:2,0,gas,GHS03|GHS04,NIST
+H2O,H2O,Air,H:2|O:1,0,liquid,,NIST
+Na,Na,Natrium,Na:1,0,solid,GHS02|GHS05,PubChem
+Cl2,Cl2,Gas klorin,Cl:2,0,gas,GHS03|GHS06,PubChem
+NaCl,NaCl,Natrium klorida,Na:1|Cl:1,0,solid,,PubChem
+C,C,Karbon,C:1,0,solid,,NIST
+CO2,CO2,Karbon dioksida,C:1|O:2,0,gas,,NIST
+CO,CO,Karbon monoksida,C:1|O:1,0,gas,GHS06,PubChem
+HCl,HCl,Asam klorida,H:1|Cl:1,0,aqueous,GHS05|GHS07,PubChem
+Mg,Mg,Magnesium,Mg:1,0,solid,GHS02,PubChem
+MgO,MgO,Magnesium oksida,Mg:1|O:1,0,solid,,PubChem
+Fe,Fe,Besi,Fe:1,0,solid,,PubChem
+Fe2O3,Fe2O3,Besi(III) oksida,Fe:2|O:3,0,solid,,PubChem
+N2,N2,Gas nitrogen,N:2,0,gas,GHS04,NIST
+NH3,NH3,Amonia,N:1|H:3,0,gas,GHS04|GHS05|GHS06,PubChem
+Li,Li,Litium,Li:1,0,solid,GHS02|GHS05,PubChem
+Li2O,Li2O,Litium oksida,Li:2|O:1,0,solid,GHS05,PubChem
+LiOH,LiOH,Litium hidroksida,Li:1|O:1|H:1,0,aqueous,GHS05|GHS06,PubChem
+LiCl,LiCl,Litium klorida,Li:1|Cl:1,0,solid,GHS07,PubChem
+Na2O,Na2O,Natrium oksida,Na:2|O:1,0,solid,GHS05,PubChem
+Na2O2,Na2O2,Natrium peroksida,Na:2|O:2,0,solid,GHS03|GHS05,PubChem
+NaOH,NaOH,Natrium hidroksida,Na:1|O:1|H:1,0,aqueous,GHS05,PubChem
+Na2CO3,Na2CO3,Natrium karbonat,Na:2|C:1|O:3,0,solid,GHS07,PubChem
+NaHCO3,NaHCO3,Natrium bikarbonat,Na:1|H:1|C:1|O:3,0,solid,,PubChem
+NaNO3,NaNO3,Natrium nitrat,Na:1|N:1|O:3,0,solid,GHS03,PubChem
+Na2SO4,Na2SO4,Natrium sulfat,Na:2|S:1|O:4,0,solid,,PubChem
+Na2SO3,Na2SO3,Natrium sulfit,Na:2|S:1|O:3,0,solid,,PubChem
+NaBr,NaBr,Natrium bromida,Na:1|Br:1,0,solid,,PubChem
+NaClO,NaClO,Natrium hipoklorit,Na:1|Cl:1|O:1,0,aqueous,GHS05|GHS09,PubChem
+Na3PO4,Na3PO4,Natrium fosfat,Na:3|P:1|O:4,0,solid,GHS05|GHS07,PubChem
+K,K,Kalium,K:1,0,solid,GHS02|GHS05,PubChem
+K2O,K2O,Kalium oksida,K:2|O:1,0,solid,GHS05,PubChem
+KOH,KOH,Kalium hidroksida,K:1|O:1|H:1,0,aqueous,GHS05|GHS06,PubChem
+KCl,KCl,Kalium klorida,K:1|Cl:1,0,solid,,PubChem
+KNO3,KNO3,Kalium nitrat,K:1|N:1|O:3,0,solid,GHS03,PubChem
+KI,KI,Kalium iodida,K:1|I:1,0,solid,,PubChem
+MgCl2,MgCl2,Magnesium klorida,Mg:1|Cl:2,0,aqueous,,PubChem
+MgCO3,MgCO3,Magnesium karbonat,Mg:1|C:1|O:3,0,solid,,PubChem
+MgSO4,MgSO4,Magnesium sulfat,Mg:1|S:1|O:4,0,aqueous,,PubChem
+Mg3N2,Mg3N2,Magnesium nitrida,Mg:3|N:2,0,solid,GHS05,PubChem
+Mg(OH)2,Mg(OH)2,Magnesium hidroksida,Mg:1|O:2|H:2,0,solid,,PubChem
+Ca,Ca,Kalsium,Ca:1,0,solid,GHS02,PubChem
+CaO,CaO,Kalsium oksida,Ca:1|O:1,0,solid,GHS05,PubChem
+Ca(OH)2,Ca(OH)2,Kalsium hidroksida,Ca:1|O:2|H:2,0,solid,GHS05,PubChem
+CaCl2,CaCl2,Kalsium klorida,Ca:1|Cl:2,0,aqueous,,PubChem
+CaCO3,CaCO3,Kalsium karbonat,Ca:1|C:1|O:3,0,solid,,PubChem
+CaSO4,CaSO4,Kalsium sulfat,Ca:1|S:1|O:4,0,solid,,PubChem
+CaC2,CaC2,Kalsium karbida,Ca:1|C:2,0,solid,GHS02|GHS04,PubChem
+Ca(NO3)2,Ca(NO3)2,Kalsium nitrat,Ca:1|N:2|O:6,0,aqueous,GHS03,PubChem
+Ca(HCO3)2,Ca(HCO3)2,Kalsium bikarbonat,Ca:1|H:2|C:2|O:6,0,aqueous,,PubChem
+Ba,Ba,Barium,Ba:1,0,solid,GHS02|GHS06,PubChem
+BaO,BaO,Barium oksida,Ba:1|O:1,0,solid,GHS05|GHS06,PubChem
+Ba(OH)2,Ba(OH)2,Barium hidroksida,Ba:1|O:2|H:2,0,aqueous,GHS05|GHS06,PubChem
+BaCl2,BaCl2,Barium klorida,Ba:1|Cl:2,0,aqueous,GHS06,PubChem
+BaSO4,BaSO4,Barium sulfat,Ba:1|S:1|O:4,0,solid,,PubChem
+Fe3O4,Fe3O4,"Besi(II,III) oksida",Fe:3|O:4,0,solid,,PubChem
+FeCl2,FeCl2,Besi(II) klorida,Fe:1|Cl:2,0,aqueous,GHS05|GHS07,PubChem
+FeCl3,FeCl3,Besi(III) klorida,Fe:1|Cl:3,0,aqueous,GHS05|GHS07,PubChem
+FeS,FeS,Besi(II) sulfida,Fe:1|S:1,0,solid,GHS02,PubChem
+FeSO4,FeSO4,Besi(II) sulfat,Fe:1|S:1|O:4,0,aqueous,GHS07,PubChem
+Fe(OH)3,Fe(OH)3,Besi(III) hidroksida,Fe:1|O:3|H:3,0,solid,,PubChem
+Cu,Cu,Tembaga,Cu:1,0,solid,,PubChem
+CuO,CuO,Tembaga(II) oksida,Cu:1|O:1,0,solid,GHS07|GHS09,PubChem
+Cu2O,Cu2O,Tembaga(I) oksida,Cu:2|O:1,0,solid,GHS09,PubChem
+Cu(OH)2,Cu(OH)2,Tembaga(II) hidroksida,Cu:1|O:2|H:2,0,solid,GHS07|GHS09,PubChem
+CuSO4,CuSO4,Tembaga(II) sulfat,Cu:1|S:1|O:4,0,aqueous,GHS05|GHS09,PubChem
+CuCl2,CuCl2,Tembaga(II) klorida,Cu:1|Cl:2,0,aqueous,GHS05|GHS07|GHS09,PubChem
+Cu(NO3)2,Cu(NO3)2,Tembaga(II) nitrat,Cu:1|N:2|O:6,0,aqueous,GHS03|GHS05|GHS09,PubChem
+Zn,Zn,Seng,Zn:1,0,solid,GHS02|GHS09,PubChem
+ZnO,ZnO,Seng oksida,Zn:1|O:1,0,solid,GHS09,PubChem
+ZnCl2,ZnCl2,Seng klorida,Zn:1|Cl:2,0,aqueous,GHS05|GHS07|GHS09,PubChem
+ZnSO4,ZnSO4,Seng sulfat,Zn:1|S:1|O:4,0,aqueous,GHS05|GHS09,PubChem
+ZnS,ZnS,Seng sulfida,Zn:1|S:1,0,solid,,PubChem
+Ag,Ag,Perak,Ag:1,0,solid,,PubChem
+AgNO3,AgNO3,Perak nitrat,Ag:1|N:1|O:3,0,aqueous,GHS03|GHS05|GHS09,PubChem
+AgCl,AgCl,Perak klorida,Ag:1|Cl:1,0,solid,,PubChem
+AgBr,AgBr,Perak bromida,Ag:1|Br:1,0,solid,,PubChem
+AgI,AgI,Perak iodida,Ag:1|I:1,0,solid,,PubChem
+Ag2O,Ag2O,Perak oksida,Ag:2|O:1,0,solid,GHS03|GHS09,PubChem
+MnO2,MnO2,Mangan(IV) oksida,Mn:1|O:2,0,solid,GHS07,PubChem
+KMnO4,KMnO4,Kalium permanganat,K:1|Mn:1|O:4,0,solid,GHS03|GHS05|GHS09,PubChem
+K2MnO4,K2MnO4,Kalium manganat,K:2|Mn:1|O:4,0,solid,GHS05|GHS09,PubChem
+MnCl2,MnCl2,Mangan(II) klorida,Mn:1|Cl:2,0,aqueous,GHS07|GHS09,PubChem
+Al,Al,Aluminium,Al:1,0,solid,GHS02,PubChem
+Al2O3,Al2O3,Aluminium oksida,Al:2|O:3,0,solid,,PubChem
+Al(OH)3,Al(OH)3,Aluminium hidroksida,Al:1|O:3|H:3,0,solid,,PubChem
+AlCl3,AlCl3,Aluminium klorida,Al:1|Cl:3,0,solid,GHS05,PubChem
+Al2(SO4)3,Al2(SO4)3,Aluminium sulfat,Al:2|S:3|O:12,0,aqueous,GHS05,PubChem
+S,S,Belerang,S:1,0,solid,,PubChem
+SO2,SO2,Belerang dioksida,S:1|O:2,0,gas,GHS05|GHS06,PubChem
+SO3,SO3,Belerang trioksida,S:1|O:3,0,gas,GHS05,PubChem
+H2SO4,H2SO4,Asam sulfat,H:2|S:1|O:4,0,aqueous,GHS05,PubChem
+H2S,H2S,Hidrogen sulfida,H:2|S:1,0,gas,GHS02|GHS06|GHS09,PubChem
+N2O,N2O,Dinitrogen monoksida,N:2|O:1,0,gas,GHS03|GHS04,PubChem
+NO,NO,Nitrogen monoksida,N:1|O:1,0,gas,GHS05|GHS06,PubChem
+NO2,NO2,Nitrogen dioksida,N:1|O:2,0,gas,GHS05|GHS06,PubChem
+HNO3,HNO3,Asam nitrat,H:1|N:1|O:3,0,aqueous,GHS03|GHS05|GHS06,PubChem
+NH4Cl,NH4Cl,Amonium klorida,N:1|H:4|Cl:1,0,solid,GHS07,PubChem
+NH4NO3,NH4NO3,Amonium nitrat,N:2|H:4|O:3,0,solid,GHS03|GHS07,PubChem
+(NH4)2SO4,(NH4)2SO4,Amonium sulfat,N:2|H:8|S:1|O:4,0,solid,,PubChem
+P4,P4,Fosfor putih,P:4,0,solid,GHS02|GHS06|GHS09,PubChem
+P4O10,P4O10,Fosfor(V) oksida,P:4|O:10,0,solid,GHS05,PubChem
+H3PO4,H3PO4,Asam fosfat,H:3|P:1|O:4,0,aqueous,GHS05,PubChem
+CH4,CH4,Metana,C:1|H:4,0,gas,GHS02|GHS04,NIST
+CH3OH,CH3OH,Metanol,C:1|H:4|O:1,0,liquid,GHS02|GHS06,PubChem
+C2H2,C2H2,Asetilena,C:2|H:2,0,gas,GHS02|GHS04,PubChem
+C2H5OH,C2H5OH,Etanol,C:2|H:6|O:1,0,liquid,GHS02,PubChem
+CH3COOH,CH3COOH,Asam asetat,C:2|H:4|O:2,0,aqueous,GHS02|GHS05,PubChem
+Si,Si,Silikon,Si:1,0,solid,,PubChem
+SiO2,SiO2,Silikon dioksida,Si:1|O:2,0,solid,,PubChem
+H2O2,H2O2,Hidrogen peroksida,H:2|O:2,0,aqueous,GHS03|GHS05|GHS07,PubChem
+F2,F2,Gas fluorin,F:2,0,gas,GHS03|GHS05|GHS06,PubChem
+HF,HF,Asam fluorida,H:1|F:1,0,aqueous,GHS05|GHS06,PubChem
+HClO,HClO,Asam hipoklorit,H:1|Cl:1|O:1,0,aqueous,GHS05|GHS09,PubChem
+Ca(ClO)2,Ca(ClO)2,Kalsium hipoklorit,Ca:1|Cl:2|O:2,0,solid,GHS03|GHS05|GHS09,PubChem
+Br2,Br2,Bromin,Br:2,0,liquid,GHS05|GHS06|GHS09,PubChem
+HBr,HBr,Asam bromida,H:1|Br:1,0,aqueous,GHS05|GHS06,PubChem
+I2,I2,Iodin,I:2,0,solid,GHS07|GHS09,PubChem
+HI,HI,Asam iodida,H:1|I:1,0,aqueous,GHS05|GHS06,PubChem

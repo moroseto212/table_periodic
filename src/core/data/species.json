@@ -1,0 +1,2180 @@
+[
+  {
+    "id": "H2",
+    "formula": "H2",
+    "name": "Gas hidrogen",
+    "composition": {
+      "H": 2
+    },
+    "charge": 0,
+    "stateSTP": "gas",
+    "hazards": [
+      "GHS02",
+      "GHS04"
+    ],
+    "sources": [
+      "NIST"
+    ],
+    "molarMass": 2.016
+  },
+  {
+    "id": "O2",
+    "formula": "O2",
+    "name": "Gas oksigen",
+    "composition": {
+      "O": 2
+    },
+    "charge": 0,
+    "stateSTP": "gas",
+    "hazards": [
+      "GHS03",
+      "GHS04"
+    ],
+    "sources": [
+      "NIST"
+    ],
+    "molarMass": 31.998
+  },
+  {
+    "id": "H2O",
+    "formula": "H2O",
+    "name": "Air",
+    "composition": {
+      "H": 2,
+      "O": 1
+    },
+    "charge": 0,
+    "stateSTP": "liquid",
+    "hazards": [],
+    "sources": [
+      "NIST"
+    ],
+    "molarMass": 18.015
+  },
+  {
+    "id": "Na",
+    "formula": "Na",
+    "name": "Natrium",
+    "composition": {
+      "Na": 1
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [
+      "GHS02",
+      "GHS05"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 22.99
+  },
+  {
+    "id": "Cl2",
+    "formula": "Cl2",
+    "name": "Gas klorin",
+    "composition": {
+      "Cl": 2
+    },
+    "charge": 0,
+    "stateSTP": "gas",
+    "hazards": [
+      "GHS03",
+      "GHS06"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 70.9
+  },
+  {
+    "id": "NaCl",
+    "formula": "NaCl",
+    "name": "Natrium klorida",
+    "composition": {
+      "Na": 1,
+      "Cl": 1
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 58.44
+  },
+  {
+    "id": "C",
+    "formula": "C",
+    "name": "Karbon",
+    "composition": {
+      "C": 1
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [],
+    "sources": [
+      "NIST"
+    ],
+    "molarMass": 12.011
+  },
+  {
+    "id": "CO2",
+    "formula": "CO2",
+    "name": "Karbon dioksida",
+    "composition": {
+      "C": 1,
+      "O": 2
+    },
+    "charge": 0,
+    "stateSTP": "gas",
+    "hazards": [],
+    "sources": [
+      "NIST"
+    ],
+    "molarMass": 44.009
+  },
+  {
+    "id": "CO",
+    "formula": "CO",
+    "name": "Karbon monoksida",
+    "composition": {
+      "C": 1,
+      "O": 1
+    },
+    "charge": 0,
+    "stateSTP": "gas",
+    "hazards": [
+      "GHS06"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 28.01
+  },
+  {
+    "id": "HCl",
+    "formula": "HCl",
+    "name": "Asam klorida",
+    "composition": {
+      "H": 1,
+      "Cl": 1
+    },
+    "charge": 0,
+    "stateSTP": "aqueous",
+    "hazards": [
+      "GHS05",
+      "GHS07"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 36.458
+  },
+  {
+    "id": "Mg",
+    "formula": "Mg",
+    "name": "Magnesium",
+    "composition": {
+      "Mg": 1
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [
+      "GHS02"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 24.305
+  },
+  {
+    "id": "MgO",
+    "formula": "MgO",
+    "name": "Magnesium oksida",
+    "composition": {
+      "Mg": 1,
+      "O": 1
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 40.304
+  },
+  {
+    "id": "Fe",
+    "formula": "Fe",
+    "name": "Besi",
+    "composition": {
+      "Fe": 1
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 55.845
+  },
+  {
+    "id": "Fe2O3",
+    "formula": "Fe2O3",
+    "name": "Besi(III) oksida",
+    "composition": {
+      "Fe": 2,
+      "O": 3
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 159.687
+  },
+  {
+    "id": "N2",
+    "formula": "N2",
+    "name": "Gas nitrogen",
+    "composition": {
+      "N": 2
+    },
+    "charge": 0,
+    "stateSTP": "gas",
+    "hazards": [
+      "GHS04"
+    ],
+    "sources": [
+      "NIST"
+    ],
+    "molarMass": 28.014
+  },
+  {
+    "id": "NH3",
+    "formula": "NH3",
+    "name": "Amonia",
+    "composition": {
+      "N": 1,
+      "H": 3
+    },
+    "charge": 0,
+    "stateSTP": "gas",
+    "hazards": [
+      "GHS04",
+      "GHS05",
+      "GHS06"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 17.031
+  },
+  {
+    "id": "Li",
+    "formula": "Li",
+    "name": "Litium",
+    "composition": {
+      "Li": 1
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [
+      "GHS02",
+      "GHS05"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 6.94
+  },
+  {
+    "id": "Li2O",
+    "formula": "Li2O",
+    "name": "Litium oksida",
+    "composition": {
+      "Li": 2,
+      "O": 1
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [
+      "GHS05"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 29.879
+  },
+  {
+    "id": "LiOH",
+    "formula": "LiOH",
+    "name": "Litium hidroksida",
+    "composition": {
+      "Li": 1,
+      "O": 1,
+      "H": 1
+    },
+    "charge": 0,
+    "stateSTP": "aqueous",
+    "hazards": [
+      "GHS05",
+      "GHS06"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 23.947
+  },
+  {
+    "id": "LiCl",
+    "formula": "LiCl",
+    "name": "Litium klorida",
+    "composition": {
+      "Li": 1,
+      "Cl": 1
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [
+      "GHS07"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 42.39
+  },
+  {
+    "id": "Na2O",
+    "formula": "Na2O",
+    "name": "Natrium oksida",
+    "composition": {
+      "Na": 2,
+      "O": 1
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [
+      "GHS05"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 61.979
+  },
+  {
+    "id": "Na2O2",
+    "formula": "Na2O2",
+    "name": "Natrium peroksida",
+    "composition": {
+      "Na": 2,
+      "O": 2
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [
+      "GHS03",
+      "GHS05"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 77.978
+  },
+  {
+    "id": "NaOH",
+    "formula": "NaOH",
+    "name": "Natrium hidroksida",
+    "composition": {
+      "Na": 1,
+      "O": 1,
+      "H": 1
+    },
+    "charge": 0,
+    "stateSTP": "aqueous",
+    "hazards": [
+      "GHS05"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 39.997
+  },
+  {
+    "id": "Na2CO3",
+    "formula": "Na2CO3",
+    "name": "Natrium karbonat",
+    "composition": {
+      "Na": 2,
+      "C": 1,
+      "O": 3
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [
+      "GHS07"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 105.988
+  },
+  {
+    "id": "NaHCO3",
+    "formula": "NaHCO3",
+    "name": "Natrium bikarbonat",
+    "composition": {
+      "Na": 1,
+      "H": 1,
+      "C": 1,
+      "O": 3
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 84.006
+  },
+  {
+    "id": "NaNO3",
+    "formula": "NaNO3",
+    "name": "Natrium nitrat",
+    "composition": {
+      "Na": 1,
+      "N": 1,
+      "O": 3
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [
+      "GHS03"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 84.994
+  },
+  {
+    "id": "Na2SO4",
+    "formula": "Na2SO4",
+    "name": "Natrium sulfat",
+    "composition": {
+      "Na": 2,
+      "S": 1,
+      "O": 4
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 142.036
+  },
+  {
+    "id": "Na2SO3",
+    "formula": "Na2SO3",
+    "name": "Natrium sulfit",
+    "composition": {
+      "Na": 2,
+      "S": 1,
+      "O": 3
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 126.037
+  },
+  {
+    "id": "NaBr",
+    "formula": "NaBr",
+    "name": "Natrium bromida",
+    "composition": {
+      "Na": 1,
+      "Br": 1
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 102.894
+  },
+  {
+    "id": "NaClO",
+    "formula": "NaClO",
+    "name": "Natrium hipoklorit",
+    "composition": {
+      "Na": 1,
+      "Cl": 1,
+      "O": 1
+    },
+    "charge": 0,
+    "stateSTP": "aqueous",
+    "hazards": [
+      "GHS05",
+      "GHS09"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 74.439
+  },
+  {
+    "id": "Na3PO4",
+    "formula": "Na3PO4",
+    "name": "Natrium fosfat",
+    "composition": {
+      "Na": 3,
+      "P": 1,
+      "O": 4
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [
+      "GHS05",
+      "GHS07"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 163.94
+  },
+  {
+    "id": "K",
+    "formula": "K",
+    "name": "Kalium",
+    "composition": {
+      "K": 1
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [
+      "GHS02",
+      "GHS05"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 39.098
+  },
+  {
+    "id": "K2O",
+    "formula": "K2O",
+    "name": "Kalium oksida",
+    "composition": {
+      "K": 2,
+      "O": 1
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [
+      "GHS05"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 94.196
+  },
+  {
+    "id": "KOH",
+    "formula": "KOH",
+    "name": "Kalium hidroksida",
+    "composition": {
+      "K": 1,
+      "O": 1,
+      "H": 1
+    },
+    "charge": 0,
+    "stateSTP": "aqueous",
+    "hazards": [
+      "GHS05",
+      "GHS06"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 56.105
+  },
+  {
+    "id": "KCl",
+    "formula": "KCl",
+    "name": "Kalium klorida",
+    "composition": {
+      "K": 1,
+      "Cl": 1
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 74.548
+  },
+  {
+    "id": "KNO3",
+    "formula": "KNO3",
+    "name": "Kalium nitrat",
+    "composition": {
+      "K": 1,
+      "N": 1,
+      "O": 3
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [
+      "GHS03"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 101.102
+  },
+  {
+    "id": "KI",
+    "formula": "KI",
+    "name": "Kalium iodida",
+    "composition": {
+      "K": 1,
+      "I": 1
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 166.003
+  },
+  {
+    "id": "MgCl2",
+    "formula": "MgCl2",
+    "name": "Magnesium klorida",
+    "composition": {
+      "Mg": 1,
+      "Cl": 2
+    },
+    "charge": 0,
+    "stateSTP": "aqueous",
+    "hazards": [],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 95.205
+  },
+  {
+    "id": "MgCO3",
+    "formula": "MgCO3",
+    "name": "Magnesium karbonat",
+    "composition": {
+      "Mg": 1,
+      "C": 1,
+      "O": 3
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 84.313
+  },
+  {
+    "id": "MgSO4",
+    "formula": "MgSO4",
+    "name": "Magnesium sulfat",
+    "composition": {
+      "Mg": 1,
+      "S": 1,
+      "O": 4
+    },
+    "charge": 0,
+    "stateSTP": "aqueous",
+    "hazards": [],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 120.361
+  },
+  {
+    "id": "Mg3N2",
+    "formula": "Mg3N2",
+    "name": "Magnesium nitrida",
+    "composition": {
+      "Mg": 3,
+      "N": 2
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [
+      "GHS05"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 100.929
+  },
+  {
+    "id": "Mg(OH)2",
+    "formula": "Mg(OH)2",
+    "name": "Magnesium hidroksida",
+    "composition": {
+      "Mg": 1,
+      "O": 2,
+      "H": 2
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 58.319
+  },
+  {
+    "id": "Ca",
+    "formula": "Ca",
+    "name": "Kalsium",
+    "composition": {
+      "Ca": 1
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [
+      "GHS02"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 40.078
+  },
+  {
+    "id": "CaO",
+    "formula": "CaO",
+    "name": "Kalsium oksida",
+    "composition": {
+      "Ca": 1,
+      "O": 1
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [
+      "GHS05"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 56.077
+  },
+  {
+    "id": "Ca(OH)2",
+    "formula": "Ca(OH)2",
+    "name": "Kalsium hidroksida",
+    "composition": {
+      "Ca": 1,
+      "O": 2,
+      "H": 2
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [
+      "GHS05"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 74.092
+  },
+  {
+    "id": "CaCl2",
+    "formula": "CaCl2",
+    "name": "Kalsium klorida",
+    "composition": {
+      "Ca": 1,
+      "Cl": 2
+    },
+    "charge": 0,
+    "stateSTP": "aqueous",
+    "hazards": [],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 110.978
+  },
+  {
+    "id": "CaCO3",
+    "formula": "CaCO3",
+    "name": "Kalsium karbonat",
+    "composition": {
+      "Ca": 1,
+      "C": 1,
+      "O": 3
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 100.086
+  },
+  {
+    "id": "CaSO4",
+    "formula": "CaSO4",
+    "name": "Kalsium sulfat",
+    "composition": {
+      "Ca": 1,
+      "S": 1,
+      "O": 4
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 136.134
+  },
+  {
+    "id": "CaC2",
+    "formula": "CaC2",
+    "name": "Kalsium karbida",
+    "composition": {
+      "Ca": 1,
+      "C": 2
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [
+      "GHS02",
+      "GHS04"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 64.1
+  },
+  {
+    "id": "Ca(NO3)2",
+    "formula": "Ca(NO3)2",
+    "name": "Kalsium nitrat",
+    "composition": {
+      "Ca": 1,
+      "N": 2,
+      "O": 6
+    },
+    "charge": 0,
+    "stateSTP": "aqueous",
+    "hazards": [
+      "GHS03"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 164.086
+  },
+  {
+    "id": "Ca(HCO3)2",
+    "formula": "Ca(HCO3)2",
+    "name": "Kalsium bikarbonat",
+    "composition": {
+      "Ca": 1,
+      "H": 2,
+      "C": 2,
+      "O": 6
+    },
+    "charge": 0,
+    "stateSTP": "aqueous",
+    "hazards": [],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 162.11
+  },
+  {
+    "id": "Ba",
+    "formula": "Ba",
+    "name": "Barium",
+    "composition": {
+      "Ba": 1
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [
+      "GHS02",
+      "GHS06"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 137.328
+  },
+  {
+    "id": "BaO",
+    "formula": "BaO",
+    "name": "Barium oksida",
+    "composition": {
+      "Ba": 1,
+      "O": 1
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [
+      "GHS05",
+      "GHS06"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 153.327
+  },
+  {
+    "id": "Ba(OH)2",
+    "formula": "Ba(OH)2",
+    "name": "Barium hidroksida",
+    "composition": {
+      "Ba": 1,
+      "O": 2,
+      "H": 2
+    },
+    "charge": 0,
+    "stateSTP": "aqueous",
+    "hazards": [
+      "GHS05",
+      "GHS06"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 171.342
+  },
+  {
+    "id": "BaCl2",
+    "formula": "BaCl2",
+    "name": "Barium klorida",
+    "composition": {
+      "Ba": 1,
+      "Cl": 2
+    },
+    "charge": 0,
+    "stateSTP": "aqueous",
+    "hazards": [
+      "GHS06"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 208.228
+  },
+  {
+    "id": "BaSO4",
+    "formula": "BaSO4",
+    "name": "Barium sulfat",
+    "composition": {
+      "Ba": 1,
+      "S": 1,
+      "O": 4
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 233.384
+  },
+  {
+    "id": "Fe3O4",
+    "formula": "Fe3O4",
+    "name": "Besi(II,III) oksida",
+    "composition": {
+      "Fe": 3,
+      "O": 4
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 231.531
+  },
+  {
+    "id": "FeCl2",
+    "formula": "FeCl2",
+    "name": "Besi(II) klorida",
+    "composition": {
+      "Fe": 1,
+      "Cl": 2
+    },
+    "charge": 0,
+    "stateSTP": "aqueous",
+    "hazards": [
+      "GHS05",
+      "GHS07"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 126.745
+  },
+  {
+    "id": "FeCl3",
+    "formula": "FeCl3",
+    "name": "Besi(III) klorida",
+    "composition": {
+      "Fe": 1,
+      "Cl": 3
+    },
+    "charge": 0,
+    "stateSTP": "aqueous",
+    "hazards": [
+      "GHS05",
+      "GHS07"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 162.195
+  },
+  {
+    "id": "FeS",
+    "formula": "FeS",
+    "name": "Besi(II) sulfida",
+    "composition": {
+      "Fe": 1,
+      "S": 1
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [
+      "GHS02"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 87.905
+  },
+  {
+    "id": "FeSO4",
+    "formula": "FeSO4",
+    "name": "Besi(II) sulfat",
+    "composition": {
+      "Fe": 1,
+      "S": 1,
+      "O": 4
+    },
+    "charge": 0,
+    "stateSTP": "aqueous",
+    "hazards": [
+      "GHS07"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 151.901
+  },
+  {
+    "id": "Fe(OH)3",
+    "formula": "Fe(OH)3",
+    "name": "Besi(III) hidroksida",
+    "composition": {
+      "Fe": 1,
+      "O": 3,
+      "H": 3
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 106.866
+  },
+  {
+    "id": "Cu",
+    "formula": "Cu",
+    "name": "Tembaga",
+    "composition": {
+      "Cu": 1
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 63.546
+  },
+  {
+    "id": "CuO",
+    "formula": "CuO",
+    "name": "Tembaga(II) oksida",
+    "composition": {
+      "Cu": 1,
+      "O": 1
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [
+      "GHS07",
+      "GHS09"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 79.545
+  },
+  {
+    "id": "Cu2O",
+    "formula": "Cu2O",
+    "name": "Tembaga(I) oksida",
+    "composition": {
+      "Cu": 2,
+      "O": 1
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [
+      "GHS09"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 143.092
+  },
+  {
+    "id": "Cu(OH)2",
+    "formula": "Cu(OH)2",
+    "name": "Tembaga(II) hidroksida",
+    "composition": {
+      "Cu": 1,
+      "O": 2,
+      "H": 2
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [
+      "GHS07",
+      "GHS09"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 97.56
+  },
+  {
+    "id": "CuSO4",
+    "formula": "CuSO4",
+    "name": "Tembaga(II) sulfat",
+    "composition": {
+      "Cu": 1,
+      "S": 1,
+      "O": 4
+    },
+    "charge": 0,
+    "stateSTP": "aqueous",
+    "hazards": [
+      "GHS05",
+      "GHS09"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 159.602
+  },
+  {
+    "id": "CuCl2",
+    "formula": "CuCl2",
+    "name": "Tembaga(II) klorida",
+    "composition": {
+      "Cu": 1,
+      "Cl": 2
+    },
+    "charge": 0,
+    "stateSTP": "aqueous",
+    "hazards": [
+      "GHS05",
+      "GHS07",
+      "GHS09"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 134.446
+  },
+  {
+    "id": "Cu(NO3)2",
+    "formula": "Cu(NO3)2",
+    "name": "Tembaga(II) nitrat",
+    "composition": {
+      "Cu": 1,
+      "N": 2,
+      "O": 6
+    },
+    "charge": 0,
+    "stateSTP": "aqueous",
+    "hazards": [
+      "GHS03",
+      "GHS05",
+      "GHS09"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 187.554
+  },
+  {
+    "id": "Zn",
+    "formula": "Zn",
+    "name": "Seng",
+    "composition": {
+      "Zn": 1
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [
+      "GHS02",
+      "GHS09"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 65.382
+  },
+  {
+    "id": "ZnO",
+    "formula": "ZnO",
+    "name": "Seng oksida",
+    "composition": {
+      "Zn": 1,
+      "O": 1
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [
+      "GHS09"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 81.381
+  },
+  {
+    "id": "ZnCl2",
+    "formula": "ZnCl2",
+    "name": "Seng klorida",
+    "composition": {
+      "Zn": 1,
+      "Cl": 2
+    },
+    "charge": 0,
+    "stateSTP": "aqueous",
+    "hazards": [
+      "GHS05",
+      "GHS07",
+      "GHS09"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 136.282
+  },
+  {
+    "id": "ZnSO4",
+    "formula": "ZnSO4",
+    "name": "Seng sulfat",
+    "composition": {
+      "Zn": 1,
+      "S": 1,
+      "O": 4
+    },
+    "charge": 0,
+    "stateSTP": "aqueous",
+    "hazards": [
+      "GHS05",
+      "GHS09"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 161.438
+  },
+  {
+    "id": "ZnS",
+    "formula": "ZnS",
+    "name": "Seng sulfida",
+    "composition": {
+      "Zn": 1,
+      "S": 1
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 97.442
+  },
+  {
+    "id": "Ag",
+    "formula": "Ag",
+    "name": "Perak",
+    "composition": {
+      "Ag": 1
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 107.868
+  },
+  {
+    "id": "AgNO3",
+    "formula": "AgNO3",
+    "name": "Perak nitrat",
+    "composition": {
+      "Ag": 1,
+      "N": 1,
+      "O": 3
+    },
+    "charge": 0,
+    "stateSTP": "aqueous",
+    "hazards": [
+      "GHS03",
+      "GHS05",
+      "GHS09"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 169.872
+  },
+  {
+    "id": "AgCl",
+    "formula": "AgCl",
+    "name": "Perak klorida",
+    "composition": {
+      "Ag": 1,
+      "Cl": 1
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 143.318
+  },
+  {
+    "id": "AgBr",
+    "formula": "AgBr",
+    "name": "Perak bromida",
+    "composition": {
+      "Ag": 1,
+      "Br": 1
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 187.772
+  },
+  {
+    "id": "AgI",
+    "formula": "AgI",
+    "name": "Perak iodida",
+    "composition": {
+      "Ag": 1,
+      "I": 1
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 234.773
+  },
+  {
+    "id": "Ag2O",
+    "formula": "Ag2O",
+    "name": "Perak oksida",
+    "composition": {
+      "Ag": 2,
+      "O": 1
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [
+      "GHS03",
+      "GHS09"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 231.735
+  },
+  {
+    "id": "MnO2",
+    "formula": "MnO2",
+    "name": "Mangan(IV) oksida",
+    "composition": {
+      "Mn": 1,
+      "O": 2
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [
+      "GHS07"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 86.936
+  },
+  {
+    "id": "KMnO4",
+    "formula": "KMnO4",
+    "name": "Kalium permanganat",
+    "composition": {
+      "K": 1,
+      "Mn": 1,
+      "O": 4
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [
+      "GHS03",
+      "GHS05",
+      "GHS09"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 158.032
+  },
+  {
+    "id": "K2MnO4",
+    "formula": "K2MnO4",
+    "name": "Kalium manganat",
+    "composition": {
+      "K": 2,
+      "Mn": 1,
+      "O": 4
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [
+      "GHS05",
+      "GHS09"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 197.131
+  },
+  {
+    "id": "MnCl2",
+    "formula": "MnCl2",
+    "name": "Mangan(II) klorida",
+    "composition": {
+      "Mn": 1,
+      "Cl": 2
+    },
+    "charge": 0,
+    "stateSTP": "aqueous",
+    "hazards": [
+      "GHS07",
+      "GHS09"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 125.838
+  },
+  {
+    "id": "Al",
+    "formula": "Al",
+    "name": "Aluminium",
+    "composition": {
+      "Al": 1
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [
+      "GHS02"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 26.982
+  },
+  {
+    "id": "Al2O3",
+    "formula": "Al2O3",
+    "name": "Aluminium oksida",
+    "composition": {
+      "Al": 2,
+      "O": 3
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 101.961
+  },
+  {
+    "id": "Al(OH)3",
+    "formula": "Al(OH)3",
+    "name": "Aluminium hidroksida",
+    "composition": {
+      "Al": 1,
+      "O": 3,
+      "H": 3
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 78.003
+  },
+  {
+    "id": "AlCl3",
+    "formula": "AlCl3",
+    "name": "Aluminium klorida",
+    "composition": {
+      "Al": 1,
+      "Cl": 3
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [
+      "GHS05"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 133.332
+  },
+  {
+    "id": "Al2(SO4)3",
+    "formula": "Al2(SO4)3",
+    "name": "Aluminium sulfat",
+    "composition": {
+      "Al": 2,
+      "S": 3,
+      "O": 12
+    },
+    "charge": 0,
+    "stateSTP": "aqueous",
+    "hazards": [
+      "GHS05"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 342.132
+  },
+  {
+    "id": "S",
+    "formula": "S",
+    "name": "Belerang",
+    "composition": {
+      "S": 1
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 32.06
+  },
+  {
+    "id": "SO2",
+    "formula": "SO2",
+    "name": "Belerang dioksida",
+    "composition": {
+      "S": 1,
+      "O": 2
+    },
+    "charge": 0,
+    "stateSTP": "gas",
+    "hazards": [
+      "GHS05",
+      "GHS06"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 64.058
+  },
+  {
+    "id": "SO3",
+    "formula": "SO3",
+    "name": "Belerang trioksida",
+    "composition": {
+      "S": 1,
+      "O": 3
+    },
+    "charge": 0,
+    "stateSTP": "gas",
+    "hazards": [
+      "GHS05"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 80.057
+  },
+  {
+    "id": "H2SO4",
+    "formula": "H2SO4",
+    "name": "Asam sulfat",
+    "composition": {
+      "H": 2,
+      "S": 1,
+      "O": 4
+    },
+    "charge": 0,
+    "stateSTP": "aqueous",
+    "hazards": [
+      "GHS05"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 98.072
+  },
+  {
+    "id": "H2S",
+    "formula": "H2S",
+    "name": "Hidrogen sulfida",
+    "composition": {
+      "H": 2,
+      "S": 1
+    },
+    "charge": 0,
+    "stateSTP": "gas",
+    "hazards": [
+      "GHS02",
+      "GHS06",
+      "GHS09"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 34.076
+  },
+  {
+    "id": "N2O",
+    "formula": "N2O",
+    "name": "Dinitrogen monoksida",
+    "composition": {
+      "N": 2,
+      "O": 1
+    },
+    "charge": 0,
+    "stateSTP": "gas",
+    "hazards": [
+      "GHS03",
+      "GHS04"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 44.013
+  },
+  {
+    "id": "NO",
+    "formula": "NO",
+    "name": "Nitrogen monoksida",
+    "composition": {
+      "N": 1,
+      "O": 1
+    },
+    "charge": 0,
+    "stateSTP": "gas",
+    "hazards": [
+      "GHS05",
+      "GHS06"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 30.006
+  },
+  {
+    "id": "NO2",
+    "formula": "NO2",
+    "name": "Nitrogen dioksida",
+    "composition": {
+      "N": 1,
+      "O": 2
+    },
+    "charge": 0,
+    "stateSTP": "gas",
+    "hazards": [
+      "GHS05",
+      "GHS06"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 46.005
+  },
+  {
+    "id": "HNO3",
+    "formula": "HNO3",
+    "name": "Asam nitrat",
+    "composition": {
+      "H": 1,
+      "N": 1,
+      "O": 3
+    },
+    "charge": 0,
+    "stateSTP": "aqueous",
+    "hazards": [
+      "GHS03",
+      "GHS05",
+      "GHS06"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 63.012
+  },
+  {
+    "id": "NH4Cl",
+    "formula": "NH4Cl",
+    "name": "Amonium klorida",
+    "composition": {
+      "N": 1,
+      "H": 4,
+      "Cl": 1
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [
+      "GHS07"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 53.489
+  },
+  {
+    "id": "NH4NO3",
+    "formula": "NH4NO3",
+    "name": "Amonium nitrat",
+    "composition": {
+      "N": 2,
+      "H": 4,
+      "O": 3
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [
+      "GHS03",
+      "GHS07"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 80.043
+  },
+  {
+    "id": "(NH4)2SO4",
+    "formula": "(NH4)2SO4",
+    "name": "Amonium sulfat",
+    "composition": {
+      "N": 2,
+      "H": 8,
+      "S": 1,
+      "O": 4
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 132.134
+  },
+  {
+    "id": "P4",
+    "formula": "P4",
+    "name": "Fosfor putih",
+    "composition": {
+      "P": 4
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [
+      "GHS02",
+      "GHS06",
+      "GHS09"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 123.896
+  },
+  {
+    "id": "P4O10",
+    "formula": "P4O10",
+    "name": "Fosfor(V) oksida",
+    "composition": {
+      "P": 4,
+      "O": 10
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [
+      "GHS05"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 283.886
+  },
+  {
+    "id": "H3PO4",
+    "formula": "H3PO4",
+    "name": "Asam fosfat",
+    "composition": {
+      "H": 3,
+      "P": 1,
+      "O": 4
+    },
+    "charge": 0,
+    "stateSTP": "aqueous",
+    "hazards": [
+      "GHS05"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 97.994
+  },
+  {
+    "id": "CH4",
+    "formula": "CH4",
+    "name": "Metana",
+    "composition": {
+      "C": 1,
+      "H": 4
+    },
+    "charge": 0,
+    "stateSTP": "gas",
+    "hazards": [
+      "GHS02",
+      "GHS04"
+    ],
+    "sources": [
+      "NIST"
+    ],
+    "molarMass": 16.043
+  },
+  {
+    "id": "CH3OH",
+    "formula": "CH3OH",
+    "name": "Metanol",
+    "composition": {
+      "C": 1,
+      "H": 4,
+      "O": 1
+    },
+    "charge": 0,
+    "stateSTP": "liquid",
+    "hazards": [
+      "GHS02",
+      "GHS06"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 32.042
+  },
+  {
+    "id": "C2H2",
+    "formula": "C2H2",
+    "name": "Asetilena",
+    "composition": {
+      "C": 2,
+      "H": 2
+    },
+    "charge": 0,
+    "stateSTP": "gas",
+    "hazards": [
+      "GHS02",
+      "GHS04"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 26.038
+  },
+  {
+    "id": "C2H5OH",
+    "formula": "C2H5OH",
+    "name": "Etanol",
+    "composition": {
+      "C": 2,
+      "H": 6,
+      "O": 1
+    },
+    "charge": 0,
+    "stateSTP": "liquid",
+    "hazards": [
+      "GHS02"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 46.069
+  },
+  {
+    "id": "CH3COOH",
+    "formula": "CH3COOH",
+    "name": "Asam asetat",
+    "composition": {
+      "C": 2,
+      "H": 4,
+      "O": 2
+    },
+    "charge": 0,
+    "stateSTP": "aqueous",
+    "hazards": [
+      "GHS02",
+      "GHS05"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 60.052
+  },
+  {
+    "id": "Si",
+    "formula": "Si",
+    "name": "Silikon",
+    "composition": {
+      "Si": 1
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 28.085
+  },
+  {
+    "id": "SiO2",
+    "formula": "SiO2",
+    "name": "Silikon dioksida",
+    "composition": {
+      "Si": 1,
+      "O": 2
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 60.083
+  },
+  {
+    "id": "H2O2",
+    "formula": "H2O2",
+    "name": "Hidrogen peroksida",
+    "composition": {
+      "H": 2,
+      "O": 2
+    },
+    "charge": 0,
+    "stateSTP": "aqueous",
+    "hazards": [
+      "GHS03",
+      "GHS05",
+      "GHS07"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 34.014
+  },
+  {
+    "id": "F2",
+    "formula": "F2",
+    "name": "Gas fluorin",
+    "composition": {
+      "F": 2
+    },
+    "charge": 0,
+    "stateSTP": "gas",
+    "hazards": [
+      "GHS03",
+      "GHS05",
+      "GHS06"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 37.996
+  },
+  {
+    "id": "HF",
+    "formula": "HF",
+    "name": "Asam fluorida",
+    "composition": {
+      "H": 1,
+      "F": 1
+    },
+    "charge": 0,
+    "stateSTP": "aqueous",
+    "hazards": [
+      "GHS05",
+      "GHS06"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 20.006
+  },
+  {
+    "id": "HClO",
+    "formula": "HClO",
+    "name": "Asam hipoklorit",
+    "composition": {
+      "H": 1,
+      "Cl": 1,
+      "O": 1
+    },
+    "charge": 0,
+    "stateSTP": "aqueous",
+    "hazards": [
+      "GHS05",
+      "GHS09"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 52.457
+  },
+  {
+    "id": "Ca(ClO)2",
+    "formula": "Ca(ClO)2",
+    "name": "Kalsium hipoklorit",
+    "composition": {
+      "Ca": 1,
+      "Cl": 2,
+      "O": 2
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [
+      "GHS03",
+      "GHS05",
+      "GHS09"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 142.976
+  },
+  {
+    "id": "Br2",
+    "formula": "Br2",
+    "name": "Bromin",
+    "composition": {
+      "Br": 2
+    },
+    "charge": 0,
+    "stateSTP": "liquid",
+    "hazards": [
+      "GHS05",
+      "GHS06",
+      "GHS09"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 159.808
+  },
+  {
+    "id": "HBr",
+    "formula": "HBr",
+    "name": "Asam bromida",
+    "composition": {
+      "H": 1,
+      "Br": 1
+    },
+    "charge": 0,
+    "stateSTP": "aqueous",
+    "hazards": [
+      "GHS05",
+      "GHS06"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 80.912
+  },
+  {
+    "id": "I2",
+    "formula": "I2",
+    "name": "Iodin",
+    "composition": {
+      "I": 2
+    },
+    "charge": 0,
+    "stateSTP": "solid",
+    "hazards": [
+      "GHS07",
+      "GHS09"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 253.809
+  },
+  {
+    "id": "HI",
+    "formula": "HI",
+    "name": "Asam iodida",
+    "composition": {
+      "H": 1,
+      "I": 1
+    },
+    "charge": 0,
+    "stateSTP": "aqueous",
+    "hazards": [
+      "GHS05",
+      "GHS06"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "molarMass": 127.912
+  }
+]

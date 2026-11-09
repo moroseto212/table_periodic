@@ -1,0 +1,5206 @@
+[
+  {
+    "id": "h2-o2-water",
+    "reactants": [
+      {
+        "species": "H2",
+        "coeff": 2
+      },
+      {
+        "species": "O2",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "H2O",
+        "coeff": 2
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "kovalen-polar"
+    ],
+    "deltaHkJmol": -571.6,
+    "observation": "Bereaksi dengan letupan kecil dan nyala terang",
+    "explanation": "Hidrogen dan oksigen bergabung membentuk air sambil melepaskan energi panas yang besar.",
+    "hazards": [
+      "Gas hidrogen sangat mudah terbakar"
+    ],
+    "curriculum": [
+      "merdeka-e",
+      "gcse"
+    ],
+    "sources": [
+      "NIST"
+    ],
+    "priority": 10
+  },
+  {
+    "id": "na-cl2-salt",
+    "reactants": [
+      {
+        "species": "Na",
+        "coeff": 2
+      },
+      {
+        "species": "Cl2",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "NaCl",
+        "coeff": 2
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": -411.2,
+    "observation": "Logam natrium menyala dan menghasilkan garam putih",
+    "explanation": "Natrium melepas satu elektron dan klorin menerimanya sehingga terbentuk ikatan ion.",
+    "hazards": [
+      "Natrium bereaksi hebat dengan air"
+    ],
+    "curriculum": [
+      "merdeka-e",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "c-o2-dioxide",
+    "reactants": [
+      {
+        "species": "C",
+        "coeff": 1
+      },
+      {
+        "species": "O2",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "CO2",
+        "coeff": 1
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "kovalen"
+    ],
+    "deltaHkJmol": -393.5,
+    "observation": "Bara menyala terang lalu menghasilkan gas",
+    "explanation": "Karbon terbakar sempurna dengan oksigen cukup membentuk karbon dioksida.",
+    "hazards": [],
+    "curriculum": [
+      "merdeka-e",
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "NIST"
+    ],
+    "priority": 30
+  },
+  {
+    "id": "c-o2-monoxide",
+    "reactants": [
+      {
+        "species": "C",
+        "coeff": 2
+      },
+      {
+        "species": "O2",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "CO",
+        "coeff": 2
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "kovalen"
+    ],
+    "deltaHkJmol": -221,
+    "observation": "Nyala biru redup dengan gas tak berwarna",
+    "explanation": "Pada oksigen terbatas karbon terbakar tidak sempurna membentuk karbon monoksida yang beracun.",
+    "hazards": [
+      "Karbon monoksida tidak berbau dan beracun"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "h2-cl2-hcl",
+    "reactants": [
+      {
+        "species": "H2",
+        "coeff": 1
+      },
+      {
+        "species": "Cl2",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "HCl",
+        "coeff": 2
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "kovalen-polar"
+    ],
+    "deltaHkJmol": -184.6,
+    "observation": "Campuran meledak bila disinari cahaya",
+    "explanation": "Cahaya memutus ikatan klorin dan memicu reaksi berantai dengan hidrogen.",
+    "hazards": [
+      "Gas klorin dan asap asam korosif"
+    ],
+    "curriculum": [
+      "merdeka-e",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 15
+  },
+  {
+    "id": "mg-o2-oxide",
+    "reactants": [
+      {
+        "species": "Mg",
+        "coeff": 2
+      },
+      {
+        "species": "O2",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "MgO",
+        "coeff": 2
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": -1203.6,
+    "observation": "Terbakar dengan nyala putih menyilaukan",
+    "explanation": "Magnesium menyerahkan dua elektron kepada oksigen membentuk oksida ionik.",
+    "hazards": [
+      "Nyala ultraviolet berbahaya bagi mata"
+    ],
+    "curriculum": [
+      "merdeka-e",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "fe-o2-oxide",
+    "reactants": [
+      {
+        "species": "Fe",
+        "coeff": 4
+      },
+      {
+        "species": "O2",
+        "coeff": 3
+      }
+    ],
+    "products": [
+      {
+        "species": "Fe2O3",
+        "coeff": 2
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": -824.2,
+    "observation": "Besi berkarat perlahan membentuk lapisan cokelat kemerahan",
+    "explanation": "Besi teroksidasi membentuk besi(III) oksida dengan bantuan uap air.",
+    "hazards": [],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "NIST"
+    ],
+    "priority": 15
+  },
+  {
+    "id": "n2-h2-ammonia",
+    "reactants": [
+      {
+        "species": "N2",
+        "coeff": 1
+      },
+      {
+        "species": "H2",
+        "coeff": 3
+      }
+    ],
+    "products": [
+      {
+        "species": "NH3",
+        "coeff": 2
+      }
+    ],
+    "conditions": [
+      "heat",
+      "catalyst",
+      "pressure"
+    ],
+    "bondTypes": [
+      "kovalen-polar"
+    ],
+    "deltaHkJmol": -91.8,
+    "observation": "Tidak bereaksi pada kondisi standar",
+    "explanation": "Ikatan rangkap tiga nitrogen sangat kuat sehingga reaksi baru berjalan pada suhu dan tekanan tinggi dengan katalis.",
+    "hazards": [
+      "Amonia korosif dan berbau menyengat"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 25
+  },
+  {
+    "id": "s-o2-so2",
+    "reactants": [
+      {
+        "species": "S",
+        "coeff": 1
+      },
+      {
+        "species": "O2",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "SO2",
+        "coeff": 1
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "kovalen-polar"
+    ],
+    "deltaHkJmol": -296.8,
+    "observation": "Belerang meleleh lalu terbakar dengan nyala biru dan gas menyengat.",
+    "explanation": "Satu atom belerang bergabung dengan dua atom oksigen membentuk belerang dioksida.",
+    "hazards": [
+      "Gas belerang dioksida mengiritasi saluran napas"
+    ],
+    "curriculum": [
+      "merdeka-e",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "so2-o2-so3",
+    "reactants": [
+      {
+        "species": "SO2",
+        "coeff": 2
+      },
+      {
+        "species": "O2",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "SO3",
+        "coeff": 2
+      }
+    ],
+    "conditions": [
+      "heat",
+      "catalyst"
+    ],
+    "bondTypes": [
+      "kovalen-polar"
+    ],
+    "deltaHkJmol": -197.8,
+    "observation": "Gas belerang dioksida bereaksi di atas katalis panas membentuk asap putih.",
+    "explanation": "Katalis vanadium(V) oksida mempercepat penggabungan oksigen ke belerang dioksida; tahap kunci pembuatan asam sulfat.",
+    "hazards": [
+      "Belerang trioksida sangat korosif"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 30
+  },
+  {
+    "id": "h2s-o2-so2",
+    "reactants": [
+      {
+        "species": "H2S",
+        "coeff": 2
+      },
+      {
+        "species": "O2",
+        "coeff": 3
+      }
+    ],
+    "products": [
+      {
+        "species": "SO2",
+        "coeff": 2
+      },
+      {
+        "species": "H2O",
+        "coeff": 2
+      }
+    ],
+    "conditions": [
+      "heat"
+    ],
+    "bondTypes": [
+      "kovalen-polar"
+    ],
+    "deltaHkJmol": -1124,
+    "observation": "Gas berbau telur busuk terbakar dengan nyala biru pucat.",
+    "explanation": "Hidrogen sulfida teroksidasi sempurna menjadi belerang dioksida dan air.",
+    "hazards": [
+      "Hidrogen sulfida sangat beracun; belerang dioksida mengiritasi"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "n2-o2-no",
+    "reactants": [
+      {
+        "species": "N2",
+        "coeff": 1
+      },
+      {
+        "species": "O2",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "NO",
+        "coeff": 2
+      }
+    ],
+    "conditions": [
+      "heat"
+    ],
+    "bondTypes": [
+      "kovalen"
+    ],
+    "deltaHkJmol": 180.5,
+    "observation": "Reaksi baru berjalan pada suhu sangat tinggi, misalnya di sekitar busur listrik.",
+    "explanation": "Ikatan rangkap tiga nitrogen sangat kuat, sehingga energi tinggi diperlukan untuk membentuk nitrogen monoksida.",
+    "hazards": [
+      "Nitrogen monoksida perlahan berubah menjadi gas cokelat beracun"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "NIST"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "no-o2-no2",
+    "reactants": [
+      {
+        "species": "NO",
+        "coeff": 2
+      },
+      {
+        "species": "O2",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "NO2",
+        "coeff": 2
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "kovalen-polar"
+    ],
+    "deltaHkJmol": -114.1,
+    "observation": "Gas tak berwarna langsung berubah menjadi gas cokelat kemerahan.",
+    "explanation": "Nitrogen monoksida mudah teroksidasi menjadi nitrogen dioksida di udara.",
+    "hazards": [
+      "Nitrogen dioksida beracun dan merusak paru-paru"
+    ],
+    "curriculum": [
+      "merdeka-e",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 25
+  },
+  {
+    "id": "p4-o2-p4o10",
+    "reactants": [
+      {
+        "species": "P4",
+        "coeff": 1
+      },
+      {
+        "species": "O2",
+        "coeff": 5
+      }
+    ],
+    "products": [
+      {
+        "species": "P4O10",
+        "coeff": 1
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "kovalen-polar"
+    ],
+    "deltaHkJmol": -2984,
+    "observation": "Fosfor putih terbakar sendiri di udara dengan nyala terang dan asap putih tebal.",
+    "explanation": "Empat atom fosfor mengikat sepuluh atom oksigen membentuk fosfor(V) oksida.",
+    "hazards": [
+      "Fosfor putih sangat mudah terbakar dan beracun"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "ch4-o2-co2",
+    "reactants": [
+      {
+        "species": "CH4",
+        "coeff": 1
+      },
+      {
+        "species": "O2",
+        "coeff": 2
+      }
+    ],
+    "products": [
+      {
+        "species": "CO2",
+        "coeff": 1
+      },
+      {
+        "species": "H2O",
+        "coeff": 2
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "kovalen-polar"
+    ],
+    "deltaHkJmol": -890.3,
+    "observation": "Gas metana terbakar dengan nyala biru bersih.",
+    "explanation": "Pembakaran sempurna metana menghasilkan karbon dioksida dan uap air.",
+    "hazards": [
+      "Metana mudah terbakar dan dapat meledak"
+    ],
+    "curriculum": [
+      "merdeka-e",
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "NIST"
+    ],
+    "priority": 30
+  },
+  {
+    "id": "c2h5oh-o2-co2",
+    "reactants": [
+      {
+        "species": "C2H5OH",
+        "coeff": 1
+      },
+      {
+        "species": "O2",
+        "coeff": 3
+      }
+    ],
+    "products": [
+      {
+        "species": "CO2",
+        "coeff": 2
+      },
+      {
+        "species": "H2O",
+        "coeff": 3
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "kovalen-polar"
+    ],
+    "deltaHkJmol": -1366.8,
+    "observation": "Etanol terbakar dengan nyala biru muda yang panas.",
+    "explanation": "Setiap molekul etanol membutuhkan tiga molekul oksigen untuk pembakaran sempurna.",
+    "hazards": [
+      "Etanol mudah terbakar"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "NIST"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "c2h2-o2-co2",
+    "reactants": [
+      {
+        "species": "C2H2",
+        "coeff": 2
+      },
+      {
+        "species": "O2",
+        "coeff": 5
+      }
+    ],
+    "products": [
+      {
+        "species": "CO2",
+        "coeff": 4
+      },
+      {
+        "species": "H2O",
+        "coeff": 2
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "kovalen-polar"
+    ],
+    "deltaHkJmol": -2599,
+    "observation": "Asetilena terbakar dengan nyala sangat panas dan terang.",
+    "explanation": "Pembakaran asetilena melepaskan energi besar, sehingga dipakai untuk las oksi-asetilena.",
+    "hazards": [
+      "Asetilena mudah meledak bila tertekan"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "ch3cooh-o2-co2",
+    "reactants": [
+      {
+        "species": "CH3COOH",
+        "coeff": 1
+      },
+      {
+        "species": "O2",
+        "coeff": 2
+      }
+    ],
+    "products": [
+      {
+        "species": "CO2",
+        "coeff": 2
+      },
+      {
+        "species": "H2O",
+        "coeff": 2
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "kovalen-polar"
+    ],
+    "deltaHkJmol": -874,
+    "observation": "Asam asetat terbakar dengan nyala biru bila dipanaskan di udara.",
+    "explanation": "Pembakaran sempurna asam asetat menghasilkan dua molekul karbon dioksida dan dua molekul air.",
+    "hazards": [
+      "Asam asetat pekat korosif dan mudah terbakar"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "NIST"
+    ],
+    "priority": 15
+  },
+  {
+    "id": "fe-o2-fe3o4",
+    "reactants": [
+      {
+        "species": "Fe",
+        "coeff": 3
+      },
+      {
+        "species": "O2",
+        "coeff": 2
+      }
+    ],
+    "products": [
+      {
+        "species": "Fe3O4",
+        "coeff": 1
+      }
+    ],
+    "conditions": [
+      "heat"
+    ],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": -1118,
+    "observation": "Besi panas membentuk lapisan hitam magnetit.",
+    "explanation": "Pada oksigen terbatas, besi membentuk besi(II,III) oksida yang mengandung kedua tingkat oksidasi.",
+    "hazards": [
+      "Serbuk besi halus mudah terbakar"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "NIST"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "cu-o2-cuo",
+    "reactants": [
+      {
+        "species": "Cu",
+        "coeff": 2
+      },
+      {
+        "species": "O2",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "CuO",
+        "coeff": 2
+      }
+    ],
+    "conditions": [
+      "heat"
+    ],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": -314,
+    "observation": "Tembaga mengilap berubah menjadi lapisan hitam saat dipanaskan di udara.",
+    "explanation": "Tembaga teroksidasi menjadi tembaga(II) oksida.",
+    "hazards": [
+      "Oksida tembaga berbahaya bagi lingkungan akuatik"
+    ],
+    "curriculum": [
+      "merdeka-e",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 25
+  },
+  {
+    "id": "cu-o2-cu2o",
+    "reactants": [
+      {
+        "species": "Cu",
+        "coeff": 4
+      },
+      {
+        "species": "O2",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "Cu2O",
+        "coeff": 2
+      }
+    ],
+    "conditions": [
+      "heat"
+    ],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": -338,
+    "observation": "Pada oksigen sangat terbatas, lapisan oksida berwarna merah bata terbentuk.",
+    "explanation": "Tembaga dapat membentuk oksida dengan bilangan oksidasi +1 bila oksigen tidak berlebih.",
+    "hazards": [
+      "Oksida tembaga berbahaya bagi lingkungan akuatik"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 15
+  },
+  {
+    "id": "al-o2-al2o3",
+    "reactants": [
+      {
+        "species": "Al",
+        "coeff": 4
+      },
+      {
+        "species": "O2",
+        "coeff": 3
+      }
+    ],
+    "products": [
+      {
+        "species": "Al2O3",
+        "coeff": 2
+      }
+    ],
+    "conditions": [
+      "heat"
+    ],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": -3352,
+    "observation": "Serbuk aluminium terbakar dengan nyala putih menyilaukan.",
+    "explanation": "Aluminium membentuk lapisan oksida yang sangat stabil; lapisan tipisnya justru melindungi logam dari korosi.",
+    "hazards": [
+      "Nyala aluminium sangat terang dan panas"
+    ],
+    "curriculum": [
+      "merdeka-e",
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "NIST"
+    ],
+    "priority": 25
+  },
+  {
+    "id": "mg-co2-mgo-c",
+    "reactants": [
+      {
+        "species": "Mg",
+        "coeff": 2
+      },
+      {
+        "species": "CO2",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "MgO",
+        "coeff": 2
+      },
+      {
+        "species": "C",
+        "coeff": 1
+      }
+    ],
+    "conditions": [
+      "heat"
+    ],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": -810,
+    "observation": "Magnesium yang terbakar tetap menyala di dalam gas karbon dioksida dan meninggalkan jelaga hitam.",
+    "explanation": "Magnesium lebih reaktif daripada karbon, sehingga mampu menarik oksigen dari karbon dioksida.",
+    "hazards": [
+      "Jangan memadamkan magnesium dengan pemadam CO2"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 15
+  },
+  {
+    "id": "mg-n2-mg3n2",
+    "reactants": [
+      {
+        "species": "Mg",
+        "coeff": 3
+      },
+      {
+        "species": "N2",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "Mg3N2",
+        "coeff": 1
+      }
+    ],
+    "conditions": [
+      "heat"
+    ],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": -461,
+    "observation": "Magnesium panas membentuk padatan kuning kehijauan di atmosfer nitrogen.",
+    "explanation": "Magnesium dapat bereaksi langsung dengan nitrogen membentuk magnesium nitrida.",
+    "hazards": [
+      "Magnesium nitrida menghasilkan amonia bila terkena air"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 15
+  },
+  {
+    "id": "na-o2-na2o",
+    "reactants": [
+      {
+        "species": "Na",
+        "coeff": 4
+      },
+      {
+        "species": "O2",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "Na2O",
+        "coeff": 2
+      }
+    ],
+    "conditions": [
+      "heat"
+    ],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": -828,
+    "observation": "Natrium terbakar dengan nyala kuning dan menyisakan padatan putih.",
+    "explanation": "Natrium menyerahkan satu elektron kepada oksigen membentuk natrium oksida.",
+    "hazards": [
+      "Natrium bereaksi hebat dengan air"
+    ],
+    "curriculum": [
+      "merdeka-e",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "na-o2-na2o2",
+    "reactants": [
+      {
+        "species": "Na",
+        "coeff": 2
+      },
+      {
+        "species": "O2",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "Na2O2",
+        "coeff": 1
+      }
+    ],
+    "conditions": [
+      "heat"
+    ],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": -510,
+    "observation": "Pada oksigen berlebih, natrium membentuk padatan kuning pucat.",
+    "explanation": "Natrium peroksida mengandung ikatan oksigen-oksigen dengan bilangan oksidasi -1.",
+    "hazards": [
+      "Natrium peroksida mengoksidasi bahan organik secara hebat"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 15
+  },
+  {
+    "id": "li-cl2-licl",
+    "reactants": [
+      {
+        "species": "Li",
+        "coeff": 2
+      },
+      {
+        "species": "Cl2",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "LiCl",
+        "coeff": 2
+      }
+    ],
+    "conditions": [
+      "heat"
+    ],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": -817,
+    "observation": "Litium terbakar dalam gas klorin membentuk garam putih.",
+    "explanation": "Litium melepas satu elektron dan klorin menerimanya membentuk litium klorida ionik.",
+    "hazards": [
+      "Gas klorin beracun"
+    ],
+    "curriculum": [
+      "merdeka-e",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 15
+  },
+  {
+    "id": "ca-o2-cao",
+    "reactants": [
+      {
+        "species": "Ca",
+        "coeff": 2
+      },
+      {
+        "species": "O2",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "CaO",
+        "coeff": 2
+      }
+    ],
+    "conditions": [
+      "heat"
+    ],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": -1270,
+    "observation": "Kalsium terbakar dengan nyala merah bata.",
+    "explanation": "Kalsium membentuk kalsium oksida, bahan dasar pembuatan semen dan kapur.",
+    "hazards": [
+      "Kalsium oksida panas sangat korosif"
+    ],
+    "curriculum": [
+      "merdeka-e",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "ba-o2-bao",
+    "reactants": [
+      {
+        "species": "Ba",
+        "coeff": 2
+      },
+      {
+        "species": "O2",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "BaO",
+        "coeff": 2
+      }
+    ],
+    "conditions": [
+      "heat"
+    ],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": -1107,
+    "observation": "Barium terbakar membentuk oksida putih.",
+    "explanation": "Barium sangat reaktif sehingga mudah bereaksi dengan oksigen.",
+    "hazards": [
+      "Senyawa barium larut bersifat beracun"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 10
+  },
+  {
+    "id": "li-o2-li2o",
+    "reactants": [
+      {
+        "species": "Li",
+        "coeff": 4
+      },
+      {
+        "species": "O2",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "Li2O",
+        "coeff": 2
+      }
+    ],
+    "conditions": [
+      "heat"
+    ],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": -598,
+    "observation": "Litium terbakar dengan nyala merah karmin.",
+    "explanation": "Litium membentuk litium oksida, senyawa ionik dengan dua ion litium per ion oksida.",
+    "hazards": [
+      "Litium bereaksi dengan air dan uap air"
+    ],
+    "curriculum": [
+      "merdeka-e",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 15
+  },
+  {
+    "id": "k-o2-k2o",
+    "reactants": [
+      {
+        "species": "K",
+        "coeff": 4
+      },
+      {
+        "species": "O2",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "K2O",
+        "coeff": 2
+      }
+    ],
+    "conditions": [
+      "heat"
+    ],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": -722,
+    "observation": "Kalium terbakar dengan nyala ungu muda.",
+    "explanation": "Kalium membentuk kalium oksida; logam ini lebih reaktif daripada natrium.",
+    "hazards": [
+      "Kalium terbakar hebat bila terkena air"
+    ],
+    "curriculum": [
+      "merdeka-e",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 15
+  },
+  {
+    "id": "nh3-o2-n2",
+    "reactants": [
+      {
+        "species": "NH3",
+        "coeff": 4
+      },
+      {
+        "species": "O2",
+        "coeff": 3
+      }
+    ],
+    "products": [
+      {
+        "species": "N2",
+        "coeff": 2
+      },
+      {
+        "species": "H2O",
+        "coeff": 6
+      }
+    ],
+    "conditions": [
+      "heat"
+    ],
+    "bondTypes": [
+      "kovalen-polar"
+    ],
+    "deltaHkJmol": -1531.2,
+    "observation": "Amonia terbakar dengan nyala kuning kehijauan.",
+    "explanation": "Pembakaran amonia tanpa katalis terutama menghasilkan nitrogen dan air.",
+    "hazards": [
+      "Amonia korosif dan beracun"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "co-h2-ch3oh",
+    "reactants": [
+      {
+        "species": "CO",
+        "coeff": 1
+      },
+      {
+        "species": "H2",
+        "coeff": 2
+      }
+    ],
+    "products": [
+      {
+        "species": "CH3OH",
+        "coeff": 1
+      }
+    ],
+    "conditions": [
+      "heat",
+      "catalyst",
+      "pressure"
+    ],
+    "bondTypes": [
+      "kovalen-polar"
+    ],
+    "deltaHkJmol": -128.2,
+    "observation": "Gas karbon monoksida dan hidrogen bergabung di atas katalis menjadi cairan tak berwarna.",
+    "explanation": "Sintesis metanol industri menggabungkan karbon monoksida dengan hidrogen pada tekanan tinggi.",
+    "hazards": [
+      "Metanol sangat beracun bila tertelan"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "naoh-hcl-nacl",
+    "reactants": [
+      {
+        "species": "NaOH",
+        "coeff": 1
+      },
+      {
+        "species": "HCl",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "NaCl",
+        "coeff": 1
+      },
+      {
+        "species": "H2O",
+        "coeff": 1
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Larutan menghangat dan garam dapur terbentuk; indikator berubah ke pH netral.",
+    "explanation": "Ion hidrogen dari asam dan ion hidroksida dari basa bergabung membentuk air.",
+    "hazards": [
+      "Asam dan basa pekat korosif"
+    ],
+    "curriculum": [
+      "merdeka-e",
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 30
+  },
+  {
+    "id": "koh-hcl-kcl",
+    "reactants": [
+      {
+        "species": "KOH",
+        "coeff": 1
+      },
+      {
+        "species": "HCl",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "KCl",
+        "coeff": 1
+      },
+      {
+        "species": "H2O",
+        "coeff": 1
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Larutan menghangat dan membentuk kalium klorida yang tidak berwarna.",
+    "explanation": "Netralisasi kalium hidroksida oleh asam klorida menghasilkan air dan garam.",
+    "hazards": [
+      "Kalium hidroksida korosif"
+    ],
+    "curriculum": [
+      "merdeka-e",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "caoh2-hcl-cacl2",
+    "reactants": [
+      {
+        "species": "Ca(OH)2",
+        "coeff": 1
+      },
+      {
+        "species": "HCl",
+        "coeff": 2
+      }
+    ],
+    "products": [
+      {
+        "species": "CaCl2",
+        "coeff": 1
+      },
+      {
+        "species": "H2O",
+        "coeff": 2
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Suspensi putih kalsium hidroksida larut menjadi larutan jernih.",
+    "explanation": "Dua ion hidrogen diperlukan untuk menetralkan dua ion hidroksida dari kalsium hidroksida.",
+    "hazards": [
+      "Kalsium hidroksida korosif"
+    ],
+    "curriculum": [
+      "merdeka-e",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "nh3-hcl-nh4cl",
+    "reactants": [
+      {
+        "species": "NH3",
+        "coeff": 1
+      },
+      {
+        "species": "HCl",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "NH4Cl",
+        "coeff": 1
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Dua gas yang bertemu membentuk asap putih padat.",
+    "explanation": "Amonia menerima proton dari asam klorida membentuk ion amonium, lalu pasangan ion mengendap.",
+    "hazards": [
+      "Amonia dan asam klorida mengiritasi saluran napas"
+    ],
+    "curriculum": [
+      "merdeka-e",
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 30
+  },
+  {
+    "id": "h2so4-naoh-na2so4",
+    "reactants": [
+      {
+        "species": "H2SO4",
+        "coeff": 1
+      },
+      {
+        "species": "NaOH",
+        "coeff": 2
+      }
+    ],
+    "products": [
+      {
+        "species": "Na2SO4",
+        "coeff": 1
+      },
+      {
+        "species": "H2O",
+        "coeff": 2
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Larutan menghangat dan membentuk natrium sulfat.",
+    "explanation": "Asam sulfat melepas dua proton, sehingga membutuhkan dua ion hidroksida untuk netralisasi lengkap.",
+    "hazards": [
+      "Asam sulfat pekat merusak jaringan"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 25
+  },
+  {
+    "id": "hno3-naoh-nano3",
+    "reactants": [
+      {
+        "species": "HNO3",
+        "coeff": 1
+      },
+      {
+        "species": "NaOH",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "NaNO3",
+        "coeff": 1
+      },
+      {
+        "species": "H2O",
+        "coeff": 1
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Larutan jernih menghangat dan membentuk natrium nitrat.",
+    "explanation": "Asam nitrat dan natrium hidroksida saling menetralkan membentuk garam dan air.",
+    "hazards": [
+      "Asam nitrat pengoksidasi kuat dan korosif"
+    ],
+    "curriculum": [
+      "merdeka-e",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "h3po4-naoh-na3po4",
+    "reactants": [
+      {
+        "species": "H3PO4",
+        "coeff": 1
+      },
+      {
+        "species": "NaOH",
+        "coeff": 3
+      }
+    ],
+    "products": [
+      {
+        "species": "Na3PO4",
+        "coeff": 1
+      },
+      {
+        "species": "H2O",
+        "coeff": 3
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Tiga porsi basa diperlukan untuk menetralkan seluruh proton asam fosfat.",
+    "explanation": "Asam fosfat memiliki tiga proton yang dapat dilepas, sehingga membentuk natrium fosfat.",
+    "hazards": [
+      "Asam fosfat pekat korosif"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 15
+  },
+  {
+    "id": "caoh2-co2-caco3",
+    "reactants": [
+      {
+        "species": "Ca(OH)2",
+        "coeff": 1
+      },
+      {
+        "species": "CO2",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "CaCO3",
+        "coeff": 1
+      },
+      {
+        "species": "H2O",
+        "coeff": 1
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Air kapur jernih menjadi keruh karena terbentuk endapan putih.",
+    "explanation": "Karbon dioksida bersifat asam dan bereaksi dengan kalsium hidroksida membentuk kalsium karbonat.",
+    "hazards": [
+      "Kalsium hidroksida korosif"
+    ],
+    "curriculum": [
+      "merdeka-e",
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 30
+  },
+  {
+    "id": "naoh-co2-na2co3",
+    "reactants": [
+      {
+        "species": "NaOH",
+        "coeff": 2
+      },
+      {
+        "species": "CO2",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "Na2CO3",
+        "coeff": 1
+      },
+      {
+        "species": "H2O",
+        "coeff": 1
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Gas karbon dioksida terserap larutan basa dan membentuk garam.",
+    "explanation": "Dua ion hidroksida menyerap karbon dioksida membentuk karbonat dan air.",
+    "hazards": [
+      "Natrium hidroksida korosif"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "na2o-h2o-naoh",
+    "reactants": [
+      {
+        "species": "Na2O",
+        "coeff": 1
+      },
+      {
+        "species": "H2O",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "NaOH",
+        "coeff": 2
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Padatan putih bereaksi hebat dengan air dan menghasilkan larutan basa.",
+    "explanation": "Oksida logam alkali bersifat basa; ion oksida menarik proton dari air membentuk hidroksida.",
+    "hazards": [
+      "Reaksi sangat eksotermik dan korosif"
+    ],
+    "curriculum": [
+      "merdeka-e",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "li2o-h2o-lioh",
+    "reactants": [
+      {
+        "species": "Li2O",
+        "coeff": 1
+      },
+      {
+        "species": "H2O",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "LiOH",
+        "coeff": 2
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Litium oksida larut dalam air membentuk larutan basa.",
+    "explanation": "Oksida logam alkali bersifat basa; ion oksida menarik proton dari air membentuk ion hidroksida.",
+    "hazards": [
+      "Litium hidroksida korosif"
+    ],
+    "curriculum": [
+      "merdeka-e",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 15
+  },
+  {
+    "id": "k2o-h2o-koh",
+    "reactants": [
+      {
+        "species": "K2O",
+        "coeff": 1
+      },
+      {
+        "species": "H2O",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "KOH",
+        "coeff": 2
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Kalium oksida bereaksi dengan air menghasilkan larutan basa kuat.",
+    "explanation": "Satu ion oksida menarik dua proton dari air, membentuk dua ion hidroksida.",
+    "hazards": [
+      "Kalium hidroksida sangat korosif"
+    ],
+    "curriculum": [
+      "merdeka-e",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 15
+  },
+  {
+    "id": "na2o2-h2o-naoh-o2",
+    "reactants": [
+      {
+        "species": "Na2O2",
+        "coeff": 2
+      },
+      {
+        "species": "H2O",
+        "coeff": 2
+      }
+    ],
+    "products": [
+      {
+        "species": "NaOH",
+        "coeff": 4
+      },
+      {
+        "species": "O2",
+        "coeff": 1
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Padatan kuning pucat bereaksi dengan air sambil melepaskan gelembung gas.",
+    "explanation": "Natrium peroksida mengalami disproporsionasi saat bereaksi dengan air, menghasilkan hidroksida dan oksigen.",
+    "hazards": [
+      "Natrium peroksida pengoksidasi kuat"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 15
+  },
+  {
+    "id": "cao-h2o-caoh2",
+    "reactants": [
+      {
+        "species": "CaO",
+        "coeff": 1
+      },
+      {
+        "species": "H2O",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "Ca(OH)2",
+        "coeff": 1
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": -63.7,
+    "observation": "Padatan putih mengeluarkan panas dan mengembang saat ditetesi air.",
+    "explanation": "Kalsium oksida menyerap air membentuk kalsium hidroksida; reaksi ini dipakai pada kapur bangunan.",
+    "hazards": [
+      "Panas reaksi dapat mendidihkan air dan menyebabkan luka bakar"
+    ],
+    "curriculum": [
+      "merdeka-e",
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 25
+  },
+  {
+    "id": "bao-h2o-baoh2",
+    "reactants": [
+      {
+        "species": "BaO",
+        "coeff": 1
+      },
+      {
+        "species": "H2O",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "Ba(OH)2",
+        "coeff": 1
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Barium oksida larut dalam air membentuk larutan basa.",
+    "explanation": "Oksida barium menyerap air membentuk barium hidroksida.",
+    "hazards": [
+      "Senyawa barium larut beracun"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 10
+  },
+  {
+    "id": "so3-h2o-h2so4",
+    "reactants": [
+      {
+        "species": "SO3",
+        "coeff": 1
+      },
+      {
+        "species": "H2O",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "H2SO4",
+        "coeff": 1
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "kovalen-polar"
+    ],
+    "deltaHkJmol": -130,
+    "observation": "Gas belerang trioksida larut dalam air dengan reaksi sangat eksotermik.",
+    "explanation": "Belerang trioksida bergabung dengan air membentuk asam sulfat; reaksi ini terlalu panas untuk dilakukan langsung di industri.",
+    "hazards": [
+      "Kabut asam sulfat sangat korosif"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 25
+  },
+  {
+    "id": "h2so4-caoh2-caso4",
+    "reactants": [
+      {
+        "species": "H2SO4",
+        "coeff": 1
+      },
+      {
+        "species": "Ca(OH)2",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "CaSO4",
+        "coeff": 1
+      },
+      {
+        "species": "H2O",
+        "coeff": 2
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Terbentuk endapan putih halus kalsium sulfat.",
+    "explanation": "Netralisasi asam sulfat oleh kalsium hidroksida menghasilkan kalsium sulfat dan air.",
+    "hazards": [
+      "Asam sulfat dan kalsium hidroksida korosif"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 15
+  },
+  {
+    "id": "h2so4-nh3-ammonium-sulfate",
+    "reactants": [
+      {
+        "species": "H2SO4",
+        "coeff": 1
+      },
+      {
+        "species": "NH3",
+        "coeff": 2
+      }
+    ],
+    "products": [
+      {
+        "species": "(NH4)2SO4",
+        "coeff": 1
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Gas amonia diserap larutan asam sulfat membentuk garam pupuk.",
+    "explanation": "Dua molekul amonia menerima proton dari asam sulfat membentuk amonium sulfat.",
+    "hazards": [
+      "Amonia mengiritasi; asam sulfat korosif"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 15
+  },
+  {
+    "id": "mg-hcl-mgcl2",
+    "reactants": [
+      {
+        "species": "Mg",
+        "coeff": 1
+      },
+      {
+        "species": "HCl",
+        "coeff": 2
+      }
+    ],
+    "products": [
+      {
+        "species": "MgCl2",
+        "coeff": 1
+      },
+      {
+        "species": "H2",
+        "coeff": 1
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": -462,
+    "observation": "Logam larut sambil mengeluarkan gelembung gas yang mudah terbakar.",
+    "explanation": "Magnesium mendesak hidrogen dari asam klorida karena magnesium lebih reaktif.",
+    "hazards": [
+      "Gas hidrogen mudah terbakar; asam korosif"
+    ],
+    "curriculum": [
+      "merdeka-e",
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "NIST"
+    ],
+    "priority": 30
+  },
+  {
+    "id": "zn-hcl-zncl2",
+    "reactants": [
+      {
+        "species": "Zn",
+        "coeff": 1
+      },
+      {
+        "species": "HCl",
+        "coeff": 2
+      }
+    ],
+    "products": [
+      {
+        "species": "ZnCl2",
+        "coeff": 1
+      },
+      {
+        "species": "H2",
+        "coeff": 1
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": -153,
+    "observation": "Gelembung gas muncul di permukaan seng dan logam perlahan larut.",
+    "explanation": "Seng bereaksi dengan asam klorida membentuk seng klorida dan gas hidrogen.",
+    "hazards": [
+      "Gas hidrogen mudah terbakar"
+    ],
+    "curriculum": [
+      "merdeka-e",
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "NIST"
+    ],
+    "priority": 25
+  },
+  {
+    "id": "fe-hcl-fecl2",
+    "reactants": [
+      {
+        "species": "Fe",
+        "coeff": 1
+      },
+      {
+        "species": "HCl",
+        "coeff": 2
+      }
+    ],
+    "products": [
+      {
+        "species": "FeCl2",
+        "coeff": 1
+      },
+      {
+        "species": "H2",
+        "coeff": 1
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": -87.9,
+    "observation": "Besi larut membentuk larutan hijau pucat dan gelembung gas.",
+    "explanation": "Asam klorida encer mengoksidasi besi hanya sampai bilangan oksidasi +2.",
+    "hazards": [
+      "Gas hidrogen mudah terbakar"
+    ],
+    "curriculum": [
+      "merdeka-e",
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "NIST"
+    ],
+    "priority": 25
+  },
+  {
+    "id": "al-hcl-alcl3",
+    "reactants": [
+      {
+        "species": "Al",
+        "coeff": 2
+      },
+      {
+        "species": "HCl",
+        "coeff": 6
+      }
+    ],
+    "products": [
+      {
+        "species": "AlCl3",
+        "coeff": 2
+      },
+      {
+        "species": "H2",
+        "coeff": 3
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": -1050,
+    "observation": "Aluminium larut dan mengeluarkan gelembung gas yang cepat.",
+    "explanation": "Setiap atom aluminium melepas tiga elektron, sehingga tiga ion hidrogen diperlukan untuk setiap atom aluminium.",
+    "hazards": [
+      "Gas hidrogen mudah terbakar; asam korosif"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "NIST"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "zn-h2so4-znso4",
+    "reactants": [
+      {
+        "species": "Zn",
+        "coeff": 1
+      },
+      {
+        "species": "H2SO4",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "ZnSO4",
+        "coeff": 1
+      },
+      {
+        "species": "H2",
+        "coeff": 1
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": -154,
+    "observation": "Seng larut dalam asam sulfat encer dengan gelembung gas.",
+    "explanation": "Seng mendesak hidrogen dari asam sulfat membentuk seng sulfat.",
+    "hazards": [
+      "Gas hidrogen mudah terbakar; asam sulfat korosif"
+    ],
+    "curriculum": [
+      "merdeka-e",
+      "gcse"
+    ],
+    "sources": [
+      "NIST"
+    ],
+    "priority": 25
+  },
+  {
+    "id": "mg-h2so4-mgso4",
+    "reactants": [
+      {
+        "species": "Mg",
+        "coeff": 1
+      },
+      {
+        "species": "H2SO4",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "MgSO4",
+        "coeff": 1
+      },
+      {
+        "species": "H2",
+        "coeff": 1
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": -466,
+    "observation": "Magnesium larut cepat sambil menghasilkan gas.",
+    "explanation": "Magnesium bereaksi dengan asam sulfat encer membentuk magnesium sulfat dan hidrogen.",
+    "hazards": [
+      "Gas hidrogen mudah terbakar"
+    ],
+    "curriculum": [
+      "merdeka-e",
+      "gcse"
+    ],
+    "sources": [
+      "NIST"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "fe-h2so4-feso4",
+    "reactants": [
+      {
+        "species": "Fe",
+        "coeff": 1
+      },
+      {
+        "species": "H2SO4",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "FeSO4",
+        "coeff": 1
+      },
+      {
+        "species": "H2",
+        "coeff": 1
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": -89,
+    "observation": "Besi larut membentuk larutan hijau kebiruan.",
+    "explanation": "Asam sulfat encer melarutkan besi menjadi besi(II) sulfat dan gas hidrogen.",
+    "hazards": [
+      "Gas hidrogen mudah terbakar"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "NIST"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "al-h2so4-al2so4",
+    "reactants": [
+      {
+        "species": "Al",
+        "coeff": 2
+      },
+      {
+        "species": "H2SO4",
+        "coeff": 3
+      }
+    ],
+    "products": [
+      {
+        "species": "Al2(SO4)3",
+        "coeff": 1
+      },
+      {
+        "species": "H2",
+        "coeff": 3
+      }
+    ],
+    "conditions": [
+      "heat"
+    ],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": -1060,
+    "observation": "Aluminium larut dalam asam sulfat hangat dengan gelembung gas.",
+    "explanation": "Aluminium membentuk aluminium sulfat dan hidrogen; lapisan oksida pelindung harus dikikis agar reaksi berjalan.",
+    "hazards": [
+      "Gas hidrogen mudah terbakar"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "NIST"
+    ],
+    "priority": 15
+  },
+  {
+    "id": "caco3-hcl-cacl2",
+    "reactants": [
+      {
+        "species": "CaCO3",
+        "coeff": 1
+      },
+      {
+        "species": "HCl",
+        "coeff": 2
+      }
+    ],
+    "products": [
+      {
+        "species": "CaCl2",
+        "coeff": 1
+      },
+      {
+        "species": "H2O",
+        "coeff": 1
+      },
+      {
+        "species": "CO2",
+        "coeff": 1
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Batu kapur berdesis dan mengeluarkan gelembung gas; air kapur menjadi keruh bila gas dialirkan.",
+    "explanation": "Asam bereaksi dengan karbonat membentuk garam, air, dan karbon dioksida.",
+    "hazards": [
+      "Asam klorida korosif"
+    ],
+    "curriculum": [
+      "merdeka-e",
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 30
+  },
+  {
+    "id": "nahco3-hcl-nacl",
+    "reactants": [
+      {
+        "species": "NaHCO3",
+        "coeff": 1
+      },
+      {
+        "species": "HCl",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "NaCl",
+        "coeff": 1
+      },
+      {
+        "species": "H2O",
+        "coeff": 1
+      },
+      {
+        "species": "CO2",
+        "coeff": 1
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Serbuk berdesis hebat dan menghasilkan gas yang memadamkan api.",
+    "explanation": "Natrium bikarbonat bereaksi dengan asam membentuk garam, air, dan karbon dioksida.",
+    "hazards": [
+      "Asam korosif; gas CO2 dapat menyesakkan di ruang tertutup"
+    ],
+    "curriculum": [
+      "merdeka-e",
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 30
+  },
+  {
+    "id": "na2co3-hcl-nacl",
+    "reactants": [
+      {
+        "species": "Na2CO3",
+        "coeff": 1
+      },
+      {
+        "species": "HCl",
+        "coeff": 2
+      }
+    ],
+    "products": [
+      {
+        "species": "NaCl",
+        "coeff": 2
+      },
+      {
+        "species": "H2O",
+        "coeff": 1
+      },
+      {
+        "species": "CO2",
+        "coeff": 1
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Larutan soda mendidih perlahan karena gas karbon dioksida keluar.",
+    "explanation": "Satu ion karbonat membutuhkan dua ion hidrogen untuk membentuk air dan karbon dioksida.",
+    "hazards": [
+      "Asam klorida korosif"
+    ],
+    "curriculum": [
+      "merdeka-e",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 25
+  },
+  {
+    "id": "cuo-hcl-cucl2",
+    "reactants": [
+      {
+        "species": "CuO",
+        "coeff": 1
+      },
+      {
+        "species": "HCl",
+        "coeff": 2
+      }
+    ],
+    "products": [
+      {
+        "species": "CuCl2",
+        "coeff": 1
+      },
+      {
+        "species": "H2O",
+        "coeff": 1
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Padatan hitam larut menjadi larutan biru kehijauan.",
+    "explanation": "Oksida basa tembaga larut dalam asam membentuk garam tembaga(II) dan air.",
+    "hazards": [
+      "Senyawa tembaga berbahaya bagi lingkungan akuatik"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "mgo-hcl-mgcl2",
+    "reactants": [
+      {
+        "species": "MgO",
+        "coeff": 1
+      },
+      {
+        "species": "HCl",
+        "coeff": 2
+      }
+    ],
+    "products": [
+      {
+        "species": "MgCl2",
+        "coeff": 1
+      },
+      {
+        "species": "H2O",
+        "coeff": 1
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Padatan putih larut membentuk larutan tidak berwarna.",
+    "explanation": "Magnesium oksida bersifat basa dan larut dalam asam klorida membentuk magnesium klorida.",
+    "hazards": [
+      "Asam klorida korosif"
+    ],
+    "curriculum": [
+      "merdeka-e",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "fe2o3-hcl-fecl3",
+    "reactants": [
+      {
+        "species": "Fe2O3",
+        "coeff": 1
+      },
+      {
+        "species": "HCl",
+        "coeff": 6
+      }
+    ],
+    "products": [
+      {
+        "species": "FeCl3",
+        "coeff": 2
+      },
+      {
+        "species": "H2O",
+        "coeff": 3
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Padatan cokelat kemerahan larut menjadi larutan kuning kecokelatan.",
+    "explanation": "Besi(III) oksida larut dalam asam membentuk besi(III) klorida dan air.",
+    "hazards": [
+      "Asam klorida korosif"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "al2o3-hcl-alcl3",
+    "reactants": [
+      {
+        "species": "Al2O3",
+        "coeff": 1
+      },
+      {
+        "species": "HCl",
+        "coeff": 6
+      }
+    ],
+    "products": [
+      {
+        "species": "AlCl3",
+        "coeff": 2
+      },
+      {
+        "species": "H2O",
+        "coeff": 3
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Oksida aluminium yang keras larut perlahan dalam asam pekat.",
+    "explanation": "Aluminium oksida bersifat amfoter, tetapi tetap dapat dinetralkan oleh asam kuat.",
+    "hazards": [
+      "Asam klorida korosif"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 15
+  },
+  {
+    "id": "aloh3-hcl-alcl3",
+    "reactants": [
+      {
+        "species": "Al(OH)3",
+        "coeff": 1
+      },
+      {
+        "species": "HCl",
+        "coeff": 3
+      }
+    ],
+    "products": [
+      {
+        "species": "AlCl3",
+        "coeff": 1
+      },
+      {
+        "species": "H2O",
+        "coeff": 3
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Endapan putih larut menjadi larutan jernih.",
+    "explanation": "Aluminium hidroksida bersifat amfoter dan larut dalam asam membentuk aluminium klorida.",
+    "hazards": [
+      "Asam klorida korosif"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 15
+  },
+  {
+    "id": "cao-hcl-cacl2",
+    "reactants": [
+      {
+        "species": "CaO",
+        "coeff": 1
+      },
+      {
+        "species": "HCl",
+        "coeff": 2
+      }
+    ],
+    "products": [
+      {
+        "species": "CaCl2",
+        "coeff": 1
+      },
+      {
+        "species": "H2O",
+        "coeff": 1
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Kapur tohor larut dalam asam sambil menghangat.",
+    "explanation": "Kalsium oksida bersifat basa dan bereaksi dengan asam klorida membentuk kalsium klorida.",
+    "hazards": [
+      "Kalsium oksida dan asam klorida korosif"
+    ],
+    "curriculum": [
+      "merdeka-e",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 15
+  },
+  {
+    "id": "agno3-nacl-agcl",
+    "reactants": [
+      {
+        "species": "AgNO3",
+        "coeff": 1
+      },
+      {
+        "species": "NaCl",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "AgCl",
+        "coeff": 1
+      },
+      {
+        "species": "NaNO3",
+        "coeff": 1
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": -65.5,
+    "observation": "Terbentuk endapan putih yang menggumpal dan tidak larut dalam asam encer.",
+    "explanation": "Ion perak dan ion klorida bergabung membentuk perak klorida yang sangat sukar larut.",
+    "hazards": [
+      "Perak nitrat menodai kulit dan berbahaya bagi lingkungan"
+    ],
+    "curriculum": [
+      "merdeka-e",
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 30
+  },
+  {
+    "id": "agno3-nabr-agbr",
+    "reactants": [
+      {
+        "species": "AgNO3",
+        "coeff": 1
+      },
+      {
+        "species": "NaBr",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "AgBr",
+        "coeff": 1
+      },
+      {
+        "species": "NaNO3",
+        "coeff": 1
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Terbentuk endapan kuning krem yang peka cahaya.",
+    "explanation": "Ion bromida mengendapkan ion perak sebagai perak bromida.",
+    "hazards": [
+      "Perak nitrat berbahaya bagi lingkungan"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "agno3-ki-agi",
+    "reactants": [
+      {
+        "species": "AgNO3",
+        "coeff": 1
+      },
+      {
+        "species": "KI",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "AgI",
+        "coeff": 1
+      },
+      {
+        "species": "KNO3",
+        "coeff": 1
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Terbentuk endapan kuning cerah.",
+    "explanation": "Ion iodida bereaksi dengan ion perak membentuk perak iodida yang sangat sukar larut.",
+    "hazards": [
+      "Perak nitrat berbahaya bagi lingkungan"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "agno3-cacl2-agcl",
+    "reactants": [
+      {
+        "species": "AgNO3",
+        "coeff": 2
+      },
+      {
+        "species": "CaCl2",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "AgCl",
+        "coeff": 2
+      },
+      {
+        "species": "Ca(NO3)2",
+        "coeff": 1
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Endapan putih terbentuk; jumlahnya sesuai dua ion klorida per kalsium klorida.",
+    "explanation": "Satu kalsium klorida melepaskan dua ion klorida, sehingga membutuhkan dua ion perak.",
+    "hazards": [
+      "Perak nitrat berbahaya bagi lingkungan"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 15
+  },
+  {
+    "id": "bacl2-na2so4-baso4",
+    "reactants": [
+      {
+        "species": "BaCl2",
+        "coeff": 1
+      },
+      {
+        "species": "Na2SO4",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "BaSO4",
+        "coeff": 1
+      },
+      {
+        "species": "NaCl",
+        "coeff": 2
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Terbentuk endapan putih sangat halus yang tidak larut dalam asam.",
+    "explanation": "Ion barium dan ion sulfat bergabung membentuk barium sulfat; endapan ini dipakai untuk uji sulfat.",
+    "hazards": [
+      "Senyawa barium larut beracun"
+    ],
+    "curriculum": [
+      "merdeka-e",
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 30
+  },
+  {
+    "id": "baoh2-na2so4-baso4",
+    "reactants": [
+      {
+        "species": "Ba(OH)2",
+        "coeff": 1
+      },
+      {
+        "species": "Na2SO4",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "BaSO4",
+        "coeff": 1
+      },
+      {
+        "species": "NaOH",
+        "coeff": 2
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Larutan barium hidroksida menjadi keruh karena endapan putih.",
+    "explanation": "Barium hidroksida dan natrium sulfat bertukar ion membentuk barium sulfat dan natrium hidroksida.",
+    "hazards": [
+      "Barium hidroksida beracun dan korosif"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 15
+  },
+  {
+    "id": "cuso4-naoh-cuoh2",
+    "reactants": [
+      {
+        "species": "CuSO4",
+        "coeff": 1
+      },
+      {
+        "species": "NaOH",
+        "coeff": 2
+      }
+    ],
+    "products": [
+      {
+        "species": "Cu(OH)2",
+        "coeff": 1
+      },
+      {
+        "species": "Na2SO4",
+        "coeff": 1
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Terbentuk endapan biru gelatin yang mudah mengendap.",
+    "explanation": "Ion tembaga(II) bereaksi dengan ion hidroksida membentuk tembaga(II) hidroksida yang sukar larut.",
+    "hazards": [
+      "Senyawa tembaga berbahaya bagi lingkungan akuatik"
+    ],
+    "curriculum": [
+      "merdeka-e",
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 25
+  },
+  {
+    "id": "fecl3-naoh-feoh3",
+    "reactants": [
+      {
+        "species": "FeCl3",
+        "coeff": 1
+      },
+      {
+        "species": "NaOH",
+        "coeff": 3
+      }
+    ],
+    "products": [
+      {
+        "species": "Fe(OH)3",
+        "coeff": 1
+      },
+      {
+        "species": "NaCl",
+        "coeff": 3
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Terbentuk endapan cokelat kemerahan.",
+    "explanation": "Ion besi(III) mengendap sebagai besi(III) hidroksida bila larutan dibuat basa.",
+    "hazards": [
+      "Natrium hidroksida korosif"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "mgcl2-naoh-mgoh2",
+    "reactants": [
+      {
+        "species": "MgCl2",
+        "coeff": 1
+      },
+      {
+        "species": "NaOH",
+        "coeff": 2
+      }
+    ],
+    "products": [
+      {
+        "species": "Mg(OH)2",
+        "coeff": 1
+      },
+      {
+        "species": "NaCl",
+        "coeff": 2
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Terbentuk endapan putih magnesium hidroksida.",
+    "explanation": "Ion magnesium dan ion hidroksida membentuk magnesium hidroksida yang sukar larut.",
+    "hazards": [
+      "Natrium hidroksida korosif"
+    ],
+    "curriculum": [
+      "merdeka-e",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "cacl2-na2co3-caco3",
+    "reactants": [
+      {
+        "species": "CaCl2",
+        "coeff": 1
+      },
+      {
+        "species": "Na2CO3",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "CaCO3",
+        "coeff": 1
+      },
+      {
+        "species": "NaCl",
+        "coeff": 2
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Terbentuk endapan putih kalsium karbonat.",
+    "explanation": "Ion kalsium dan ion karbonat bergabung membentuk kalsium karbonat yang sukar larut.",
+    "hazards": [
+      "Tidak berbahaya dalam jumlah kecil"
+    ],
+    "curriculum": [
+      "merdeka-e",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "cuso4-zn-znso4",
+    "reactants": [
+      {
+        "species": "Zn",
+        "coeff": 1
+      },
+      {
+        "species": "CuSO4",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "ZnSO4",
+        "coeff": 1
+      },
+      {
+        "species": "Cu",
+        "coeff": 1
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": -217,
+    "observation": "Warna biru larutan memudar dan lapisan tembaga kemerahan muncul pada seng.",
+    "explanation": "Seng lebih reaktif daripada tembaga sehingga mendesak tembaga dari larutan garamnya.",
+    "hazards": [
+      "Senyawa tembaga dan seng berbahaya bagi lingkungan akuatik"
+    ],
+    "curriculum": [
+      "merdeka-e",
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "NIST"
+    ],
+    "priority": 30
+  },
+  {
+    "id": "cuso4-fe-feso4",
+    "reactants": [
+      {
+        "species": "Fe",
+        "coeff": 1
+      },
+      {
+        "species": "CuSO4",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "FeSO4",
+        "coeff": 1
+      },
+      {
+        "species": "Cu",
+        "coeff": 1
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": -149,
+    "observation": "Paku besi terlapisi tembaga kemerahan dan larutan biru berubah kehijauan.",
+    "explanation": "Besi mendesak tembaga dari larutan tembaga(II) sulfat karena besi lebih reaktif.",
+    "hazards": [
+      "Larutan tembaga berbahaya bagi lingkungan"
+    ],
+    "curriculum": [
+      "merdeka-e",
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "NIST"
+    ],
+    "priority": 25
+  },
+  {
+    "id": "cuso4-mg-mgso4",
+    "reactants": [
+      {
+        "species": "Mg",
+        "coeff": 1
+      },
+      {
+        "species": "CuSO4",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "MgSO4",
+        "coeff": 1
+      },
+      {
+        "species": "Cu",
+        "coeff": 1
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": -515,
+    "observation": "Magnesium larut cepat dan tembaga mengendap pada permukaannya.",
+    "explanation": "Magnesium jauh lebih reaktif daripada tembaga, sehingga reaksi berlangsung lebih hebat.",
+    "hazards": [
+      "Reaksi eksotermik; larutan tembaga berbahaya bagi lingkungan"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "NIST"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "cu-agno3-cuno3",
+    "reactants": [
+      {
+        "species": "Cu",
+        "coeff": 1
+      },
+      {
+        "species": "AgNO3",
+        "coeff": 2
+      }
+    ],
+    "products": [
+      {
+        "species": "Cu(NO3)2",
+        "coeff": 1
+      },
+      {
+        "species": "Ag",
+        "coeff": 2
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Kristal perak berbulu tumbuh pada tembaga dan larutan menjadi biru.",
+    "explanation": "Tembaga lebih reaktif daripada perak sehingga mendesaknya dari larutan perak nitrat.",
+    "hazards": [
+      "Perak nitrat menodai kulit dan berbahaya bagi lingkungan"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "cl2-naoh-naclo",
+    "reactants": [
+      {
+        "species": "Cl2",
+        "coeff": 1
+      },
+      {
+        "species": "NaOH",
+        "coeff": 2
+      }
+    ],
+    "products": [
+      {
+        "species": "NaCl",
+        "coeff": 1
+      },
+      {
+        "species": "NaClO",
+        "coeff": 1
+      },
+      {
+        "species": "H2O",
+        "coeff": 1
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Gas kuning kehijauan terserap larutan basa dan menghasilkan larutan pemutih.",
+    "explanation": "Klorin mengalami disproporsionasi menjadi klorida dan hipoklorit dalam larutan basa dingin.",
+    "hazards": [
+      "Gas klorin beracun; hipoklorit korosif"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "cl2-caoh2-bleaching",
+    "reactants": [
+      {
+        "species": "Cl2",
+        "coeff": 2
+      },
+      {
+        "species": "Ca(OH)2",
+        "coeff": 2
+      }
+    ],
+    "products": [
+      {
+        "species": "CaCl2",
+        "coeff": 1
+      },
+      {
+        "species": "Ca(ClO)2",
+        "coeff": 1
+      },
+      {
+        "species": "H2O",
+        "coeff": 2
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Gas klorin diserap kapur basah membentuk bubuk pemutih.",
+    "explanation": "Klorin bereaksi dengan kalsium hidroksida membentuk kalsium klorida dan kalsium hipoklorit.",
+    "hazards": [
+      "Gas klorin beracun; bubuk pemutih mengoksidasi bahan organik"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 15
+  },
+  {
+    "id": "caco3-decomp",
+    "reactants": [
+      {
+        "species": "CaCO3",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "CaO",
+        "coeff": 1
+      },
+      {
+        "species": "CO2",
+        "coeff": 1
+      }
+    ],
+    "conditions": [
+      "heat"
+    ],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": 178,
+    "observation": "Batu kapur dipanaskan kuat hingga berpijar dan menyisakan padatan putih.",
+    "explanation": "Panas memutus karbonat menjadi oksida logam dan karbon dioksida; dasar pembuatan kapur tohor.",
+    "hazards": [
+      "Karbon dioksida menyesakkan di ruang tertutup"
+    ],
+    "curriculum": [
+      "merdeka-e",
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "NIST"
+    ],
+    "priority": 30
+  },
+  {
+    "id": "mgco3-decomp",
+    "reactants": [
+      {
+        "species": "MgCO3",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "MgO",
+        "coeff": 1
+      },
+      {
+        "species": "CO2",
+        "coeff": 1
+      }
+    ],
+    "conditions": [
+      "heat"
+    ],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": 118,
+    "observation": "Padatan putih kehilangan massa dan meninggalkan bubuk oksida.",
+    "explanation": "Magnesium karbonat terurai menjadi magnesium oksida dan karbon dioksida saat dipanaskan.",
+    "hazards": [
+      "Karbon dioksida menyesakkan di ruang tertutup"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "NIST"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "cuoh2-decomp",
+    "reactants": [
+      {
+        "species": "Cu(OH)2",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "CuO",
+        "coeff": 1
+      },
+      {
+        "species": "H2O",
+        "coeff": 1
+      }
+    ],
+    "conditions": [
+      "heat"
+    ],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": 32,
+    "observation": "Endapan biru berubah menjadi bubuk hitam dan uap air keluar.",
+    "explanation": "Hidroksida logam yang tidak stabil terurai menjadi oksida logam dan air.",
+    "hazards": [
+      "Senyawa tembaga berbahaya bagi lingkungan"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "mgoh2-decomp",
+    "reactants": [
+      {
+        "species": "Mg(OH)2",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "MgO",
+        "coeff": 1
+      },
+      {
+        "species": "H2O",
+        "coeff": 1
+      }
+    ],
+    "conditions": [
+      "heat"
+    ],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": 81,
+    "observation": "Padatan putih kehilangan air dan berubah menjadi oksida.",
+    "explanation": "Magnesium hidroksida terurai secara termal menjadi magnesium oksida dan uap air.",
+    "hazards": [
+      "Tidak berbahaya dalam jumlah kecil"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 15
+  },
+  {
+    "id": "h2o2-decomp",
+    "reactants": [
+      {
+        "species": "H2O2",
+        "coeff": 2
+      }
+    ],
+    "products": [
+      {
+        "species": "H2O",
+        "coeff": 2
+      },
+      {
+        "species": "O2",
+        "coeff": 1
+      }
+    ],
+    "conditions": [
+      "catalyst"
+    ],
+    "bondTypes": [
+      "kovalen-polar"
+    ],
+    "deltaHkJmol": -196,
+    "observation": "Gelembung gas muncul cepat; kentang atau mangan(IV) oksida mempercepatnya.",
+    "explanation": "Hidrogen peroksida terurai menjadi air dan oksigen; katalis menurunkan energi aktivasi tanpa ikut terpakai.",
+    "hazards": [
+      "Hidrogen peroksida pekat mengoksidasi kulit"
+    ],
+    "curriculum": [
+      "merdeka-e",
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "NIST"
+    ],
+    "priority": 30
+  },
+  {
+    "id": "kmno4-decomp",
+    "reactants": [
+      {
+        "species": "KMnO4",
+        "coeff": 2
+      }
+    ],
+    "products": [
+      {
+        "species": "K2MnO4",
+        "coeff": 1
+      },
+      {
+        "species": "MnO2",
+        "coeff": 1
+      },
+      {
+        "species": "O2",
+        "coeff": 1
+      }
+    ],
+    "conditions": [
+      "heat"
+    ],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Kristal ungu dipanaskan menjadi padatan hijau dan hitam sambil melepaskan gas.",
+    "explanation": "Kalium permanganat terurai menjadi kalium manganat, mangan(IV) oksida, dan oksigen.",
+    "hazards": [
+      "Permanganat pengoksidasi kuat"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "ag2o-decomp",
+    "reactants": [
+      {
+        "species": "Ag2O",
+        "coeff": 2
+      }
+    ],
+    "products": [
+      {
+        "species": "Ag",
+        "coeff": 4
+      },
+      {
+        "species": "O2",
+        "coeff": 1
+      }
+    ],
+    "conditions": [
+      "heat"
+    ],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": 62.2,
+    "observation": "Bubuk cokelat gelap terurai dan menyisakan logam perak berkilau.",
+    "explanation": "Perak oksida tidak stabil terhadap panas dan terurai menjadi perak dan oksigen.",
+    "hazards": [
+      "Perak oksida pengoksidasi dan berbahaya bagi lingkungan"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 15
+  },
+  {
+    "id": "nh4no3-decomp",
+    "reactants": [
+      {
+        "species": "NH4NO3",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "N2O",
+        "coeff": 1
+      },
+      {
+        "species": "H2O",
+        "coeff": 2
+      }
+    ],
+    "conditions": [
+      "heat"
+    ],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": -37,
+    "observation": "Padatan putih meleleh lalu terurai dengan ledakan bila dipanaskan cepat.",
+    "explanation": "Amonium nitrat terurai menjadi dinitrogen monoksida dan air; pemanasan cepat dapat menyebabkan ledakan.",
+    "hazards": [
+      "Amonium nitrat dapat meledak bila dipanaskan dalam wadah tertutup"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 15
+  },
+  {
+    "id": "nahco3-decomp",
+    "reactants": [
+      {
+        "species": "NaHCO3",
+        "coeff": 2
+      }
+    ],
+    "products": [
+      {
+        "species": "Na2CO3",
+        "coeff": 1
+      },
+      {
+        "species": "H2O",
+        "coeff": 1
+      },
+      {
+        "species": "CO2",
+        "coeff": 1
+      }
+    ],
+    "conditions": [
+      "heat"
+    ],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": 129,
+    "observation": "Serbuk putih mengeluarkan gas dan menyisakan padatan yang lebih stabil.",
+    "explanation": "Natrium bikarbonat terurai menjadi natrium karbonat, air, dan karbon dioksida; reaksi ini mengembangkan adonan.",
+    "hazards": [
+      "Karbon dioksida menyesakkan di ruang tertutup"
+    ],
+    "curriculum": [
+      "merdeka-e",
+      "gcse"
+    ],
+    "sources": [
+      "NIST"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "fe2o3-al-thermite",
+    "reactants": [
+      {
+        "species": "Fe2O3",
+        "coeff": 1
+      },
+      {
+        "species": "Al",
+        "coeff": 2
+      }
+    ],
+    "products": [
+      {
+        "species": "Al2O3",
+        "coeff": 1
+      },
+      {
+        "species": "Fe",
+        "coeff": 2
+      }
+    ],
+    "conditions": [
+      "heat"
+    ],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": -852,
+    "observation": "Sekali dinyalakan, campuran berpijar putih dan melelehkan besi.",
+    "explanation": "Aluminium lebih reaktif daripada besi sehingga menarik oksigen dari besi(III) oksida; reaksi termit sangat eksotermik.",
+    "hazards": [
+      "Suhu sangat tinggi; percikan logam cair berbahaya"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "NIST"
+    ],
+    "priority": 30
+  },
+  {
+    "id": "fe2o3-co-reduction",
+    "reactants": [
+      {
+        "species": "Fe2O3",
+        "coeff": 1
+      },
+      {
+        "species": "CO",
+        "coeff": 3
+      }
+    ],
+    "products": [
+      {
+        "species": "Fe",
+        "coeff": 2
+      },
+      {
+        "species": "CO2",
+        "coeff": 3
+      }
+    ],
+    "conditions": [
+      "heat"
+    ],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": -24.8,
+    "observation": "Gas karbon monoksida mereduksi bijih besi menjadi logam besi di tanur tinggi.",
+    "explanation": "Karbon monoksida mengambil oksigen dari besi(III) oksida dan berubah menjadi karbon dioksida.",
+    "hazards": [
+      "Karbon monoksida tidak berbau dan beracun"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "NIST"
+    ],
+    "priority": 30
+  },
+  {
+    "id": "cuo-h2-reduction",
+    "reactants": [
+      {
+        "species": "CuO",
+        "coeff": 1
+      },
+      {
+        "species": "H2",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "Cu",
+        "coeff": 1
+      },
+      {
+        "species": "H2O",
+        "coeff": 1
+      }
+    ],
+    "conditions": [
+      "heat"
+    ],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": -129,
+    "observation": "Padatan hitam berubah menjadi tembaga kemerahan dan muncul tetesan air.",
+    "explanation": "Hidrogen mereduksi tembaga(II) oksida menjadi tembaga sambil membentuk air.",
+    "hazards": [
+      "Gas hidrogen mudah terbakar"
+    ],
+    "curriculum": [
+      "merdeka-e",
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "NIST"
+    ],
+    "priority": 25
+  },
+  {
+    "id": "cuo-c-reduction",
+    "reactants": [
+      {
+        "species": "CuO",
+        "coeff": 2
+      },
+      {
+        "species": "C",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "Cu",
+        "coeff": 2
+      },
+      {
+        "species": "CO2",
+        "coeff": 1
+      }
+    ],
+    "conditions": [
+      "heat"
+    ],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Campuran hitam berpijar dan meninggalkan tembaga serta gas.",
+    "explanation": "Karbon mereduksi tembaga(II) oksida; karbon sendiri teroksidasi menjadi karbon dioksida.",
+    "hazards": [
+      "Karbon monoksida dapat terbentuk bila oksigen terbatas"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "zno-c-reduction",
+    "reactants": [
+      {
+        "species": "ZnO",
+        "coeff": 1
+      },
+      {
+        "species": "C",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "Zn",
+        "coeff": 1
+      },
+      {
+        "species": "CO",
+        "coeff": 1
+      }
+    ],
+    "conditions": [
+      "heat"
+    ],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Seng menguap dari campuran panas dan mengembun sebagai logam.",
+    "explanation": "Karbon mereduksi seng oksida pada suhu tinggi; seng tereduksi lebih mudah menguap.",
+    "hazards": [
+      "Karbon monoksida beracun; uap seng mengiritasi"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "zno-h2-reduction",
+    "reactants": [
+      {
+        "species": "ZnO",
+        "coeff": 1
+      },
+      {
+        "species": "H2",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "Zn",
+        "coeff": 1
+      },
+      {
+        "species": "H2O",
+        "coeff": 1
+      }
+    ],
+    "conditions": [
+      "heat"
+    ],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Padatan putih memudar dan logam seng terbentuk.",
+    "explanation": "Hidrogen dapat mereduksi seng oksida pada suhu cukup tinggi.",
+    "hazards": [
+      "Gas hidrogen mudah terbakar"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "NIST"
+    ],
+    "priority": 15
+  },
+  {
+    "id": "fe2o3-h2-reduction",
+    "reactants": [
+      {
+        "species": "Fe2O3",
+        "coeff": 1
+      },
+      {
+        "species": "H2",
+        "coeff": 3
+      }
+    ],
+    "products": [
+      {
+        "species": "Fe",
+        "coeff": 2
+      },
+      {
+        "species": "H2O",
+        "coeff": 3
+      }
+    ],
+    "conditions": [
+      "heat"
+    ],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": 98,
+    "observation": "Serbuk cokelat berubah menjadi serbuk besi kehitaman.",
+    "explanation": "Hidrogen mereduksi besi(III) oksida menjadi besi; reaksi ini membutuhkan energi panas terus-menerus.",
+    "hazards": [
+      "Gas hidrogen mudah terbakar"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "NIST"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "na-h2o-naoh",
+    "reactants": [
+      {
+        "species": "Na",
+        "coeff": 2
+      },
+      {
+        "species": "H2O",
+        "coeff": 2
+      }
+    ],
+    "products": [
+      {
+        "species": "NaOH",
+        "coeff": 2
+      },
+      {
+        "species": "H2",
+        "coeff": 1
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": -368,
+    "observation": "Natrium bergerak cepat di permukaan air, meleleh, dan kadang terbakar.",
+    "explanation": "Natrium mendesak hidrogen dari air membentuk natrium hidroksida dan gas hidrogen.",
+    "hazards": [
+      "Sangat eksotermik; hidrogen dapat menyala dan natrium bereaksi hebat"
+    ],
+    "curriculum": [
+      "merdeka-e",
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "NIST"
+    ],
+    "priority": 35
+  },
+  {
+    "id": "k-h2o-koh",
+    "reactants": [
+      {
+        "species": "K",
+        "coeff": 2
+      },
+      {
+        "species": "H2O",
+        "coeff": 2
+      }
+    ],
+    "products": [
+      {
+        "species": "KOH",
+        "coeff": 2
+      },
+      {
+        "species": "H2",
+        "coeff": 1
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": -393,
+    "observation": "Kalium bereaksi lebih hebat daripada natrium dan nyalanya berwarna ungu.",
+    "explanation": "Kalium mendesak hidrogen dari air; reaksinya lebih cepat karena kalium lebih reaktif.",
+    "hazards": [
+      "Reaksi dapat meledak dan menyulut hidrogen"
+    ],
+    "curriculum": [
+      "merdeka-e",
+      "gcse"
+    ],
+    "sources": [
+      "NIST"
+    ],
+    "priority": 30
+  },
+  {
+    "id": "li-h2o-lioh",
+    "reactants": [
+      {
+        "species": "Li",
+        "coeff": 2
+      },
+      {
+        "species": "H2O",
+        "coeff": 2
+      }
+    ],
+    "products": [
+      {
+        "species": "LiOH",
+        "coeff": 2
+      },
+      {
+        "species": "H2",
+        "coeff": 1
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": -445,
+    "observation": "Litium mengapung dan bereaksi tenang sambil mengeluarkan gelembung.",
+    "explanation": "Litium bereaksi dengan air membentuk litium hidroksida dan hidrogen; reaksinya paling tenang di antara logam alkali.",
+    "hazards": [
+      "Gas hidrogen mudah terbakar"
+    ],
+    "curriculum": [
+      "merdeka-e",
+      "gcse"
+    ],
+    "sources": [
+      "NIST"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "ca-h2o-caoh2",
+    "reactants": [
+      {
+        "species": "Ca",
+        "coeff": 1
+      },
+      {
+        "species": "H2O",
+        "coeff": 2
+      }
+    ],
+    "products": [
+      {
+        "species": "Ca(OH)2",
+        "coeff": 1
+      },
+      {
+        "species": "H2",
+        "coeff": 1
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": -414,
+    "observation": "Kalsium tenggelam, mengeluarkan gelembung, dan air menjadi keruh.",
+    "explanation": "Kalsium mendesak hidrogen dari air membentuk kalsium hidroksida yang sedikit larut.",
+    "hazards": [
+      "Gas hidrogen mudah terbakar"
+    ],
+    "curriculum": [
+      "merdeka-e",
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "NIST"
+    ],
+    "priority": 25
+  },
+  {
+    "id": "mg-h2o-mgoh2",
+    "reactants": [
+      {
+        "species": "Mg",
+        "coeff": 1
+      },
+      {
+        "species": "H2O",
+        "coeff": 2
+      }
+    ],
+    "products": [
+      {
+        "species": "Mg(OH)2",
+        "coeff": 1
+      },
+      {
+        "species": "H2",
+        "coeff": 1
+      }
+    ],
+    "conditions": [
+      "heat"
+    ],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Reaksi berjalan sangat lambat di air dingin dan lebih cepat dengan air panas.",
+    "explanation": "Magnesium bereaksi lambat dengan air dingin dan lebih cepat dengan air panas membentuk magnesium hidroksida dan hidrogen.",
+    "hazards": [
+      "Gas hidrogen mudah terbakar"
+    ],
+    "curriculum": [
+      "merdeka-e",
+      "gcse"
+    ],
+    "sources": [
+      "NIST"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "fe-h2o-steam",
+    "reactants": [
+      {
+        "species": "Fe",
+        "coeff": 3
+      },
+      {
+        "species": "H2O",
+        "coeff": 4
+      }
+    ],
+    "products": [
+      {
+        "species": "Fe3O4",
+        "coeff": 1
+      },
+      {
+        "species": "H2",
+        "coeff": 4
+      }
+    ],
+    "conditions": [
+      "heat"
+    ],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Besi panas dalam uap air membentuk lapisan hitam dan gas yang dapat menyala.",
+    "explanation": "Uap air panas mengoksidasi besi menjadi magnetit sambil melepaskan hidrogen.",
+    "hazards": [
+      "Uap panas dan gas hidrogen mudah terbakar"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "NIST"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "cac2-h2o-c2h2",
+    "reactants": [
+      {
+        "species": "CaC2",
+        "coeff": 1
+      },
+      {
+        "species": "H2O",
+        "coeff": 2
+      }
+    ],
+    "products": [
+      {
+        "species": "Ca(OH)2",
+        "coeff": 1
+      },
+      {
+        "species": "C2H2",
+        "coeff": 1
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": -130,
+    "observation": "Batu karbida berdesis dan mengeluarkan gas yang terbakar dengan nyala terang.",
+    "explanation": "Air menghidrolisis kalsium karbida menjadi kalsium hidroksida dan asetilena.",
+    "hazards": [
+      "Asetilena mudah terbakar dan dapat meledak"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 25
+  },
+  {
+    "id": "mg3n2-h2o-mgoh2",
+    "reactants": [
+      {
+        "species": "Mg3N2",
+        "coeff": 1
+      },
+      {
+        "species": "H2O",
+        "coeff": 6
+      }
+    ],
+    "products": [
+      {
+        "species": "Mg(OH)2",
+        "coeff": 3
+      },
+      {
+        "species": "NH3",
+        "coeff": 2
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Padatan kuning kehijauan bereaksi dengan air dan mengeluarkan gas berbau menyengat.",
+    "explanation": "Nitrida logam terhidrolisis menghasilkan hidroksida logam dan amonia.",
+    "hazards": [
+      "Amonia korosif dan beracun"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 15
+  },
+  {
+    "id": "fe-s-fes",
+    "reactants": [
+      {
+        "species": "Fe",
+        "coeff": 1
+      },
+      {
+        "species": "S",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "FeS",
+        "coeff": 1
+      }
+    ],
+    "conditions": [
+      "heat"
+    ],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": -100,
+    "observation": "Campuran besi dan belerang berpijar dan membentuk padatan hitam.",
+    "explanation": "Besi dan belerang bergabung langsung membentuk besi(II) sulfida.",
+    "hazards": [
+      "Besi(II) sulfida menghasilkan hidrogen sulfida bila terkena asam"
+    ],
+    "curriculum": [
+      "merdeka-e",
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "NIST"
+    ],
+    "priority": 25
+  },
+  {
+    "id": "zn-s-zns",
+    "reactants": [
+      {
+        "species": "Zn",
+        "coeff": 1
+      },
+      {
+        "species": "S",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "ZnS",
+        "coeff": 1
+      }
+    ],
+    "conditions": [
+      "heat"
+    ],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": -206,
+    "observation": "Campuran berpijar dan membentuk padatan putih kekuningan.",
+    "explanation": "Seng dan belerang bergabung membentuk seng sulfida.",
+    "hazards": [
+      "Uap seng oksida dapat menyebabkan demam logam"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "NIST"
+    ],
+    "priority": 15
+  },
+  {
+    "id": "h2-f2-hf",
+    "reactants": [
+      {
+        "species": "H2",
+        "coeff": 1
+      },
+      {
+        "species": "F2",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "HF",
+        "coeff": 2
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "kovalen-polar"
+    ],
+    "deltaHkJmol": -542,
+    "observation": "Campuran gas meledak bahkan pada suhu rendah.",
+    "explanation": "Fluorin paling reaktif di antara halogen sehingga bereaksi hebat dengan hidrogen.",
+    "hazards": [
+      "Hidrogen fluorida sangat korosif dan beracun"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "NIST"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "h2-br2-hbr",
+    "reactants": [
+      {
+        "species": "H2",
+        "coeff": 1
+      },
+      {
+        "species": "Br2",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "HBr",
+        "coeff": 2
+      }
+    ],
+    "conditions": [
+      "heat",
+      "catalyst"
+    ],
+    "bondTypes": [
+      "kovalen-polar"
+    ],
+    "deltaHkJmol": -72.8,
+    "observation": "Uap brom berwarna merah kecokelatan bereaksi dengan hidrogen di atas katalis panas.",
+    "explanation": "Hidrogen dan brom bereaksi membentuk hidrogen bromida; reaksinya lebih lambat daripada dengan klorin.",
+    "hazards": [
+      "Bromin dan hidrogen bromida korosif serta beracun"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "NIST"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "h2-i2-hi",
+    "reactants": [
+      {
+        "species": "H2",
+        "coeff": 1
+      },
+      {
+        "species": "I2",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "HI",
+        "coeff": 2
+      }
+    ],
+    "conditions": [
+      "heat",
+      "catalyst"
+    ],
+    "bondTypes": [
+      "kovalen-polar"
+    ],
+    "deltaHkJmol": 53,
+    "observation": "Uap ungu iodin bereaksi dengan hidrogen; reaksinya dapat berbalik.",
+    "explanation": "Pembentukan hidrogen iodida bersifat reversibel dan sedikit endotermik.",
+    "hazards": [
+      "Iodin dan hidrogen iodida mengiritasi"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "NIST"
+    ],
+    "priority": 15
+  },
+  {
+    "id": "h2-s-h2s",
+    "reactants": [
+      {
+        "species": "H2",
+        "coeff": 1
+      },
+      {
+        "species": "S",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "H2S",
+        "coeff": 1
+      }
+    ],
+    "conditions": [
+      "heat"
+    ],
+    "bondTypes": [
+      "kovalen-polar"
+    ],
+    "deltaHkJmol": -20.6,
+    "observation": "Gas hidrogen dialirkan di atas belerang panas membentuk gas berbau busuk.",
+    "explanation": "Hidrogen bergabung dengan belerang membentuk hidrogen sulfida.",
+    "hazards": [
+      "Hidrogen sulfida sangat beracun"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "NIST"
+    ],
+    "priority": 15
+  },
+  {
+    "id": "al-cl2-alcl3",
+    "reactants": [
+      {
+        "species": "Al",
+        "coeff": 2
+      },
+      {
+        "species": "Cl2",
+        "coeff": 3
+      }
+    ],
+    "products": [
+      {
+        "species": "AlCl3",
+        "coeff": 2
+      }
+    ],
+    "conditions": [
+      "heat"
+    ],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": -1408,
+    "observation": "Aluminium terbakar dalam gas klorin dengan nyala terang.",
+    "explanation": "Aluminium menyerahkan tiga elektron kepada setiap atom klorin membentuk aluminium klorida.",
+    "hazards": [
+      "Gas klorin beracun; aluminium klorida korosif"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "fe-cl2-fecl3",
+    "reactants": [
+      {
+        "species": "Fe",
+        "coeff": 2
+      },
+      {
+        "species": "Cl2",
+        "coeff": 3
+      }
+    ],
+    "products": [
+      {
+        "species": "FeCl3",
+        "coeff": 2
+      }
+    ],
+    "conditions": [
+      "heat"
+    ],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": -798,
+    "observation": "Besi panas terbakar dalam klorin membentuk asap cokelat kemerahan.",
+    "explanation": "Klorin mengoksidasi besi sampai bilangan oksidasi +3.",
+    "hazards": [
+      "Gas klorin beracun; besi(III) klorida korosif"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "cu-cl2-cucl2",
+    "reactants": [
+      {
+        "species": "Cu",
+        "coeff": 1
+      },
+      {
+        "species": "Cl2",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "CuCl2",
+        "coeff": 1
+      }
+    ],
+    "conditions": [
+      "heat"
+    ],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": -220,
+    "observation": "Tembaga panas bereaksi dengan klorin membentuk padatan cokelat kekuningan.",
+    "explanation": "Tembaga teroksidasi menjadi tembaga(II) klorida oleh klorin.",
+    "hazards": [
+      "Gas klorin beracun"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 15
+  },
+  {
+    "id": "cao-so3-caso4",
+    "reactants": [
+      {
+        "species": "CaO",
+        "coeff": 1
+      },
+      {
+        "species": "SO3",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "CaSO4",
+        "coeff": 1
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": -402,
+    "observation": "Gas belerang trioksida diserap kapur dan membentuk padatan putih.",
+    "explanation": "Kalsium oksida menyerap belerang trioksida membentuk kalsium sulfat; dasar pengendalian gas buang.",
+    "hazards": [
+      "Belerang trioksida korosif"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "na2o2-co2-na2co3",
+    "reactants": [
+      {
+        "species": "Na2O2",
+        "coeff": 2
+      },
+      {
+        "species": "CO2",
+        "coeff": 2
+      }
+    ],
+    "products": [
+      {
+        "species": "Na2CO3",
+        "coeff": 2
+      },
+      {
+        "species": "O2",
+        "coeff": 1
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": -452.6,
+    "observation": "Padatan kuning pucat menyerap karbon dioksida dan melepaskan oksigen.",
+    "explanation": "Natrium peroksida bereaksi dengan karbon dioksida membentuk karbonat dan oksigen; dipakai pada masker oksigen.",
+    "hazards": [
+      "Natrium peroksida pengoksidasi kuat"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "caco3-co2-h2o-cahco3",
+    "reactants": [
+      {
+        "species": "CaCO3",
+        "coeff": 1
+      },
+      {
+        "species": "CO2",
+        "coeff": 1
+      },
+      {
+        "species": "H2O",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "Ca(HCO3)2",
+        "coeff": 1
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Endapan putih larut perlahan bila air mengandung karbon dioksida berlebih.",
+    "explanation": "Kalsium karbonat larut sebagai kalsium bikarbonat; reaksi ini membentuk gua kapur dan air sadah.",
+    "hazards": [
+      "Tidak berbahaya dalam jumlah kecil"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 25
+  },
+  {
+    "id": "so2-naoh-na2so3",
+    "reactants": [
+      {
+        "species": "SO2",
+        "coeff": 1
+      },
+      {
+        "species": "NaOH",
+        "coeff": 2
+      }
+    ],
+    "products": [
+      {
+        "species": "Na2SO3",
+        "coeff": 1
+      },
+      {
+        "species": "H2O",
+        "coeff": 1
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Gas belerang dioksida terserap larutan basa.",
+    "explanation": "Belerang dioksida bersifat asam dan dinetralkan basa membentuk sulfit dan air.",
+    "hazards": [
+      "Natrium hidroksida korosif; belerang dioksida mengiritasi"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "hno3-cu-no2",
+    "reactants": [
+      {
+        "species": "Cu",
+        "coeff": 1
+      },
+      {
+        "species": "HNO3",
+        "coeff": 4
+      }
+    ],
+    "products": [
+      {
+        "species": "Cu(NO3)2",
+        "coeff": 1
+      },
+      {
+        "species": "NO2",
+        "coeff": 2
+      },
+      {
+        "species": "H2O",
+        "coeff": 2
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Tembaga larut dan gas cokelat kemerahan keluar dari larutan.",
+    "explanation": "Asam nitrat pekat mengoksidasi tembaga; sebagian nitrogen tereduksi menjadi nitrogen dioksida.",
+    "hazards": [
+      "Gas nitrogen dioksida beracun; asam nitrat korosif"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "hno3-ag-no2",
+    "reactants": [
+      {
+        "species": "Ag",
+        "coeff": 1
+      },
+      {
+        "species": "HNO3",
+        "coeff": 2
+      }
+    ],
+    "products": [
+      {
+        "species": "AgNO3",
+        "coeff": 1
+      },
+      {
+        "species": "NO2",
+        "coeff": 1
+      },
+      {
+        "species": "H2O",
+        "coeff": 1
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Perak larut dalam asam nitrat dan menghasilkan gas cokelat.",
+    "explanation": "Asam nitrat mengoksidasi perak menjadi perak nitrat sambil melepaskan nitrogen dioksida.",
+    "hazards": [
+      "Gas nitrogen dioksida beracun; perak nitrat menodai kulit"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "fes-hcl-h2s",
+    "reactants": [
+      {
+        "species": "FeS",
+        "coeff": 1
+      },
+      {
+        "species": "HCl",
+        "coeff": 2
+      }
+    ],
+    "products": [
+      {
+        "species": "FeCl2",
+        "coeff": 1
+      },
+      {
+        "species": "H2S",
+        "coeff": 1
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Padatan hitam larut dan mengeluarkan gas berbau telur busuk.",
+    "explanation": "Asam kuat mendesak hidrogen sulfida dari besi(II) sulfida; cara umum membuat gas H2S di laboratorium.",
+    "hazards": [
+      "Hidrogen sulfida sangat beracun"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 25
+  },
+  {
+    "id": "mno2-hcl-cl2",
+    "reactants": [
+      {
+        "species": "MnO2",
+        "coeff": 1
+      },
+      {
+        "species": "HCl",
+        "coeff": 4
+      }
+    ],
+    "products": [
+      {
+        "species": "MnCl2",
+        "coeff": 1
+      },
+      {
+        "species": "Cl2",
+        "coeff": 1
+      },
+      {
+        "species": "H2O",
+        "coeff": 2
+      }
+    ],
+    "conditions": [
+      "heat"
+    ],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Gas kuning kehijauan keluar saat mangan(IV) oksida dipanaskan dengan asam klorida pekat.",
+    "explanation": "Mangan(IV) oksida mengoksidasi klorida menjadi gas klorin; cara klasik pembuatan klorin di laboratorium.",
+    "hazards": [
+      "Gas klorin beracun; asam klorida pekat korosif"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "nh4cl-caoh2-nh3",
+    "reactants": [
+      {
+        "species": "NH4Cl",
+        "coeff": 2
+      },
+      {
+        "species": "Ca(OH)2",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "CaCl2",
+        "coeff": 1
+      },
+      {
+        "species": "NH3",
+        "coeff": 2
+      },
+      {
+        "species": "H2O",
+        "coeff": 2
+      }
+    ],
+    "conditions": [
+      "heat"
+    ],
+    "bondTypes": [
+      "ion"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Gas menyengat keluar dan membuat kertas lakmus merah menjadi biru.",
+    "explanation": "Basa kuat mendesak amonia dari garam amonium; cara umum membuat amonia di laboratorium.",
+    "hazards": [
+      "Amonia korosif dan beracun"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "sio2-c-si",
+    "reactants": [
+      {
+        "species": "SiO2",
+        "coeff": 1
+      },
+      {
+        "species": "C",
+        "coeff": 2
+      }
+    ],
+    "products": [
+      {
+        "species": "Si",
+        "coeff": 1
+      },
+      {
+        "species": "CO",
+        "coeff": 2
+      }
+    ],
+    "conditions": [
+      "heat"
+    ],
+    "bondTypes": [
+      "kovalen"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Pasir dan karbon dipanaskan sangat kuat menghasilkan silikon dan gas karbon monoksida.",
+    "explanation": "Karbon mereduksi silikon dioksida pada suhu tinggi; dasar pembuatan silikon untuk semikonduktor.",
+    "hazards": [
+      "Karbon monoksida beracun; debu silika berbahaya bagi paru-paru"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 20
+  },
+  {
+    "id": "cl2-h2o-hclo",
+    "reactants": [
+      {
+        "species": "Cl2",
+        "coeff": 1
+      },
+      {
+        "species": "H2O",
+        "coeff": 1
+      }
+    ],
+    "products": [
+      {
+        "species": "HCl",
+        "coeff": 1
+      },
+      {
+        "species": "HClO",
+        "coeff": 1
+      }
+    ],
+    "conditions": [],
+    "bondTypes": [
+      "kovalen-polar"
+    ],
+    "deltaHkJmol": null,
+    "observation": "Gas klorin larut dalam air dan membentuk larutan yang berbau tajam serta memutihkan.",
+    "explanation": "Klorin mengalami disproporsionasi dalam air menjadi asam klorida dan asam hipoklorit; asam hipoklorit adalah zat pemutihnya.",
+    "hazards": [
+      "Gas klorin beracun; larutan korosif dan pengoksidasi"
+    ],
+    "curriculum": [
+      "merdeka-f",
+      "gcse"
+    ],
+    "sources": [
+      "PubChem"
+    ],
+    "priority": 20
+  }
+]

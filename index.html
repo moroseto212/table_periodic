@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="id" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="color-scheme" content="dark light" />
+    <title>PeriodikLab — Tabel Periodik & Laboratorium Kimia</title>
+    <meta
+      name="description"
+      content="Tabel periodik interaktif dan laboratorium reaksi kimia berbahasa Indonesia. Jelajahi 118 unsur, coba reaksi terkurasi, dan uji pemahaman lewat tantangan."
+    />
+    <meta name="theme-color" content="#0F1016" />
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('periodic-lab.theme');
+          var theme =
+            stored === 'dark' || stored === 'light'
+              ? stored
+              : window.matchMedia('(prefers-color-scheme: light)').matches
+                ? 'light'
+                : 'dark';
+          var root = document.documentElement;
+          root.dataset.theme = theme;
+          root.style.colorScheme = theme;
+          var meta = document.querySelector('meta[name="theme-color"]');
+          if (meta) meta.setAttribute('content', theme === 'light' ? '#F4F6FB' : '#0F1016');
+        } catch (error) {
+          /* Tema tetap memakai nilai gelap bawaan. */
+        }
+      })();
+    </script>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="PeriodikLab" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="PeriodikLab" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:title" content="PeriodikLab — Tabel Periodik & Laboratorium Kimia" />
+    <meta
+      property="og:description"
+      content="Jelajahi 118 unsur dalam tabel periodik interaktif, coba reaksi kimia di laboratorium virtual, dan asah pemahaman lewat tantangan."
+    />
+    <meta property="og:image" content="/icons/icon-512.png" />
+    <meta name="twitter:card" content="summary" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>
+      <p style="padding: 24px; font-family: system-ui, sans-serif; line-height: 1.6">
+        PeriodikLab membutuhkan JavaScript untuk menampilkan tabel periodik dan laboratorium
+        reaksi. Aktifkan JavaScript, lalu muat ulang halaman ini.
+      </p>
+    </noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
