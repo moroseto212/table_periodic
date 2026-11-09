@@ -1388,6 +1388,20 @@ sub {
   }
 }
 
+/* Di layar sangat sempit (≤379px) rapatkan chip kondisi agar keempatnya
+   tetap sejajar satu baris: 271px chip + gap masih muat di 296px. */
+@media (max-width: 379px) {
+  .conditions {
+    gap: 6px;
+    justify-content: space-between;
+  }
+
+  .conditions .chip--condition {
+    padding: 6px 8px;
+    font-size: 11px;
+  }
+}
+
 .chip--condition.is-active {
   background: var(--success-soft);
   border-color: var(--success-border);
