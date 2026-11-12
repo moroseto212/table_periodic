@@ -772,11 +772,11 @@ export function prerender(root = process.cwd(), base = '/'): void {
   // Mulai unduh chunk rute lebih awal agar LCP halaman itu tidak menunggu
   // eksekusi bundel utama menemukan dynamic import.
   const preloadsFor = (path: string): string[] => {
-    if (path === '/lab') return preload(/^LabScreen-.*\.js$/);
+    if (path === '/lab') return [...preload(/^LabScreen-.*\.js$/), ...preload(/^data-.*\.js$/)];
     if (path.startsWith('/tantangan')) {
       return [...preload(/^QuizScreen-.*\.js$/), ...preload(/^quiz-.*\.js$/)];
     }
-    if (path === '/tentang') return preload(/^AboutScreen-.*\.js$/);
+    if (path === '/tentang') return [...preload(/^AboutScreen-.*\.js$/), ...preload(/^data-.*\.js$/)];
     return [];
   };
 

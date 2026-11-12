@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import type { Element, ElementCategory } from '../../core/chemistry/types';
-import { elements } from '../../core/data';
+import { elements } from '../../core/data/elements';
 import { categoryColors, categoryInkColors, categoryLabels } from '../../ui/tokens';
 import { useAppStore } from '../../app/store';
 import { navigate } from '../../app/router';

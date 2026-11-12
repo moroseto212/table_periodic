@@ -1,5 +1,5 @@
 import { lazy, Suspense, useEffect, useMemo, useRef, useState } from 'react';
-import { elements } from './core/data';
+import { elements } from './core/data/elements';
 import { useAppStore, type CategoryFilter } from './app/store';
 import { categoryColors, categoryInkColors, categoryLabels } from './ui/tokens';
 import { applyTheme } from './app/theme';

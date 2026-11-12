@@ -1,5 +1,5 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
-import { elements } from '../../core/data';
+import { elements } from '../../core/data/elements';
 import { layoutElements } from './layout';
 import { focusScrollTarget, type ScrollTarget } from './focus';
 import { categoryColors, categoryInkColors, categoryLabels } from '../../ui/tokens';

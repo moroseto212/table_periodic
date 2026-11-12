@@ -71,7 +71,10 @@ export default defineConfig({
         ],
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,svg,png,json,woff2}'],
+        // Hanya aplikasi shell + aset yang diprecache. Halaman per rute dilayani
+        // lewat navigateFallback, jadi 125 HTML prerender tidak perlu diunduh
+        // saat service worker memasang (menghemat ~900 KB pada kunjungan pertama).
+        globPatterns: ['index.html', '**/*.{js,css,svg,png,json,woff2}'],
         navigateFallback: asset('index.html'),
         navigateFallbackDenylist: [/^\/api\//],
         cleanupOutdatedCaches: true,
