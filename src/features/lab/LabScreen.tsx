@@ -10,6 +10,7 @@ import type {
 import { MAX_ATOMS_PER_ELEMENT, MAX_ATOMS_TOTAL } from '../../core/chemistry/types';
 import { categoryColors, categoryInkColors, categoryLabels } from '../../ui/tokens';
 import Formula, { formatCoeff } from '../../ui/Formula';
+import { filterElements } from './filter';
 
 import { withBase } from '../../app/router';
 
@@ -236,16 +237,7 @@ export default function LabScreen({ initial }: { initial: string | null }) {
   const total = totalAtoms(chamber);
   const dots = useMemo(() => chamberToDots(chamber), [chamber]);
 
-  const filteredElements = useMemo(() => {
-    const needle = query.trim().toLowerCase();
-    if (!needle) return elements;
-    return elements.filter(
-      (element) =>
-        element.name.toLowerCase().includes(needle) ||
-        element.symbol.toLowerCase().includes(needle) ||
-        String(element.z) === needle,
-    );
-  }, [query]);
+  const filteredElements = useMemo(() => filterElements(elements, query), [query]);
 
   useEffect(() => {
     if (initial) setChamber(parseChamber(initial));
