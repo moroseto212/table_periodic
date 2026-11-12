@@ -52,23 +52,38 @@ export function registerServiceWorker(): void {
   started = true;
   if (import.meta.env.DEV || !('serviceWorker' in navigator)) return;
 
-  updateServiceWorker = registerSW({
-    immediate: true,
-    onOfflineReady() {
-      window.dispatchEvent(new CustomEvent('pl:pwa-ready'));
-    },
-    onNeedRefresh() {
-      window.dispatchEvent(new CustomEvent('pl:pwa-update'));
-    },
-    onRegisteredSW(_url, registration) {
-      if (!registration) return;
-      // Periksa pembaruan saat tab aktif, paling sering sekali sejam.
-      window.setInterval(
-        () => {
-          if (document.visibilityState === 'visible') void registration.update();
-        },
-        60 * 60 * 1000,
-      );
-    },
-  });
+  // Daftarkan setelah halaman selesai dimuat dan browser menganggur agar
+  // unduhan precache tidak bersaing dengan LCP pada kunjungan pertama.
+  const start = () => {
+    updateServiceWorker = registerSW({
+      immediate: true,
+      onOfflineReady() {
+        window.dispatchEvent(new CustomEvent('pl:pwa-ready'));
+      },
+      onNeedRefresh() {
+        window.dispatchEvent(new CustomEvent('pl:pwa-update'));
+      },
+      onRegisteredSW(_url, registration) {
+        if (!registration) return;
+        // Periksa pembaruan saat tab aktif, paling sering sekali sejam.
+        window.setInterval(
+          () => {
+            if (document.visibilityState === 'visible') void registration.update();
+          },
+          60 * 60 * 1000,
+        );
+      },
+    });
+  };
+
+  const schedule = () => {
+    if (typeof window.requestIdleCallback === 'function') {
+      window.requestIdleCallback(start, { timeout: 3000 });
+    } else {
+      window.setTimeout(start, 1200);
+    }
+  };
+
+  if (document.readyState === 'complete') schedule();
+  else window.addEventListener('load', schedule, { once: true });
 }

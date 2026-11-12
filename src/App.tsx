@@ -27,7 +27,7 @@ const ROUTE_META: Record<string, { title: string; description: string }> = {
   '': {
     title: 'PeriodikLab — Tabel Periodik & Laboratorium Kimia',
     description:
-      'Jelajahi 118 unsur dalam tabel periodik interaktif, coba reaksi di laboratorium virtual, dan asah pemahaman lewat tantangan kimia berbahasa Indonesia.',
+      'Tabel periodik 118 unsur berbahasa Indonesia, lengkap dengan laboratorium reaksi virtual, stoikiometri, dan tantangan kimia tiga tingkat.',
   },
   lab: {
     title: 'Laboratorium Reaksi — PeriodikLab',
@@ -37,7 +37,7 @@ const ROUTE_META: Record<string, { title: string; description: string }> = {
   tantangan: {
     title: 'Tantangan Kimia — PeriodikLab',
     description:
-      'Latihan kimia tiga tingkat dengan pembahasan, pengulangan soal salah, dan tautan berbagi.',
+      'Latihan kimia tiga tingkat dengan pembahasan, pengulangan soal salah, dan tautan berbagi. Kalibrasi Kurikulum Merdeka dan GCSE.',
   },
   tentang: {
     title: 'Tentang, Sumber & Disclaimer — PeriodikLab',
@@ -56,6 +56,15 @@ const QUIZ_LEVEL_TITLES: Record<string, string> = {
   mahir: 'Tantangan mahir — PeriodikLab',
 };
 
+/** Batasi meta description agar tidak terpotong di hasil pencarian. */
+function clip(text: string, max = 155): string {
+  const clean = text.replace(/\s+/g, ' ').trim();
+  if (clean.length <= max) return clean;
+  const cut = clean.slice(0, max - 1);
+  const lastSpace = cut.lastIndexOf(' ');
+  return `${cut.slice(0, lastSpace > max * 0.6 ? lastSpace : cut.length)}…`;
+}
+
 function metaFor(path: string) {
   const parts = segments(path);
   const mode = parts[0] ?? '';
@@ -65,7 +74,9 @@ function metaFor(path: string) {
     if (element) {
       return {
         title: `${element.name} (${element.symbol}) — Unsur ${element.z} | PeriodikLab`,
-        description: `${element.name} (${element.symbol}) adalah ${categoryLabels[element.category].toLowerCase()} bernomor atom ${element.z}. ${element.summary}`,
+        description: clip(
+          `${element.name} (${element.symbol}) adalah ${categoryLabels[element.category].toLowerCase()} bernomor atom ${element.z}. ${element.summary}`,
+        ),
       };
     }
   }

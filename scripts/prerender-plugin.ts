@@ -1,4 +1,4 @@
-import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import type { Plugin } from 'vite';
@@ -169,7 +169,7 @@ interface PageMeta {
   intro: string[];
   facts?: Fact[];
   groups?: LinkGroup[];
-  jsonLd?: Record<string, unknown>;
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 }
 
 const NAV: LinkItem[] = [
@@ -179,7 +179,7 @@ const NAV: LinkItem[] = [
   { path: '/tentang', label: 'Tentang' },
 ];
 
-function buildHead(meta: PageMeta, site: string): string {
+function buildHead(meta: PageMeta, site: string, preloads: string[] = []): string {
   const url = `${site}${meta.path === '/' ? '/' : meta.path}`;
   const image = `${site}/icons/icon-512.png`;
   const tags = [
@@ -200,9 +200,12 @@ function buildHead(meta: PageMeta, site: string): string {
   ];
 
   if (meta.jsonLd) {
-    const json = JSON.stringify(meta.jsonLd).replace(/</g, '\\u003c');
+    const data = Array.isArray(meta.jsonLd) ? meta.jsonLd : [meta.jsonLd];
+    const json = JSON.stringify(data.length === 1 ? data[0] : data).replace(/</g, '\\u003c');
     tags.push(`<script type="application/ld+json">${json}</script>`);
   }
+
+  tags.push(...preloads);
 
   return tags.join('\n    ');
 }
@@ -270,10 +273,16 @@ const STRIP_PATTERNS: RegExp[] = [
   /<link\s+rel="canonical"[^>]*>\s*/gi,
 ];
 
-function renderPage(baseHtml: string, meta: PageMeta, site: string, base: string): string {
+function renderPage(
+  baseHtml: string,
+  meta: PageMeta,
+  site: string,
+  base: string,
+  preloads: string[] = [],
+): string {
   let html = baseHtml;
   for (const pattern of STRIP_PATTERNS) html = html.replace(pattern, '');
-  const head = `\n    ${buildHead(meta, site)}\n  </head>`;
+  const head = `\n    ${buildHead(meta, site, preloads)}\n  </head>`;
   html = html.replace('</head>', head);
   return html.replace('<div id="root"></div>', `<div id="root">${renderBody(meta, base)}</div>`);
 }
@@ -282,6 +291,22 @@ function writePage(dist: string, path: string, html: string): void {
   const target = path === '/' ? resolve(dist, 'index.html') : resolve(dist, path.slice(1), 'index.html');
   mkdirSync(dirname(target), { recursive: true });
   writeFileSync(target, html, 'utf8');
+}
+
+function breadcrumbJsonLd(
+  site: string,
+  items: { name: string; path: string }[],
+): Record<string, unknown> {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.name,
+      item: `${site}${item.path === '/' ? '/' : item.path}`,
+    })),
+  };
 }
 
 function buildPages(
@@ -300,7 +325,7 @@ function buildPages(
       path: '/',
       title: 'PeriodikLab — Tabel Periodik & Laboratorium Kimia',
       description:
-        'Jelajahi 118 unsur dalam tabel periodik interaktif, coba reaksi di laboratorium virtual, dan asah pemahaman lewat tantangan kimia berbahasa Indonesia.',
+        'Tabel periodik 118 unsur berbahasa Indonesia, lengkap dengan laboratorium reaksi virtual, stoikiometri, dan tantangan kimia tiga tingkat.',
       heading: 'Tabel Periodik Interaktif & Laboratorium Kimia',
       intro: [
         'PeriodikLab merangkum 118 unsur dalam tabel periodik 2D berbahasa Indonesia. Setiap unsur punya halaman berisi nomor atom, massa, konfigurasi elektron, wujud pada suhu kamar, dan ringkasan sifatnya.',
@@ -337,17 +362,29 @@ function buildPages(
           })),
         },
       ],
-      jsonLd: {
-        '@context': 'https://schema.org',
-        '@type': 'WebApplication',
-        name: 'PeriodikLab',
-        applicationCategory: 'EducationalApplication',
-        operatingSystem: 'Web',
-        inLanguage: 'id',
-        url: `${site}/`,
-        description:
-          'Tabel periodik interaktif dengan laboratorium reaksi dan tantangan kimia.',
-      },
+      jsonLd: [
+        {
+          '@context': 'https://schema.org',
+          '@type': 'WebApplication',
+          name: 'PeriodikLab',
+          applicationCategory: 'EducationalApplication',
+          operatingSystem: 'Web',
+          inLanguage: 'id',
+          url: `${site}/`,
+          description:
+            'Tabel periodik interaktif dengan laboratorium reaksi dan tantangan kimia.',
+          isAccessibleForFree: true,
+          offers: { '@type': 'Offer', price: '0', priceCurrency: 'IDR' },
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'WebSite',
+          name: 'PeriodikLab',
+          alternateName: 'PeriodikLab — Tabel Periodik & Lab Kimia',
+          url: `${site}/`,
+          inLanguage: 'id',
+        },
+      ],
     },
     {
       path: '/lab',
@@ -383,6 +420,30 @@ function buildPages(
             { path: '/tentang', label: 'Cara data reaksi disusun' },
           ],
         },
+      ],
+      jsonLd: [
+        {
+          '@context': 'https://schema.org',
+          '@type': 'LearningResource',
+          name: 'Laboratorium Reaksi Kimia Virtual PeriodikLab',
+          description:
+            'Susun atom, atur kondisi reaksi, dan lihat persamaan setara, pereaksi pembatas, serta sisa zat secara langsung.',
+          url: `${site}/lab`,
+          inLanguage: 'id',
+          learningResourceType: 'Laboratorium virtual',
+          educationalLevel: 'Sekolah menengah',
+          isAccessibleForFree: true,
+          about: [
+            { '@type': 'Thing', name: 'Kimia' },
+            { '@type': 'Thing', name: 'Stoikiometri' },
+            { '@type': 'Thing', name: 'Persamaan reaksi' },
+          ],
+          isPartOf: { '@type': 'WebSite', name: 'PeriodikLab', url: `${site}/` },
+        },
+        breadcrumbJsonLd(site, [
+          { name: 'Tabel periodik', path: '/' },
+          { name: 'Laboratorium', path: '/lab' },
+        ]),
       ],
     },
     {
@@ -424,6 +485,27 @@ function buildPages(
             { path: '/lab', label: 'Laboratorium reaksi' },
           ],
         },
+      ],
+      jsonLd: [
+        {
+          '@context': 'https://schema.org',
+          '@type': 'CollectionPage',
+          name: 'Tantangan Kimia — PeriodikLab',
+          description:
+            'Latihan kimia tiga tingkat berbahasa Indonesia dengan pembahasan tiap soal.',
+          url: `${site}/tantangan`,
+          inLanguage: 'id',
+          isPartOf: { '@type': 'WebSite', name: 'PeriodikLab', url: `${site}/` },
+          hasPart: (['dasar', 'menengah', 'mahir'] as const).map((level) => ({
+            '@type': 'Quiz',
+            name: `Tantangan ${level.charAt(0).toUpperCase() + level.slice(1)}`,
+            url: `${site}/tantangan/${level}`,
+          })),
+        },
+        breadcrumbJsonLd(site, [
+          { name: 'Tabel periodik', path: '/' },
+          { name: 'Tantangan', path: '/tantangan' },
+        ]),
       ],
     },
     ...(['dasar', 'menengah', 'mahir'] as const).map<PageMeta>((level) => {
@@ -467,6 +549,29 @@ function buildPages(
             ],
           },
         ],
+        jsonLd: [
+          {
+            '@context': 'https://schema.org',
+            '@type': 'Quiz',
+            name: `Tantangan Kimia Tingkat ${label}`,
+            description: blurbs[level],
+            url: `${site}/tantangan/${level}`,
+            inLanguage: 'id',
+            educationalLevel: level,
+            isAccessibleForFree: true,
+            about: { '@type': 'Thing', name: 'Kimia' },
+            isPartOf: {
+              '@type': 'CollectionPage',
+              name: 'Tantangan Kimia',
+              url: `${site}/tantangan`,
+            },
+          },
+          breadcrumbJsonLd(site, [
+            { name: 'Tabel periodik', path: '/' },
+            { name: 'Tantangan', path: '/tantangan' },
+            { name: label, path: `/tantangan/${level}` },
+          ]),
+        ],
       };
     }),
     {
@@ -495,6 +600,21 @@ function buildPages(
             { path: '/tantangan', label: 'Tantangan kimia' },
           ],
         },
+      ],
+      jsonLd: [
+        {
+          '@context': 'https://schema.org',
+          '@type': 'AboutPage',
+          name: 'Tentang PeriodikLab',
+          url: `${site}/tentang`,
+          inLanguage: 'id',
+          isPartOf: { '@type': 'WebSite', name: 'PeriodikLab', url: `${site}/` },
+          mainEntity: { '@type': 'Organization', name: 'PeriodikLab' },
+        },
+        breadcrumbJsonLd(site, [
+          { name: 'Tabel periodik', path: '/' },
+          { name: 'Tentang', path: '/tentang' },
+        ]),
       ],
     },
   ];
@@ -603,15 +723,22 @@ function buildPages(
       intro,
       facts,
       groups,
-      jsonLd: {
-        '@context': 'https://schema.org',
-        '@type': 'ChemicalSubstance',
-        name: element.name,
-        alternateName: element.symbol,
-        identifier: element.symbol,
-        atomicNumber: element.z,
-        url: `${site}/unsur/${element.symbol}`,
-      },
+      jsonLd: [
+        {
+          '@context': 'https://schema.org',
+          '@type': 'ChemicalSubstance',
+          name: element.name,
+          alternateName: element.symbol,
+          identifier: element.symbol,
+          atomicNumber: element.z,
+          url: `${site}/unsur/${element.symbol}`,
+          isPartOf: { '@type': 'WebSite', name: 'PeriodikLab', url: `${site}/` },
+        },
+        breadcrumbJsonLd(site, [
+          { name: 'Tabel periodik', path: '/' },
+          { name: `${element.name} (${element.symbol})`, path: `/unsur/${element.symbol}` },
+        ]),
+      ],
     });
   }
 
@@ -636,8 +763,25 @@ export function prerender(root = process.cwd(), base = '/'): void {
 
   const pages = buildPages(root, elements, presets, site);
 
+  const assetFiles = readdirSync(resolve(dist, 'assets'));
+  const preload = (pattern: RegExp): string[] =>
+    assetFiles
+      .filter((file) => pattern.test(file))
+      .map((file) => `<link rel="modulepreload" crossorigin href="${base}assets/${file}" />`);
+
+  // Mulai unduh chunk rute lebih awal agar LCP halaman itu tidak menunggu
+  // eksekusi bundel utama menemukan dynamic import.
+  const preloadsFor = (path: string): string[] => {
+    if (path === '/lab') return preload(/^LabScreen-.*\.js$/);
+    if (path.startsWith('/tantangan')) {
+      return [...preload(/^QuizScreen-.*\.js$/), ...preload(/^quiz-.*\.js$/)];
+    }
+    if (path === '/tentang') return preload(/^AboutScreen-.*\.js$/);
+    return [];
+  };
+
   for (const page of pages) {
-    writePage(dist, page.path, renderPage(baseHtml, page, site, base));
+    writePage(dist, page.path, renderPage(baseHtml, page, site, base, preloadsFor(page.path)));
   }
 
   // Fallback 404 untuk hosting statis yang mendukungnya.
