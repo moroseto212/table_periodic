@@ -25,13 +25,6 @@ interface ReactionRow {
   conditions: string[];
 }
 
-interface SpeciesRow {
-  id: string;
-  formula: string;
-  name: string;
-  composition: Record<string, number>;
-}
-
 const CATEGORY_LABELS: Record<string, string> = {
   alkali: 'logam alkali',
   alkaline: 'logam alkali tanah',
@@ -77,72 +70,8 @@ function readJson<T>(root: string, path: string): T {
   return JSON.parse(readFileSync(resolve(root, path), 'utf8')) as T;
 }
 
-function gcd(a: number, b: number): number {
-  let x = Math.abs(a);
-  let y = Math.abs(b);
-  while (y) {
-    const t = y;
-    y = x % y;
-    x = t;
-  }
-  return x;
-}
-
 function numberId(value: number): string {
   return new Intl.NumberFormat('id-ID', { maximumFractionDigits: 4 }).format(value);
-}
-
-interface PresetLink {
-  label: string;
-  formula: string;
-  chamberLabel: string;
-  href: string;
-}
-
-/** Resep cepat yang sama dengan yang tampil di Laboratorium, untuk tautan dalam. */
-const PRESET_RECIPES: { reactionId: string; label: string }[] = [
-  { reactionId: 'h2-o2-water', label: 'Air' },
-  { reactionId: 'c-o2-dioxide', label: 'Karbon dioksida' },
-  { reactionId: 'na-cl2-salt', label: 'Garam dapur' },
-  { reactionId: 'n2-h2-ammonia', label: 'Amonia' },
-  { reactionId: 'fe-o2-oxide', label: 'Karat besi' },
-  { reactionId: 's-o2-so2', label: 'Belerang dioksida' },
-];
-
-function buildPresetLinks(root: string): PresetLink[] {
-  const reactions = readJson<ReactionRow[]>(root, 'src/core/data/reactions.json');
-  const species = readJson<SpeciesRow[]>(root, 'src/core/data/species.json');
-  const speciesById = new Map(species.map((item) => [item.id, item]));
-  const reactionsById = new Map(reactions.map((item) => [item.id, item]));
-  const links: PresetLink[] = [];
-
-  for (const recipe of PRESET_RECIPES) {
-    const reaction = reactionsById.get(recipe.reactionId);
-    if (!reaction) continue;
-    const atoms: Record<string, number> = {};
-    for (const reactant of reaction.reactants) {
-      const item = speciesById.get(reactant.species);
-      if (!item) continue;
-      for (const [symbol, count] of Object.entries(item.composition)) {
-        atoms[symbol] = (atoms[symbol] ?? 0) + count * reactant.coeff;
-      }
-    }
-    const values = Object.values(atoms);
-    if (values.length === 0) continue;
-    const divisor = values.reduce((a, b) => gcd(a, b));
-    const ratio = Object.entries(atoms).map(([symbol, count]) => [symbol, count / divisor] as const);
-    const encoded = ratio.map(([symbol, count]) => `${symbol}:${count}`).join(',');
-    const product = speciesById.get(reaction.products[0]?.species ?? '');
-
-    links.push({
-      label: recipe.label,
-      formula: product?.formula ?? product?.name ?? '',
-      chamberLabel: ratio.map(([symbol, count]) => `${count} ${symbol}`).join(' + '),
-      href: `/lab?s=${encodeURIComponent(encoded)}`,
-    });
-  }
-
-  return links;
 }
 
 interface LinkItem {
@@ -312,7 +241,6 @@ function breadcrumbJsonLd(
 function buildPages(
   root: string,
   elements: ElementRow[],
-  presets: PresetLink[],
   site: string,
 ): PageMeta[] {
   const reactions = readJson<ReactionRow[]>(root, 'src/core/data/reactions.json');
@@ -393,7 +321,7 @@ function buildPages(
         'Campur atom di baki, atur kondisi reaksi, dan lihat stoikiometri, pereaksi pembatas, serta sisa zat secara langsung.',
       heading: 'Laboratorium Reaksi Kimia Virtual',
       intro: [
-        'Laboratorium PeriodikLab mencocokkan rasio atom, bukan molekul. Pilih unsur dari baki atau pakai resep cepat, lalu tekan Reaksikan untuk melihat persamaan setara, pereaksi pembatas, dan zat sisa.',
+        'Laboratorium PeriodikLab mencocokkan rasio atom, bukan molekul. Pilih unsur dari baki, atur kondisi bila perlu, lalu tekan Reaksikan untuk melihat persamaan setara, pereaksi pembatas, dan zat sisa.',
         'Beberapa reaksi baru berjalan dengan kondisi tertentu, misalnya panaskan, katalis, atau tekanan tinggi. Kamu bisa menambah dan mengurangi atom langsung dari chip, membagikan tautan eksperimen, atau mengembalikan langkah terakhir lewat tombol Undo.',
         'Batas percobaan adalah 24 atom total dan 12 atom per unsur agar hasil tetap mudah dibaca. Seluruh perhitungan berjalan lokal di browser.',
       ],
@@ -404,14 +332,6 @@ function buildPages(
         { label: 'Kondisi', value: 'panas, katalis, tekanan' },
       ],
       groups: [
-        {
-          heading: 'Coba resep cepat',
-          items: presets.map((preset) => ({
-            path: preset.href,
-            label: `${preset.label} (${preset.formula})`,
-            hint: preset.chamberLabel,
-          })),
-        },
         {
           heading: 'Halaman terkait',
           items: [
@@ -753,7 +673,6 @@ export function prerender(root = process.cwd(), base = '/'): void {
   const dist = resolve(root, 'dist');
   const baseHtml = readFileSync(resolve(dist, 'index.html'), 'utf8');
   const elements = readJson<ElementRow[]>(root, 'src/core/data/elements.json');
-  const presets = buildPresetLinks(root);
 
   const rawSite = process.env.SITE_URL?.trim();
   const site = (rawSite || DEFAULT_SITE).replace(/\/+$/, '');
@@ -761,7 +680,7 @@ export function prerender(root = process.cwd(), base = '/'): void {
     console.warn(`[prerender] SITE_URL belum diset; canonical memakai ${DEFAULT_SITE}`);
   }
 
-  const pages = buildPages(root, elements, presets, site);
+  const pages = buildPages(root, elements, site);
 
   const assetFiles = readdirSync(resolve(dist, 'assets'));
   const preload = (pattern: RegExp): string[] =>

@@ -138,7 +138,7 @@ Hosting statis harus mengarahkan rute yang tidak punya file ke `index.html`
 - `dist/sitemap.xml`, `dist/robots.txt`, `dist/404.html`
 
 Setiap halaman hasil prerender sudah memuat `<h1>`, ringkasan beberapa paragraf,
-fakta singkat, dan tautan internal (navigasi, indeks unsur, resep lab, tingkat
+fakta singkat, dan tautan internal (navigasi, indeks unsur, tingkat
 tantangan). Konten itu tampil sebelum JavaScript siap, lalu diganti aplikasi React.
 
 ### Domain utama

@@ -5,13 +5,11 @@ import type {
   AtomCount,
   BondType,
   Condition,
-  ElementCategory,
   ReactionOutcome,
 } from '../../core/chemistry/types';
 import { MAX_ATOMS_PER_ELEMENT, MAX_ATOMS_TOTAL } from '../../core/chemistry/types';
 import { categoryColors, categoryInkColors, categoryLabels } from '../../ui/tokens';
 import Formula, { formatCoeff } from '../../ui/Formula';
-import { buildPresets, type LabPreset } from './presets';
 
 import { withBase } from '../../app/router';
 
@@ -30,47 +28,6 @@ const BOND_LABELS: Record<BondType, string> = {
   ion: 'Ionik',
   logam: 'Logam',
 };
-
-type TrayGroup = 'all' | 'logam' | 'nonlogam' | 'metaloid' | 'noble';
-
-const TRAY_GROUPS: { id: TrayGroup; label: string }[] = [
-  { id: 'all', label: 'Semua' },
-  { id: 'logam', label: 'Logam' },
-  { id: 'nonlogam', label: 'Nonlogam' },
-  { id: 'metaloid', label: 'Metaloid' },
-  { id: 'noble', label: 'Gas mulia' },
-];
-
-const METAL_CATEGORIES: ElementCategory[] = [
-  'alkali',
-  'alkaline',
-  'transition',
-  'post-transition',
-  'lanthanide',
-  'actinide',
-];
-
-function matchesGroup(category: ElementCategory, group: TrayGroup): boolean {
-  if (group === 'all') return true;
-  if (group === 'noble') return category === 'noble';
-  if (group === 'metaloid') return category === 'metalloid';
-  if (group === 'nonlogam') return category === 'nonmetal' || category === 'halogen';
-  return METAL_CATEGORIES.includes(category);
-}
-
-/** Ringkasan isi chamber, mis. "2 H + 1 O". */
-function chamberFormula(chamber: AtomCount): string {
-  return Object.entries(chamber)
-    .map(([symbol, count]) => `${count} ${symbol}`)
-    .join(' + ');
-}
-
-function conditionsLabel(conditions: Condition[]): string {
-  return conditions.map((condition) => CONDITION_LABELS[condition].toLowerCase()).join(' dan ');
-}
-
-// Resep dibangun sekali dari data reaksi yang sudah ada.
-const PRESETS = buildPresets(reactionIndex, speciesById);
 
 function totalAtoms(chamber: AtomCount): number {
   return Object.values(chamber).reduce((a, b) => a + b, 0);
@@ -275,24 +232,20 @@ export default function LabScreen({ initial }: { initial: string | null }) {
   const [bump, setBump] = useState(false);
   const [restorePrompt, setRestorePrompt] = useState<AtomCount | null>(null);
   const [query, setQuery] = useState('');
-  const [group, setGroup] = useState<TrayGroup>('all');
-  const [announcement, setAnnouncement] = useState('');
 
   const total = totalAtoms(chamber);
   const dots = useMemo(() => chamberToDots(chamber), [chamber]);
 
   const filteredElements = useMemo(() => {
     const needle = query.trim().toLowerCase();
-    return elements.filter((element) => {
-      if (!matchesGroup(element.category, group)) return false;
-      if (!needle) return true;
-      return (
+    if (!needle) return elements;
+    return elements.filter(
+      (element) =>
         element.name.toLowerCase().includes(needle) ||
         element.symbol.toLowerCase().includes(needle) ||
-        String(element.z) === needle
-      );
-    });
-  }, [query, group]);
+        String(element.z) === needle,
+    );
+  }, [query]);
 
   useEffect(() => {
     if (initial) setChamber(parseChamber(initial));
@@ -355,21 +308,8 @@ export default function LabScreen({ initial }: { initial: string | null }) {
     setOutcome(null);
   };
 
-  const applyPreset = (preset: LabPreset) => {
-    setHistory((prev) => [...prev.slice(-19), chamber]);
-    setChamber({ ...preset.chamber });
-    setConditions([...preset.conditions]);
-    setOutcome(null);
-    setAnnouncement(
-      `Resep ${preset.label} dimuat: ${chamberFormula(preset.chamber)}${
-        preset.conditions.length > 0 ? `, kondisi ${conditionsLabel(preset.conditions)}` : ''
-      }.`,
-    );
-  };
-
-  const resetTrayFilters = () => {
+  const resetTraySearch = () => {
     setQuery('');
-    setGroup('all');
   };
 
   const run = () => {
@@ -402,15 +342,12 @@ export default function LabScreen({ initial }: { initial: string | null }) {
 
   return (
     <div className="lab">
-      <p className="sr-only" role="status" aria-live="polite">
-        {announcement}
-      </p>
       <section className="lab__bench" aria-label="Meja kerja laboratorium">
         <header className="lab__head">
           <div>
             <h1>Laboratorium</h1>
             <p>
-              Susun atom atau pilih resep cepat, lalu reaksikan. Chamber mencocokkan rasio atom,
+              Susun atom, atur kondisi bila perlu, lalu reaksikan. Chamber mencocokkan rasio atom,
               bukan molekul.
             </p>
           </div>
@@ -463,9 +400,7 @@ export default function LabScreen({ initial }: { initial: string | null }) {
               );
             })}
             {dots.length === 0 && (
-              <p className="chamber__empty">
-                Chamber kosong. Ketuk unsur di baki, atau pilih resep cepat di atas.
-              </p>
+              <p className="chamber__empty">Chamber kosong. Ketuk unsur di baki.</p>
             )}
           </div>
 
@@ -513,38 +448,6 @@ export default function LabScreen({ initial }: { initial: string | null }) {
           ))}
         </div>
 
-        <section className="lab__presets" aria-label="Resep cepat">
-          <div className="lab__presets-head">
-            <span className="lab__presets-label">Resep cepat</span>
-            <span className="lab__presets-hint">Sekali ketuk, rasio langsung terisi</span>
-          </div>
-          <div className="lab__presets-row">
-            {PRESETS.map((preset) => (
-              <button
-                key={preset.id}
-                type="button"
-                className="preset"
-                onClick={() => applyPreset(preset)}
-                title={`${preset.productName} — ${chamberFormula(preset.chamber)}${
-                  preset.conditions.length > 0
-                    ? ` (butuh ${conditionsLabel(preset.conditions)})`
-                    : ''
-                }`}
-                aria-label={`Resep ${preset.label}: ${chamberFormula(preset.chamber)}${
-                  preset.conditions.length > 0
-                    ? `, kondisi ${conditionsLabel(preset.conditions)}`
-                    : ''
-                }`}
-              >
-                <span className="preset__formula">
-                  <Formula formula={preset.formula} />
-                </span>
-                <span className="preset__label">{preset.label}</span>
-              </button>
-            ))}
-          </div>
-        </section>
-
         <div className="lab__actions">
           <button
             type="button"
@@ -574,19 +477,6 @@ export default function LabScreen({ initial }: { initial: string | null }) {
             autoComplete="off"
             enterKeyHint="search"
           />
-          <div className="tray__filters" role="group" aria-label="Filter kategori unsur">
-            {TRAY_GROUPS.map((item) => (
-              <button
-                key={item.id}
-                type="button"
-                className={`chip chip--filter${group === item.id ? ' is-active' : ''}`}
-                aria-pressed={group === item.id}
-                onClick={() => setGroup(item.id)}
-              >
-                {item.label}
-              </button>
-            ))}
-          </div>
         </div>
         <p className="sr-only" aria-live="polite">
           {filteredElements.length} unsur ditemukan
@@ -617,8 +507,8 @@ export default function LabScreen({ initial }: { initial: string | null }) {
             {filteredElements.length === 0 && (
               <p className="tray__empty">
                 Tidak ada unsur yang cocok dengan pencarian.
-                <button type="button" className="btn btn--small" onClick={resetTrayFilters}>
-                  Reset filter
+                <button type="button" className="btn btn--small" onClick={resetTraySearch}>
+                  Hapus pencarian
                 </button>
               </p>
             )}
@@ -647,17 +537,10 @@ export default function LabScreen({ initial }: { initial: string | null }) {
             <span className="result__kicker">Siap</span>
             <h2>Belum ada reaksi</h2>
             <p>
-              Tambahkan atom dari baki, pilih resep cepat, atur kondisi bila perlu, lalu tekan{' '}
+              Tambahkan atom dari baki, atur kondisi bila perlu, lalu tekan{' '}
               <strong>Reaksikan</strong>. Kamu bisa mengulang dan membagikan eksperimen lewat
               tautan.
             </p>
-            <ul className="result__tips">
-              {PRESETS.slice(0, 3).map((preset) => (
-                <li key={preset.id}>
-                  {chamberFormula(preset.chamber)} → {preset.label.toLowerCase()}
-                </li>
-              ))}
-            </ul>
           </div>
         )}
       </section>
