@@ -2305,6 +2305,30 @@ sub {
     order: 2;
   }
 
+  /* Mobile & tablet: Bersihkan, Undo, Reaksikan sejajar dalam satu baris. */
+  .lab__actions {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .lab__actions .btn {
+    min-height: 44px;
+    padding: 0 10px;
+  }
+
+  .lab__actions .btn--danger {
+    order: 1;
+  }
+
+  .lab__actions .btn--warn {
+    order: 2;
+  }
+
+  .lab__actions .btn--primary {
+    order: 3;
+  }
+
   /* Padding kanan wadah gulir tidak ikut dihitung ketika tabel (1040px)
      meluber, sehingga kolom terakhir menempel di tepi kanan. Border transparan
      selebar gutter kiri membuat jarak kanan sama dengan jarak kiri tanpa
@@ -2441,12 +2465,10 @@ sub {
     font-size: 21px;
   }
 
-  .lab__actions {
-    flex-wrap: wrap;
-  }
-
-  .lab__actions .btn--wide {
-    flex-basis: 100%;
+  .lab__actions .btn {
+    padding: 0 6px;
+    font-size: 12.5px;
+    white-space: nowrap;
   }
 
   .tray__tools {
