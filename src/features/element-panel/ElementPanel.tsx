@@ -228,48 +228,11 @@ export default function ElementPanel() {
   const closePanel = useAppStore((s) => s.closePanel);
   const [tab, setTab] = useState<Tab>('ringkasan');
   const [switching, setSwitching] = useState(false);
-  const [prewarm, setPrewarm] = useState(false);
   const panelRef = useRef<HTMLElement>(null);
   const previousSelected = useRef(selected);
   const switchTimer = useRef<number | null>(null);
-  const prewarmDone = useRef(false);
 
-  const element = selected
-    ? elements.find((el) => el.symbol === selected) ?? null
-    : prewarm
-      ? elements[0]
-      : null;
-
-  // Pemanasan sekali saat idle: render panel tak terlihat agar shader/raster
-  // backdrop-filter dan konten panel sudah siap sebelum klik pertama.
-  useEffect(() => {
-    if (selected || prewarm || prewarmDone.current) return;
-    const start = () => {
-      prewarmDone.current = true;
-      setPrewarm(true);
-    };
-    type IdleWindow = Window & {
-      requestIdleCallback?: (callback: () => void, options?: { timeout: number }) => number;
-      cancelIdleCallback?: (id: number) => void;
-    };
-    const idleWindow = window as IdleWindow;
-    if (idleWindow.requestIdleCallback) {
-      const id = idleWindow.requestIdleCallback(start, { timeout: 400 });
-      return () => idleWindow.cancelIdleCallback?.(id);
-    }
-    const timer = window.setTimeout(start, 300);
-    return () => window.clearTimeout(timer);
-  }, [prewarm, selected]);
-
-  useEffect(() => {
-    if (!prewarm) return;
-    if (selected) {
-      setPrewarm(false);
-      return;
-    }
-    const timer = window.setTimeout(() => setPrewarm(false), 700);
-    return () => window.clearTimeout(timer);
-  }, [prewarm, selected]);
+  const element = selected ? elements.find((el) => el.symbol === selected) ?? null : null;
 
   useEffect(() => {
     setTab('ringkasan');
@@ -311,12 +274,10 @@ export default function ElementPanel() {
   return (
     <aside
       ref={panelRef}
-      className={`element-panel${panelOpen ? ' is-open' : ''}${switching ? ' is-switching' : ''}${
-        !selected && prewarm ? ' is-prewarm' : ''
-      }`}
+      className={`element-panel${panelOpen ? ' is-open' : ''}${switching ? ' is-switching' : ''}`}
       aria-label={`Detail unsur ${element.name}`}
-      aria-hidden={!panelOpen || switching || (!selected && prewarm)}
-      inert={!panelOpen || switching || (!selected && prewarm) ? true : undefined}
+      aria-hidden={!panelOpen || switching}
+      inert={!panelOpen || switching ? true : undefined}
     >
       <div className="element-panel__handle" aria-hidden="true" />
 

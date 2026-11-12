@@ -774,15 +774,6 @@ sub {
   transition-duration: 180ms;
 }
 
-/* Panel tak terlihat yang dirender sekali saat idle untuk memanaskan
-   backdrop-filter sebelum panel pertama kali dibuka. */
-.element-panel.is-prewarm {
-  transform: none;
-  opacity: 0.002;
-  pointer-events: none;
-  transition: none;
-}
-
 .element-panel__handle {
   display: none;
 }
