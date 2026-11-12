@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect, useMemo, useRef, useState } from 'react';
+import { lazy, Suspense, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { elements } from './core/data/elements';
 import { useAppStore, type CategoryFilter } from './app/store';
 import { categoryColors, categoryInkColors, categoryLabels } from './ui/tokens';
@@ -359,6 +359,69 @@ function ExploreScreen() {
   );
 }
 
+const MODE_ICONS: Record<string, ReactNode> = {
+  '': (
+    <>
+      <rect x="3.5" y="3.5" width="17" height="17" rx="2.5" />
+      <path d="M3.5 9.2h17M3.5 14.9h17M9.2 3.5v17M14.9 3.5v17" />
+    </>
+  ),
+  lab: (
+    <>
+      <path d="M9.5 3h5" />
+      <path d="M10.5 3v5.1L6.3 16a2.4 2.4 0 0 0 2 3.6h7.4a2.4 2.4 0 0 0 2-3.6l-4.2-7.9V3" />
+      <path d="M8.6 13.6h6.8" />
+    </>
+  ),
+  tantangan: (
+    <>
+      <circle cx="12" cy="12" r="8.6" />
+      <path d="M9.5 9.4a2.6 2.6 0 0 1 5 .8c0 1.7-2.4 1.8-2.4 3.5" />
+      <circle cx="12.1" cy="16.9" r="0.9" fill="currentColor" stroke="none" />
+    </>
+  ),
+  tentang: (
+    <>
+      <circle cx="12" cy="12" r="8.6" />
+      <path d="M12 11.2v5.4" />
+      <circle cx="12" cy="8" r="0.9" fill="currentColor" stroke="none" />
+    </>
+  ),
+};
+
+function BottomNav() {
+  const route = useRoute();
+  const mode = segments(route.path)[0] ?? '';
+
+  return (
+    <nav className="bottom-nav" aria-label="Navigasi utama">
+      {MODES.map((item) => (
+        <button
+          key={item.id}
+          type="button"
+          className={`bottom-nav__item${mode === item.id ? ' is-active' : ''}`}
+          aria-current={mode === item.id ? 'page' : undefined}
+          onClick={() => navigate(item.path)}
+        >
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            className="bottom-nav__icon"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.7"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            {MODE_ICONS[item.id]}
+          </svg>
+          <span className="bottom-nav__label">{item.label}</span>
+        </button>
+      ))}
+    </nav>
+  );
+}
+
 export default function App() {
   const route = useRoute();
   const mode = segments(route.path)[0] ?? '';
@@ -414,6 +477,7 @@ export default function App() {
           </div>
         )}
       </main>
+      <BottomNav />
     </div>
   );
 }

@@ -39,6 +39,9 @@ Tanpa variabel itu, build tetap berhasil tetapi memakai placeholder
 | `/tantangan/:level` | Tantangan | Langsung mulai paket `dasar` / `menengah` / `mahir` |
 | `/tentang` | Tentang | Sumber & sitasi, lisensi, disclaimer, privasi, diagnostik error |
 
+Di layar sempit (≤ 720px) keempat mode tampil sebagai navigasi yang menetap di
+bagian bawah layar (ikon + label), sedangkan di desktop tetap di baris atas.
+
 ## Arsitektur singkat
 
 ```

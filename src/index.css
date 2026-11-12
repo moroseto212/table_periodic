@@ -512,6 +512,11 @@ sub {
   box-shadow: inset 0 0 0 1px var(--border);
 }
 
+/* Navigasi bawah hanya dipakai di layar sempit (lihat media query di bawah). */
+.bottom-nav {
+  display: none;
+}
+
 .search {
   position: relative;
   flex: 1;
@@ -2303,15 +2308,50 @@ sub {
   }
 
   .mode-nav {
-    order: 3;
-    width: 100%;
-    justify-content: space-between;
+    display: none;
   }
 
-  .mode-nav__item {
-    flex: 1;
-    padding: 8px 6px;
-    font-size: 12.5px;
+  .bottom-nav {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 2px;
+    flex: none;
+    padding: 4px 6px calc(4px + env(safe-area-inset-bottom));
+    border-top: 1px solid var(--border);
+    background: var(--topbar-bg);
+    backdrop-filter: blur(18px);
+  }
+
+  .bottom-nav__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    min-height: 48px;
+    padding: 6px 2px 4px;
+    border: 0;
+    border-radius: 10px;
+    background: transparent;
+    color: var(--muted);
+    font-size: clamp(10px, 2.9vw, 11px);
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+    text-align: center;
+  }
+
+  .bottom-nav__icon {
+    width: 23px;
+    height: 23px;
+  }
+
+  .bottom-nav__label {
+    white-space: nowrap;
+  }
+
+  .bottom-nav__item.is-active {
+    background: var(--surface-hover);
+    color: var(--accent);
   }
 
   .search {
