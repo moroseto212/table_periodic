@@ -995,6 +995,28 @@ sub {
   flex: 1;
 }
 
+.btn--warn {
+  background: var(--warning-soft);
+  border-color: var(--warning-border);
+  color: var(--warning-ink);
+}
+
+.btn--warn:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--warning) 18%, transparent);
+  border-color: color-mix(in srgb, var(--warning) 65%, transparent);
+}
+
+.btn--danger {
+  background: var(--danger-soft);
+  border-color: var(--danger-border);
+  color: var(--danger);
+}
+
+.btn--danger:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--danger) 17%, transparent);
+  border-color: color-mix(in srgb, var(--danger) 65%, transparent);
+}
+
 .electron-config {
   display: flex;
   flex-direction: column;

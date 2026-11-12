@@ -138,7 +138,7 @@ function ResultCard({
               membentuk H<sub>2</sub>O.
             </p>
             <div className="result__actions">
-              <button type="button" className="btn" onClick={onRepeat}>
+              <button type="button" className="btn btn--danger" onClick={onRepeat}>
                 Bersihkan chamber
               </button>
             </div>
@@ -450,10 +450,20 @@ export default function LabScreen({ initial }: { initial: string | null }) {
           >
             Reaksikan
           </button>
-          <button type="button" className="btn" onClick={undo} disabled={history.length === 0}>
+          <button
+            type="button"
+            className="btn btn--warn"
+            onClick={undo}
+            disabled={history.length === 0}
+          >
             Undo
           </button>
-          <button type="button" className="btn" onClick={clear} disabled={total === 0}>
+          <button
+            type="button"
+            className="btn btn--danger"
+            onClick={clear}
+            disabled={total === 0}
+          >
             Bersihkan
           </button>
         </div>
