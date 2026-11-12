@@ -103,6 +103,9 @@ function TopBar() {
   const toggleTheme = useAppStore((s) => s.toggleTheme);
   const [open, setOpen] = useState(false);
   const wrapRef = useRef<HTMLDivElement>(null);
+  // Di Laboratorium sudah ada pencarian baki; kolom cari global disembunyikan
+  // agar pengguna tidak melihat dua kolom pencarian sekaligus.
+  const showSearch = mode !== 'lab';
 
   const results = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -127,6 +130,7 @@ function TopBar() {
 
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
+      if (!showSearch) return;
       if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') {
         event.preventDefault();
         (wrapRef.current?.querySelector('input') as HTMLInputElement | null)?.focus();
@@ -134,7 +138,12 @@ function TopBar() {
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
-  }, []);
+  }, [showSearch]);
+
+  // Tutup dropdown saat pencarian disembunyikan (mis. masuk ke Laboratorium).
+  useEffect(() => {
+    if (!showSearch) setOpen(false);
+  }, [showSearch]);
 
   const choose = (symbol: string) => {
     select(symbol);
@@ -150,7 +159,7 @@ function TopBar() {
 
   return (
     <header className="topbar">
-      <div className="topbar__row">
+      <div className={`topbar__row${showSearch ? '' : ' topbar__row--compact'}`}>
         <button type="button" className="brand" onClick={() => navigate('/')} aria-label="PeriodikLab — jelajah tabel periodik">
           <span className="brand__mark" aria-hidden="true" />
           <span className="brand__text">
@@ -172,72 +181,74 @@ function TopBar() {
           ))}
         </nav>
 
-        <div className="search" ref={wrapRef}>
-          <label className="search__field">
-            <span className="sr-only">Cari unsur</span>
-            <svg viewBox="0 0 24 24" aria-hidden="true" className="search__icon">
-              <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" strokeWidth="2" />
-              <path d="m16.5 16.5 4 4" fill="none" stroke="currentColor" strokeWidth="2" />
-            </svg>
-            <input
-              type="text"
-              inputMode="search"
-              placeholder="Cari nama, simbol, atau nomor atom…"
-              value={query}
-              onChange={(event) => {
-                setQuery(event.target.value);
-                setOpen(true);
-              }}
-              onFocus={() => setOpen(true)}
-              onKeyDown={(event) => {
-                if (event.key === 'Enter' && results[0]) {
-                  event.preventDefault();
-                  choose(results[0].symbol);
-                }
-                if (event.key === 'Escape') {
-                  setOpen(false);
-                  setQuery('');
-                }
-              }}
-              autoComplete="off"
-            />
-            <kbd className="search__kbd">Ctrl K</kbd>
-          </label>
+        {showSearch && (
+          <div className="search" ref={wrapRef}>
+            <label className="search__field">
+              <span className="sr-only">Cari unsur</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true" className="search__icon">
+                <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" strokeWidth="2" />
+                <path d="m16.5 16.5 4 4" fill="none" stroke="currentColor" strokeWidth="2" />
+              </svg>
+              <input
+                type="text"
+                inputMode="search"
+                placeholder="Cari nama, simbol, atau nomor atom…"
+                value={query}
+                onChange={(event) => {
+                  setQuery(event.target.value);
+                  setOpen(true);
+                }}
+                onFocus={() => setOpen(true)}
+                onKeyDown={(event) => {
+                  if (event.key === 'Enter' && results[0]) {
+                    event.preventDefault();
+                    choose(results[0].symbol);
+                  }
+                  if (event.key === 'Escape') {
+                    setOpen(false);
+                    setQuery('');
+                  }
+                }}
+                autoComplete="off"
+              />
+              <kbd className="search__kbd">Ctrl K</kbd>
+            </label>
 
-          {open && query.trim() !== '' && (
-            <div className="search__results" role="listbox" aria-label="Hasil pencarian">
-              {results.length === 0 && (
-                <p className="search__empty">
-                  Tidak ada unsur bernama “{query.trim()}”. Coba simbol (Fe) atau nomor atom
-                  (26).
-                </p>
-              )}
-              {results.map((el) => (
-                <button
-                  key={el.symbol}
-                  type="button"
-                  role="option"
-                  aria-selected="false"
-                  className="search__result"
-                  onClick={() => choose(el.symbol)}
-                >
-                  <span className="search__z">{el.z}</span>
-                  <span className="search__symbol">{el.symbol}</span>
-                  <span className="search__name">{el.name}</span>
-                  <span
-                    className="search__cat"
-                    style={{
-                      ['--cat-color' as string]: categoryColors[el.category],
-                      ['--cat-ink' as string]: categoryInkColors[el.category],
-                    }}
+            {open && query.trim() !== '' && (
+              <div className="search__results" role="listbox" aria-label="Hasil pencarian">
+                {results.length === 0 && (
+                  <p className="search__empty">
+                    Tidak ada unsur bernama “{query.trim()}”. Coba simbol (Fe) atau nomor atom
+                    (26).
+                  </p>
+                )}
+                {results.map((el) => (
+                  <button
+                    key={el.symbol}
+                    type="button"
+                    role="option"
+                    aria-selected="false"
+                    className="search__result"
+                    onClick={() => choose(el.symbol)}
                   >
-                    {categoryLabels[el.category]}
-                  </span>
-                </button>
-              ))}
-            </div>
-          )}
-        </div>
+                    <span className="search__z">{el.z}</span>
+                    <span className="search__symbol">{el.symbol}</span>
+                    <span className="search__name">{el.name}</span>
+                    <span
+                      className="search__cat"
+                      style={{
+                        ['--cat-color' as string]: categoryColors[el.category],
+                        ['--cat-ink' as string]: categoryInkColors[el.category],
+                      }}
+                    >
+                      {categoryLabels[el.category]}
+                    </span>
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
 
         <div className="toolbar">
           <ConnectionStatus />
