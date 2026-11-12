@@ -8,7 +8,28 @@ interface ElementRow {
   symbol: string;
   name: string;
   category: string;
+  group: number | null;
+  period: number;
+  block: string;
+  mass: number;
+  electronConfig: string;
+  stateSTP: string;
+  discoveredYear: number | null;
   summary: string;
+}
+
+interface ReactionRow {
+  id: string;
+  reactants: { species: string; coeff: number }[];
+  products: { species: string; coeff: number }[];
+  conditions: string[];
+}
+
+interface SpeciesRow {
+  id: string;
+  formula: string;
+  name: string;
+  composition: Record<string, number>;
 }
 
 const CATEGORY_LABELS: Record<string, string> = {
@@ -24,7 +45,18 @@ const CATEGORY_LABELS: Record<string, string> = {
   actinide: 'aktinida',
 };
 
-const DEFAULT_SITE = 'https://periodiklab.example.com';
+const STATE_LABELS: Record<string, string> = {
+  solid: 'padat',
+  liquid: 'cair',
+  gas: 'gas',
+};
+
+/**
+ * Domain utama untuk canonical, og:url, sitemap, dan robots.txt.
+ * GitHub Pages dideploy sebagai cermin dan menunjuk ke domain ini agar
+ * sinyal peringkat tidak terpecah. Ubah lewat env SITE_URL bila perlu.
+ */
+const DEFAULT_SITE = 'https://table-periodic-moroseto.vercel.app';
 
 const escapeHtml = (value: string): string =>
   value
@@ -41,12 +73,111 @@ function shorten(text: string, max: number): string {
   return `${cut.slice(0, lastSpace > max * 0.6 ? lastSpace : cut.length)}…`;
 }
 
+function readJson<T>(root: string, path: string): T {
+  return JSON.parse(readFileSync(resolve(root, path), 'utf8')) as T;
+}
+
+function gcd(a: number, b: number): number {
+  let x = Math.abs(a);
+  let y = Math.abs(b);
+  while (y) {
+    const t = y;
+    y = x % y;
+    x = t;
+  }
+  return x;
+}
+
+function numberId(value: number): string {
+  return new Intl.NumberFormat('id-ID', { maximumFractionDigits: 4 }).format(value);
+}
+
+interface PresetLink {
+  label: string;
+  formula: string;
+  chamberLabel: string;
+  href: string;
+}
+
+/** Resep cepat yang sama dengan yang tampil di Laboratorium, untuk tautan dalam. */
+const PRESET_RECIPES: { reactionId: string; label: string }[] = [
+  { reactionId: 'h2-o2-water', label: 'Air' },
+  { reactionId: 'c-o2-dioxide', label: 'Karbon dioksida' },
+  { reactionId: 'na-cl2-salt', label: 'Garam dapur' },
+  { reactionId: 'n2-h2-ammonia', label: 'Amonia' },
+  { reactionId: 'fe-o2-oxide', label: 'Karat besi' },
+  { reactionId: 's-o2-so2', label: 'Belerang dioksida' },
+];
+
+function buildPresetLinks(root: string): PresetLink[] {
+  const reactions = readJson<ReactionRow[]>(root, 'src/core/data/reactions.json');
+  const species = readJson<SpeciesRow[]>(root, 'src/core/data/species.json');
+  const speciesById = new Map(species.map((item) => [item.id, item]));
+  const reactionsById = new Map(reactions.map((item) => [item.id, item]));
+  const links: PresetLink[] = [];
+
+  for (const recipe of PRESET_RECIPES) {
+    const reaction = reactionsById.get(recipe.reactionId);
+    if (!reaction) continue;
+    const atoms: Record<string, number> = {};
+    for (const reactant of reaction.reactants) {
+      const item = speciesById.get(reactant.species);
+      if (!item) continue;
+      for (const [symbol, count] of Object.entries(item.composition)) {
+        atoms[symbol] = (atoms[symbol] ?? 0) + count * reactant.coeff;
+      }
+    }
+    const values = Object.values(atoms);
+    if (values.length === 0) continue;
+    const divisor = values.reduce((a, b) => gcd(a, b));
+    const ratio = Object.entries(atoms).map(([symbol, count]) => [symbol, count / divisor] as const);
+    const encoded = ratio.map(([symbol, count]) => `${symbol}:${count}`).join(',');
+    const product = speciesById.get(reaction.products[0]?.species ?? '');
+
+    links.push({
+      label: recipe.label,
+      formula: product?.formula ?? product?.name ?? '',
+      chamberLabel: ratio.map(([symbol, count]) => `${count} ${symbol}`).join(' + '),
+      href: `/lab?s=${encodeURIComponent(encoded)}`,
+    });
+  }
+
+  return links;
+}
+
+interface LinkItem {
+  path: string;
+  label: string;
+  hint?: string;
+}
+
+interface LinkGroup {
+  heading: string;
+  items: LinkItem[];
+}
+
+interface Fact {
+  label: string;
+  value: string;
+}
+
 interface PageMeta {
   path: string;
   title: string;
   description: string;
+  heading: string;
+  intro: string[];
+  facts?: Fact[];
+  groups?: LinkGroup[];
   jsonLd?: Record<string, unknown>;
 }
+
+const NAV: LinkItem[] = [
+  { path: '/', label: 'Tabel periodik' },
+  { path: '/lab', label: 'Laboratorium' },
+  { path: '/tantangan', label: 'Tantangan' },
+  { path: '/tentang', label: 'Tentang' },
+];
 
 function buildHead(meta: PageMeta, site: string): string {
   const url = `${site}${meta.path === '/' ? '/' : meta.path}`;
@@ -62,6 +193,9 @@ function buildHead(meta: PageMeta, site: string): string {
     `<meta property="og:description" content="${escapeHtml(meta.description)}" />`,
     `<meta property="og:url" content="${escapeHtml(url)}" />`,
     `<meta property="og:image" content="${escapeHtml(image)}" />`,
+    '<meta property="og:image:width" content="512" />',
+    '<meta property="og:image:height" content="512" />',
+    '<meta property="og:image:alt" content="Logo PeriodikLab" />',
     '<meta name="twitter:card" content="summary" />',
   ];
 
@@ -73,6 +207,61 @@ function buildHead(meta: PageMeta, site: string): string {
   return tags.join('\n    ');
 }
 
+/**
+ * Konten HTML di dalam #root: tampil sebelum JavaScript siap, lalu diganti
+ * aplikasi React. Memberi crawler dan pengunjung tanpa JS judul, ringkasan,
+ * serta tautan yang bisa diikuti.
+ */
+function renderBody(meta: PageMeta, base: string): string {
+  const href = (path: string) => (path === '/' ? base : `${base}${path.replace(/^\/+/, '')}`);
+
+  const nav = NAV.map(
+    (item) =>
+      `<a href="${escapeHtml(href(item.path))}"${
+        item.path === meta.path ? ' aria-current="page"' : ''
+      }>${escapeHtml(item.label)}</a>`,
+  ).join(' ');
+
+  const facts = meta.facts?.length
+    ? `<dl class="seo__facts">${meta.facts
+        .map(
+          (fact) =>
+            `<div><dt>${escapeHtml(fact.label)}</dt><dd>${escapeHtml(fact.value)}</dd></div>`,
+        )
+        .join('')}</dl>`
+    : '';
+
+  const groups = (meta.groups ?? [])
+    .map(
+      (group) => `<section class="seo__group">
+        <h2>${escapeHtml(group.heading)}</h2>
+        <ul>${group.items
+          .map(
+            (item) =>
+              `<li><a href="${escapeHtml(href(item.path))}">${escapeHtml(item.label)}</a>${
+                item.hint ? ` <span>${escapeHtml(item.hint)}</span>` : ''
+              }</li>`,
+          )
+          .join('')}</ul>
+      </section>`,
+    )
+    .join('\n      ');
+
+  return `<div class="seo">
+      <header class="seo__bar">
+        <a class="seo__brand" href="${escapeHtml(base)}">PeriodikLab</a>
+        <nav class="seo__nav" aria-label="Navigasi utama">${nav}</nav>
+      </header>
+      <main class="seo__main">
+        <h1>${escapeHtml(meta.heading)}</h1>
+        ${meta.intro.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join('\n        ')}
+        ${facts}
+        ${groups}
+        <p class="seo__more"><a href="${escapeHtml(href('/'))}">Buka tabel periodik interaktif</a> — semua fitur berjalan di browser dan bisa dipasang sebagai aplikasi.</p>
+      </main>
+    </div>`;
+}
+
 const STRIP_PATTERNS: RegExp[] = [
   /<title>[\s\S]*?<\/title>\s*/gi,
   /<meta\s+name="description"[^>]*>\s*/gi,
@@ -81,11 +270,12 @@ const STRIP_PATTERNS: RegExp[] = [
   /<link\s+rel="canonical"[^>]*>\s*/gi,
 ];
 
-function renderPage(base: string, meta: PageMeta, site: string): string {
-  let html = base;
+function renderPage(baseHtml: string, meta: PageMeta, site: string, base: string): string {
+  let html = baseHtml;
   for (const pattern of STRIP_PATTERNS) html = html.replace(pattern, '');
   const head = `\n    ${buildHead(meta, site)}\n  </head>`;
-  return html.replace('</head>', head);
+  html = html.replace('</head>', head);
+  return html.replace('<div id="root"></div>', `<div id="root">${renderBody(meta, base)}</div>`);
 }
 
 function writePage(dist: string, path: string, html: string): void {
@@ -94,24 +284,16 @@ function writePage(dist: string, path: string, html: string): void {
   writeFileSync(target, html, 'utf8');
 }
 
-/**
- * Prerender metadata per rute dan sitemap. Dijalankan sebelum service worker
- * dibuat agar halaman hasil prerender ikut masuk precache.
- */
-export function prerender(root = process.cwd()): void {
-  const dist = resolve(root, 'dist');
-  const base = readFileSync(resolve(dist, 'index.html'), 'utf8');
-  const elements = JSON.parse(
-    readFileSync(resolve(root, 'src/core/data/elements.json'), 'utf8'),
-  ) as ElementRow[];
-
-  const rawSite = process.env.SITE_URL?.trim();
-  const site = (rawSite || DEFAULT_SITE).replace(/\/+$/, '');
-  if (!rawSite) {
-    console.warn(
-      `[prerender] SITE_URL belum diset; canonical dan sitemap memakai placeholder ${DEFAULT_SITE}`,
-    );
-  }
+function buildPages(
+  root: string,
+  elements: ElementRow[],
+  presets: PresetLink[],
+  site: string,
+): PageMeta[] {
+  const reactions = readJson<ReactionRow[]>(root, 'src/core/data/reactions.json');
+  const featured = ['H', 'C', 'N', 'O', 'Na', 'Mg', 'Al', 'Si', 'S', 'Cl', 'Fe', 'Cu']
+    .map((symbol) => elements.find((element) => element.symbol === symbol))
+    .filter((element): element is ElementRow => Boolean(element));
 
   const pages: PageMeta[] = [
     {
@@ -119,6 +301,42 @@ export function prerender(root = process.cwd()): void {
       title: 'PeriodikLab — Tabel Periodik & Laboratorium Kimia',
       description:
         'Jelajahi 118 unsur dalam tabel periodik interaktif, coba reaksi di laboratorium virtual, dan asah pemahaman lewat tantangan kimia berbahasa Indonesia.',
+      heading: 'Tabel Periodik Interaktif & Laboratorium Kimia',
+      intro: [
+        'PeriodikLab merangkum 118 unsur dalam tabel periodik 2D berbahasa Indonesia. Setiap unsur punya halaman berisi nomor atom, massa, konfigurasi elektron, wujud pada suhu kamar, dan ringkasan sifatnya.',
+        'Selain menjelajah, kamu bisa menyusun atom di laboratorium reaksi virtual — lengkap dengan stoikiometri, pereaksi pembatas, dan sisa zat — lalu menguji pemahaman lewat tantangan tiga tingkat. Semua berjalan di browser, bisa dipasang sebagai aplikasi, dan tetap terbuka saat offline.',
+      ],
+      facts: [
+        { label: 'Unsur', value: '118' },
+        { label: 'Reaksi terkurasi', value: String(reactions.length) },
+        { label: 'Tingkat tantangan', value: '3' },
+        { label: 'Bahasa', value: 'Indonesia' },
+      ],
+      groups: [
+        {
+          heading: 'Mulai dari sini',
+          items: [
+            { path: '/lab', label: 'Laboratorium reaksi', hint: 'susun atom dan lihat hasilnya' },
+            { path: '/tantangan', label: 'Tantangan kimia', hint: 'tiga tingkat dengan pembahasan' },
+            { path: '/tentang', label: 'Sumber data & disclaimer' },
+          ],
+        },
+        {
+          heading: 'Unsur yang sering dicari',
+          items: featured.map((element) => ({
+            path: `/unsur/${element.symbol}`,
+            label: `${element.name} (${element.symbol})`,
+            hint: `nomor atom ${element.z}`,
+          })),
+        },
+        {
+          heading: 'Indeks 118 unsur',
+          items: elements.map((element) => ({
+            path: `/unsur/${element.symbol}`,
+            label: `${element.symbol} · ${element.name}`,
+          })),
+        },
+      ],
       jsonLd: {
         '@context': 'https://schema.org',
         '@type': 'WebApplication',
@@ -136,28 +354,244 @@ export function prerender(root = process.cwd()): void {
       title: 'Laboratorium Reaksi — PeriodikLab',
       description:
         'Campur atom di baki, atur kondisi reaksi, dan lihat stoikiometri, pereaksi pembatas, serta sisa zat secara langsung.',
+      heading: 'Laboratorium Reaksi Kimia Virtual',
+      intro: [
+        'Laboratorium PeriodikLab mencocokkan rasio atom, bukan molekul. Pilih unsur dari baki atau pakai resep cepat, lalu tekan Reaksikan untuk melihat persamaan setara, pereaksi pembatas, dan zat sisa.',
+        'Beberapa reaksi baru berjalan dengan kondisi tertentu, misalnya panaskan, katalis, atau tekanan tinggi. Kamu bisa menambah dan mengurangi atom langsung dari chip, membagikan tautan eksperimen, atau mengembalikan langkah terakhir lewat tombol Undo.',
+        'Batas percobaan adalah 24 atom total dan 12 atom per unsur agar hasil tetap mudah dibaca. Seluruh perhitungan berjalan lokal di browser.',
+      ],
+      facts: [
+        { label: 'Unsur tersedia', value: '118' },
+        { label: 'Reaksi terkurasi', value: String(reactions.length) },
+        { label: 'Batas atom', value: '24 per percobaan' },
+        { label: 'Kondisi', value: 'panas, katalis, tekanan' },
+      ],
+      groups: [
+        {
+          heading: 'Coba resep cepat',
+          items: presets.map((preset) => ({
+            path: preset.href,
+            label: `${preset.label} (${preset.formula})`,
+            hint: preset.chamberLabel,
+          })),
+        },
+        {
+          heading: 'Halaman terkait',
+          items: [
+            { path: '/', label: 'Tabel periodik 118 unsur' },
+            { path: '/tantangan', label: 'Tantangan kimia' },
+            { path: '/tentang', label: 'Cara data reaksi disusun' },
+          ],
+        },
+      ],
     },
     {
       path: '/tantangan',
       title: 'Tantangan Kimia — PeriodikLab',
       description:
         'Latihan kimia tiga tingkat dengan pembahasan, pengulangan soal salah, dan tautan berbagi. Kalibrasi Kurikulum Merdeka dan GCSE.',
+      heading: 'Tantangan Kimia Tiga Tingkat',
+      intro: [
+        'Tantangan PeriodikLab berisi tiga paket soal berbahasa Indonesia: Dasar untuk simbol dan fakta unsur, Menengah untuk konfigurasi elektron, ikatan, dan reaksi umum, serta Mahir untuk stoikiometri, pereaksi pembatas, dan kondisi reaksi.',
+        'Setiap sesi memuat 10 soal pilihan ganda dengan pembahasan. Soal yang salah bisa diulang dalam satu sesi baru, skor terbaik disimpan di perangkat, dan hasilnya bisa dibagikan lewat tautan.',
+      ],
+      facts: [
+        { label: 'Tingkat', value: '3' },
+        { label: 'Soal per sesi', value: '10' },
+        { label: 'Kurikulum', value: 'Merdeka & GCSE' },
+      ],
+      groups: [
+        {
+          heading: 'Pilih tingkat',
+          items: [
+            { path: '/tantangan/dasar', label: 'Dasar', hint: 'simbol, nama, dan fakta dasar unsur' },
+            {
+              path: '/tantangan/menengah',
+              label: 'Menengah',
+              hint: 'konfigurasi elektron, ikatan, dan reaksi umum',
+            },
+            {
+              path: '/tantangan/mahir',
+              label: 'Mahir',
+              hint: 'stoikiometri, pereaksi pembatas, kondisi reaksi',
+            },
+          ],
+        },
+        {
+          heading: 'Halaman terkait',
+          items: [
+            { path: '/', label: 'Tabel periodik 118 unsur' },
+            { path: '/lab', label: 'Laboratorium reaksi' },
+          ],
+        },
+      ],
     },
-    ...(['dasar', 'menengah', 'mahir'] as const).map<PageMeta>((level) => ({
-      path: `/tantangan/${level}`,
-      title: `Tantangan ${level} — PeriodikLab`,
-      description: `Paket soal kimia tingkat ${level} berisi 10 pertanyaan orisinal dengan pembahasan.`,
-    })),
+    ...(['dasar', 'menengah', 'mahir'] as const).map<PageMeta>((level) => {
+      const label = level.charAt(0).toUpperCase() + level.slice(1);
+      const blurbs: Record<typeof level, string> = {
+        dasar: 'Simbol, nama, nomor atom, dan fakta dasar unsur.',
+        menengah: 'Konfigurasi elektron, ikatan kimia, dan reaksi umum.',
+        mahir: 'Stoikiometri, pereaksi pembatas, dan kondisi reaksi.',
+      };
+      return {
+        path: `/tantangan/${level}`,
+        title: `Tantangan ${label} — PeriodikLab`,
+        description: `Paket soal kimia tingkat ${level} berisi 10 pertanyaan orisinal dengan pembahasan.`,
+        heading: `Tantangan Kimia Tingkat ${label}`,
+        intro: [
+          `Paket ${level} berisi 10 soal pilihan ganda yang diacak dari bank soal PeriodikLab. Cakupannya ${blurbs[level].toLowerCase()} Setiap jawaban disertai pembahasan singkat agar bisa dipelajari ulang.`,
+          'Skor terbaik tersimpan di perangkat, sesi yang belum selesai bisa dilanjutkan, dan soal yang salah dapat diulang sebagai sesi baru. Tidak perlu akun dan tidak ada data yang dikirim ke server.',
+        ],
+        facts: [
+          { label: 'Jumlah soal', value: '10 per sesi' },
+          { label: 'Pembahasan', value: 'ya, tiap soal' },
+          { label: 'Penyimpanan', value: 'lokal di perangkat' },
+        ],
+        groups: [
+          {
+            heading: 'Tingkat lain',
+            items: (['dasar', 'menengah', 'mahir'] as const)
+              .filter((item) => item !== level)
+              .map((item) => ({
+                path: `/tantangan/${item}`,
+                label: item.charAt(0).toUpperCase() + item.slice(1),
+                hint: blurbs[item],
+              })),
+          },
+          {
+            heading: 'Halaman terkait',
+            items: [
+              { path: '/tantangan', label: 'Semua tantangan' },
+              { path: '/lab', label: 'Laboratorium reaksi' },
+              { path: '/', label: 'Tabel periodik' },
+            ],
+          },
+        ],
+      };
+    }),
     {
       path: '/tentang',
       title: 'Tentang, Sumber & Disclaimer — PeriodikLab',
       description:
         'Sumber data, sitasi reaksi, lisensi, disclaimer keselamatan, dan kebijakan penyimpanan lokal PeriodikLab.',
+      heading: 'Tentang PeriodikLab',
+      intro: [
+        'PeriodikLab adalah proyek edukasi kimia berbahasa Indonesia: tabel periodik 118 unsur, laboratorium reaksi, dan tantangan tiga tingkat. Tujuannya membantu siswa membaca tabel periodik dan memahami stoikiometri tanpa perangkat lunak tambahan.',
+        'Data unsur dirangkum dari PubChem, NIST, dan sumber kurikulum; reaksi terkurasi disertai sitasi. PeriodikLab bukan pengganti buku teks atau prosedur laboratorium nyata — selalu ikuti petunjuk guru dan aturan keselamatan.',
+        'Semua preferensi, skor tantangan, dan draf eksperimen disimpan di localStorage perangkat. Tidak ada akun, pelacakan iklan, atau pengiriman data ke server.',
+      ],
+      facts: [
+        { label: 'Unsur', value: '118' },
+        { label: 'Reaksi', value: String(reactions.length) },
+        { label: 'Lisensi', value: 'lihat halaman sumber' },
+        { label: 'Data pribadi', value: 'tidak dikumpulkan' },
+      ],
+      groups: [
+        {
+          heading: 'Jelajahi',
+          items: [
+            { path: '/', label: 'Tabel periodik' },
+            { path: '/lab', label: 'Laboratorium reaksi' },
+            { path: '/tantangan', label: 'Tantangan kimia' },
+          ],
+        },
+      ],
     },
   ];
 
+  const categoryMembers = new Map<string, ElementRow[]>();
+  for (const element of elements) {
+    const list = categoryMembers.get(element.category) ?? [];
+    list.push(element);
+    categoryMembers.set(element.category, list);
+  }
+
   for (const element of elements) {
     const category = CATEGORY_LABELS[element.category] ?? element.category;
+    const state = STATE_LABELS[element.stateSTP] ?? element.stateSTP;
+    const position = [
+      element.group != null ? `golongan ${element.group}` : null,
+      `periode ${element.period}`,
+      `blok ${element.block}`,
+    ]
+      .filter(Boolean)
+      .join(', ');
+
+    const index = elements.findIndex((item) => item.z === element.z);
+    const previous = index > 0 ? elements[index - 1] : null;
+    const next = index >= 0 && index < elements.length - 1 ? elements[index + 1] : null;
+
+    const peers = (categoryMembers.get(element.category) ?? [])
+      .filter((item) => item.z !== element.z)
+      .slice(0, 8);
+
+    const intro = [
+      `${element.name} (${element.symbol}) adalah ${category} bernomor atom ${element.z}. ${element.summary}`,
+      `Di tabel periodik, ${element.name} berada pada ${position}. Massa atomnya ${numberId(
+        element.mass,
+      )} u, berwujud ${state} pada suhu kamar, dengan konfigurasi elektron ${element.electronConfig}.`,
+    ];
+
+    if (element.discoveredYear != null) {
+      intro.push(`Unsur ini tercatat ditemukan pada tahun ${element.discoveredYear}.`);
+    }
+
+    if (peers.length > 0) {
+      intro.push(
+        `Sesama ${category} antara lain ${peers
+          .slice(0, 5)
+          .map((item) => `${item.name} (${item.symbol})`)
+          .join(', ')}.`,
+      );
+    }
+
+    const facts: Fact[] = [
+      { label: 'Nomor atom', value: String(element.z) },
+      { label: 'Simbol', value: element.symbol },
+      { label: 'Kategori', value: category },
+      { label: 'Massa atom', value: `${numberId(element.mass)} u` },
+      { label: 'Wujud (suhu kamar)', value: state },
+      { label: 'Konfigurasi elektron', value: element.electronConfig },
+    ];
+
+    const groups: LinkGroup[] = [];
+    const around: LinkItem[] = [];
+    if (previous) {
+      around.push({
+        path: `/unsur/${previous.symbol}`,
+        label: `← ${previous.name} (${previous.symbol})`,
+        hint: `nomor atom ${previous.z}`,
+      });
+    }
+    around.push({ path: '/', label: 'Tabel periodik lengkap' });
+    if (next) {
+      around.push({
+        path: `/unsur/${next.symbol}`,
+        label: `${next.name} (${next.symbol}) →`,
+        hint: `nomor atom ${next.z}`,
+      });
+    }
+    groups.push({ heading: 'Unsur di sekitar', items: around });
+
+    if (peers.length > 0) {
+      groups.push({
+        heading: `Unsur lain dalam kategori ${category}`,
+        items: peers.map((item) => ({
+          path: `/unsur/${item.symbol}`,
+          label: `${item.name} (${item.symbol})`,
+          hint: `nomor atom ${item.z}`,
+        })),
+      });
+    }
+
+    groups.push({
+      heading: 'Coba di laboratorium',
+      items: [
+        { path: '/lab', label: 'Laboratorium reaksi', hint: 'susun atom dari unsur ini' },
+        { path: '/tantangan', label: 'Tantangan kimia', hint: 'uji pemahaman' },
+      ],
+    });
+
     pages.push({
       path: `/unsur/${element.symbol}`,
       title: `${element.name} (${element.symbol}) — Unsur ${element.z} | PeriodikLab`,
@@ -165,6 +599,10 @@ export function prerender(root = process.cwd()): void {
         `${element.name} (${element.symbol}) adalah ${category} bernomor atom ${element.z}. ${element.summary}`,
         155,
       ),
+      heading: `${element.name} (${element.symbol})`,
+      intro,
+      facts,
+      groups,
       jsonLd: {
         '@context': 'https://schema.org',
         '@type': 'ChemicalSubstance',
@@ -177,16 +615,60 @@ export function prerender(root = process.cwd()): void {
     });
   }
 
+  return pages;
+}
+
+/**
+ * Prerender metadata per rute dan sitemap. Dijalankan sebelum service worker
+ * dibuat agar halaman hasil prerender ikut masuk precache.
+ */
+export function prerender(root = process.cwd(), base = '/'): void {
+  const dist = resolve(root, 'dist');
+  const baseHtml = readFileSync(resolve(dist, 'index.html'), 'utf8');
+  const elements = readJson<ElementRow[]>(root, 'src/core/data/elements.json');
+  const presets = buildPresetLinks(root);
+
+  const rawSite = process.env.SITE_URL?.trim();
+  const site = (rawSite || DEFAULT_SITE).replace(/\/+$/, '');
+  if (!rawSite) {
+    console.warn(`[prerender] SITE_URL belum diset; canonical memakai ${DEFAULT_SITE}`);
+  }
+
+  const pages = buildPages(root, elements, presets, site);
+
   for (const page of pages) {
-    writePage(dist, page.path, renderPage(base, page, site));
+    writePage(dist, page.path, renderPage(baseHtml, page, site, base));
   }
 
   // Fallback 404 untuk hosting statis yang mendukungnya.
-  writeFileSync(resolve(dist, '404.html'), renderPage(base, {
-    path: '/',
-    title: 'Halaman tidak ditemukan — PeriodikLab',
-    description: 'Halaman yang Anda cari tidak tersedia. Kembali ke tabel periodik.',
-  }, site), 'utf8');
+  writeFileSync(
+    resolve(dist, '404.html'),
+    renderPage(
+      baseHtml,
+      {
+        path: '/',
+        title: 'Halaman tidak ditemukan — PeriodikLab',
+        description: 'Halaman yang Anda cari tidak tersedia. Kembali ke tabel periodik.',
+        heading: 'Halaman tidak ditemukan',
+        intro: [
+          'Alamat yang Anda buka tidak tersedia di PeriodikLab. Gunakan tautan di bawah untuk kembali ke tabel periodik, laboratorium, atau tantangan.',
+        ],
+        groups: [
+          {
+            heading: 'Kembali ke',
+            items: [
+              { path: '/', label: 'Tabel periodik 118 unsur' },
+              { path: '/lab', label: 'Laboratorium reaksi' },
+              { path: '/tantangan', label: 'Tantangan kimia' },
+            ],
+          },
+        ],
+      },
+      site,
+      base,
+    ),
+    'utf8',
+  );
 
   const today = new Date().toISOString().slice(0, 10);
   const urls = pages
@@ -221,17 +703,19 @@ if (isDirectRun()) prerender();
 /** Plugin Vite: jalankan prerender tepat sebelum VitePWA membuat service worker. */
 export function prerenderPlugin(): Plugin {
   let root = process.cwd();
+  let base = '/';
   return {
     name: 'periodiklab-prerender',
     apply: 'build',
     configResolved(config) {
       root = config.root;
+      base = config.base;
     },
     closeBundle: {
       order: 'pre',
       sequential: true,
       handler() {
-        prerender(root);
+        prerender(root, base);
       },
     },
   };

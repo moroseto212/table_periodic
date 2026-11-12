@@ -136,6 +136,19 @@ Hosting statis harus mengarahkan rute yang tidak punya file ke `index.html`
 - `dist/unsur/<simbol>/index.html` untuk 118 unsur (judul, deskripsi, canonical, JSON-LD)
 - `dist/lab`, `dist/tantangan`, `dist/tantangan/<level>`, `dist/tentang`
 - `dist/sitemap.xml`, `dist/robots.txt`, `dist/404.html`
+
+Setiap halaman hasil prerender sudah memuat `<h1>`, ringkasan beberapa paragraf,
+fakta singkat, dan tautan internal (navigasi, indeks unsur, resep lab, tingkat
+tantangan). Konten itu tampil sebelum JavaScript siap, lalu diganti aplikasi React.
+
+### Domain utama
+
+Canonical, `og:url`, sitemap, dan robots.txt menunjuk ke satu domain utama:
+`https://table-periodic-moroseto.vercel.app`. Deploy Vercel memakai env proyek;
+build GitHub Pages menyetel `SITE_URL` ke domain yang sama sehingga Pages hanya
+menjadi cermin dan sinyal peringkat tidak terpecah. Untuk mengganti domain, ubah
+env `SITE_URL` di kedua tempat (dan `DEFAULT_SITE` di `scripts/prerender-plugin.ts`
+sebagai nilai cadangan).
 - `dist/manifest.webmanifest`, `dist/sw.js`
 
 ### GitHub Pages
@@ -148,7 +161,7 @@ Untuk build lokal yang meniru Pages:
 
 ```bash
 BASE_PATH=/table_periodic/ \
-SITE_URL=https://moroseto212.github.io/table_periodic \
+SITE_URL=https://table-periodic-moroseto.vercel.app \
 npm run build
 BASE_PATH=/table_periodic/ npm run preview   # http://localhost:4173/table_periodic/
 ```

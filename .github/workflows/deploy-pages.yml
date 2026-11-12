@@ -34,7 +34,8 @@ jobs:
         run: npm run build
         env:
           BASE_PATH: /table_periodic/
-          SITE_URL: https://moroseto212.github.io/table_periodic
+          # GitHub Pages adalah cermin; canonical & sitemap menunjuk domain utama.
+          SITE_URL: https://table-periodic-moroseto.vercel.app
 
       - name: Nonaktifkan Jekyll
         run: touch dist/.nojekyll

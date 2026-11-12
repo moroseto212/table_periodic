@@ -321,6 +321,7 @@ function ExploreScreen() {
 
   return (
     <>
+      <h1 className="sr-only">Tabel periodik interaktif PeriodikLab</h1>
       <div className="stage">
         <Table2D />
       </div>
