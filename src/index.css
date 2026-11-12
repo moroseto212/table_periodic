@@ -1567,10 +1567,8 @@ sub {
   .conditions__label {
     display: none;
   }
-}
 
-/* Ponsel: grup chip kondisi dipusatkan dengan gap tetap 8px. */
-@media (max-width: 480px) {
+  /* Ponsel & tablet: grup chip kondisi dipusatkan dengan gap tetap 8px. */
   .conditions {
     justify-content: center;
   }
