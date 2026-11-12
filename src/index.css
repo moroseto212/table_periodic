@@ -2424,12 +2424,6 @@ sub {
     margin-left: 0;
   }
 
-  /* Di Laboratorium kolom cari global tidak dirender; dorong toolbar ke kanan
-     agar baris pertama tetap logo + tombol, nav mode tetap satu baris penuh. */
-  .topbar__row--compact .toolbar {
-    margin-left: auto;
-  }
-
   .tool-btn--theme {
     width: 44px;
     height: 44px;
