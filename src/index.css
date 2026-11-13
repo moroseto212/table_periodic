@@ -2327,6 +2327,12 @@ sub {
     order: 3;
   }
 
+  /* Pita 16px di bawah area gulir menjadi jarak bersih antara baris terakhir
+     dan navbar (ponsel) atau tepi bawah (tablet), termasuk saat gulir mentok. */
+  .table2d-wrap {
+    height: calc(100% - 16px);
+  }
+
   /* Padding kanan wadah gulir tidak ikut dihitung ketika tabel (1040px)
      meluber, sehingga kolom terakhir menempel di tepi kanan. Border transparan
      selebar gutter kiri membuat jarak kanan sama dengan jarak kiri tanpa
@@ -2334,6 +2340,9 @@ sub {
   .table2d {
     box-sizing: content-box;
     border-right: var(--table-gutter) solid transparent;
+    /* Rapatkan jarak antar-baris menjadi 2px (dari 5px) agar tabel muat di
+       area yang lebih pendek; kartu tetap 58px dan jarak kolom tetap 5px. */
+    row-gap: 2px;
   }
 }
 
