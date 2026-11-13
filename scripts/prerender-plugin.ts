@@ -46,10 +46,10 @@ const STATE_LABELS: Record<string, string> = {
 
 /**
  * Domain utama untuk canonical, og:url, sitemap, dan robots.txt.
- * GitHub Pages dideploy sebagai cermin dan menunjuk ke domain ini agar
- * sinyal peringkat tidak terpecah. Ubah lewat env SITE_URL bila perlu.
+ * Hanya ada satu host publik agar sinyal peringkat tidak terpecah.
+ * Ubah lewat env SITE_URL bila perlu.
  */
-const DEFAULT_SITE = 'https://table-periodic-moroseto.vercel.app';
+const DEFAULT_SITE = 'https://periodiclab.my.id';
 
 const escapeHtml = (value: string): string =>
   value

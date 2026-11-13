@@ -170,10 +170,10 @@ tantangan). Konten itu tampil sebelum JavaScript siap, lalu diganti aplikasi Rea
 ### Domain utama
 
 Canonical, `og:url`, sitemap, dan robots.txt menunjuk ke satu domain utama:
-`https://table-periodic-moroseto.vercel.app`. Vercel adalah satu-satunya host
-publik; tidak ada cermin GitHub Pages, sehingga sinyal peringkat tidak
-terpecah. Untuk mengganti domain, ubah env `SITE_URL` di proyek Vercel (dan
-`DEFAULT_SITE` di `scripts/prerender-plugin.ts` sebagai nilai cadangan).
+`https://periodiclab.my.id`. Vercel adalah satu-satunya host publik; tidak ada
+cermin GitHub Pages, sehingga sinyal peringkat tidak terpecah. Untuk mengganti
+domain, ubah env `SITE_URL` di proyek Vercel (dan `DEFAULT_SITE` di
+`scripts/prerender-plugin.ts` sebagai nilai cadangan).
 
 ### GitHub Pages (dinonaktifkan)
 
