@@ -474,6 +474,9 @@ export default function Table2D() {
             );
           })}
         </div>
+        {/* Pita 16px di dalam area gulir: menjaga jarak baris terakhir ke navbar
+            saat gulir mentok tanpa menggeser batang gulir dari dasar wadah. */}
+        <div className="table2d-end" aria-hidden="true" />
       </div>
     </div>
   );

@@ -1201,6 +1201,12 @@ sub {
   height: 100%;
 }
 
+/* Pita jarak setelah baris terakhir; hanya tampil di ponsel/tablet (tanpa zoom)
+   lewat aturan @media di bawah. */
+.table2d-end {
+  display: none;
+}
+
 .table2d {
   position: relative;
   display: grid;
@@ -2327,10 +2333,18 @@ sub {
     order: 3;
   }
 
-  /* Pita 16px di bawah area gulir menjadi jarak bersih antara baris terakhir
-     dan navbar (ponsel) atau tepi bawah (tablet), termasuk saat gulir mentok. */
+  /* Jarak 16px diwujudkan sebagai pita di dalam area gulir (`.table2d-end`),
+     bukan sebagai padding bawah wadah. Dengan padding bawah 0, tepi wadah —
+     tempat batang gulir horizontal berada — menempel ke navbar (ponsel) atau
+     tepi bawah layar (tablet), sementara jarak ke baris terakhir tetap ada
+     bahkan saat gulir mentok. */
   .table2d-wrap {
-    height: calc(100% - 16px);
+    padding-bottom: 0;
+  }
+
+  .table2d-end {
+    display: block;
+    height: 16px;
   }
 
   /* Padding kanan wadah gulir tidak ikut dihitung ketika tabel (1040px)
@@ -2526,7 +2540,7 @@ sub {
 
   .table2d-wrap {
     --table-gutter: 10px;
-    padding: 12px var(--table-gutter) 32px;
+    padding: 12px var(--table-gutter) 0;
   }
 }
 
