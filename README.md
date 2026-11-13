@@ -139,6 +139,7 @@ Hosting statis harus mengarahkan rute yang tidak punya file ke `index.html`
 - `dist/unsur/<simbol>/index.html` untuk 118 unsur (judul, deskripsi, canonical, JSON-LD)
 - `dist/lab`, `dist/tantangan`, `dist/tantangan/<level>`, `dist/tentang`
 - `dist/sitemap.xml`, `dist/robots.txt`, `dist/404.html`
+- `dist/manifest.webmanifest`, `dist/sw.js`
 
 Setiap halaman hasil prerender sudah memuat `<h1>`, ringkasan beberapa paragraf,
 fakta singkat, dan tautan internal (navigasi, indeks unsur, tingkat
@@ -147,30 +148,28 @@ tantangan). Konten itu tampil sebelum JavaScript siap, lalu diganti aplikasi Rea
 ### Domain utama
 
 Canonical, `og:url`, sitemap, dan robots.txt menunjuk ke satu domain utama:
-`https://table-periodic-moroseto.vercel.app`. Deploy Vercel memakai env proyek;
-build GitHub Pages menyetel `SITE_URL` ke domain yang sama sehingga Pages hanya
-menjadi cermin dan sinyal peringkat tidak terpecah. Untuk mengganti domain, ubah
-env `SITE_URL` di kedua tempat (dan `DEFAULT_SITE` di `scripts/prerender-plugin.ts`
-sebagai nilai cadangan).
-- `dist/manifest.webmanifest`, `dist/sw.js`
+`https://table-periodic-moroseto.vercel.app`. Vercel adalah satu-satunya host
+publik; tidak ada cermin GitHub Pages, sehingga sinyal peringkat tidak
+terpecah. Untuk mengganti domain, ubah env `SITE_URL` di proyek Vercel (dan
+`DEFAULT_SITE` di `scripts/prerender-plugin.ts` sebagai nilai cadangan).
 
-### GitHub Pages
+### GitHub Pages (dinonaktifkan)
 
-Situs dipublikasikan di <https://moroseto212.github.io/table_periodic/> lewat
-`.github/workflows/deploy-pages.yml`. Workflow membangun dengan base path
-`/table_periodic/`, menulis `dist/.nojekyll`, lalu mengunggah artefak ke Pages.
+Situs GitHub Pages di <https://moroseto212.github.io/table_periodic/> sudah
+dinonaktifkan agar hanya domain Vercel yang dapat diakses. Workflow
+`deploy-pages.yml` dihapus supaya push ke `main` tidak memicu deploy yang
+gagal. Alamat lama sekarang mengembalikan 404.
 
-Untuk build lokal yang meniru Pages:
+Dukungan `BASE_PATH` di `vite.config.ts` dan `src/app/router.ts` tetap
+dipertahankan untuk build di subpath lain:
 
 ```bash
-BASE_PATH=/table_periodic/ \
-SITE_URL=https://table-periodic-moroseto.vercel.app \
-npm run build
-BASE_PATH=/table_periodic/ npm run preview   # http://localhost:4173/table_periodic/
+BASE_PATH=/subpath/ npm run build
+BASE_PATH=/subpath/ npm run preview
 ```
 
-Router, tautan bagikan, manifest, dan service worker semuanya mengikuti
-`BASE_PATH`; tanpa variabel itu build tetap berjalan di `/` untuk dev.
+Router, tautan bagikan, manifest, dan service worker mengikuti `BASE_PATH`;
+tanpa variabel itu build tetap berjalan di `/` untuk dev.
 
 ## Batasan yang disadari
 
