@@ -8,6 +8,7 @@ import Table2D from './features/table2d/Table2D';
 import ElementPanel from './features/element-panel/ElementPanel';
 import { ConnectionStatus } from './ui/ConnectionStatus';
 import { PwaBanner } from './ui/PwaBanner';
+import { BrandMark } from './ui/BrandMark';
 import type { ElementCategory } from './core/chemistry/types';
 
 const LabScreen = lazy(() => import('./features/lab/LabScreen'));
@@ -152,7 +153,7 @@ function TopBar() {
     <header className="topbar">
       <div className="topbar__row">
         <button type="button" className="brand" onClick={() => navigate('/')} aria-label="PeriodikLab — jelajah tabel periodik">
-          <span className="brand__mark" aria-hidden="true" />
+          <BrandMark />
           <span className="brand__text">
             Periodik<strong>Lab</strong>
           </span>

@@ -463,14 +463,8 @@ sub {
 .brand__mark {
   width: 26px;
   height: 26px;
-  border-radius: 8px;
-  background:
-    radial-gradient(circle at 30% 30%, var(--text) 0 2px, transparent 3px),
-    radial-gradient(circle at 70% 62%, var(--cat-transition) 0 3px, transparent 4px),
-    radial-gradient(circle at 40% 78%, var(--cat-alkali) 0 2px, transparent 3px),
-    linear-gradient(135deg, var(--brand-a), var(--brand-b));
-  border: 1px solid var(--border);
   flex: none;
+  overflow: visible;
 }
 
 .brand__text {

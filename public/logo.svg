@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="PeriodikLab">
+  <defs>
+    <clipPath id="card">
+      <rect x="23" y="19" width="31" height="34" rx="9" />
+    </clipPath>
+  </defs>
+  <rect x="17.5" y="13" width="26" height="30" rx="8" transform="rotate(-8 30.5 28)" fill="#D9C9FF" fill-opacity="0.12" stroke="#D9C9FF" stroke-opacity="0.9" stroke-width="2" />
+  <rect x="23" y="19" width="31" height="34" rx="9" fill="#171B26" stroke="#A9DCE8" stroke-width="2" />
+  <g clip-path="url(#card)">
+    <rect x="23" y="19" width="31" height="4.6" fill="#A9DCE8" />
+  </g>
+  <rect x="34.6" y="28" width="4.2" height="19.5" rx="2.1" fill="#F4F4F7" />
+  <path d="M36.7 30 A5.6 5.6 0 0 1 36.7 41.2" fill="none" stroke="#F4F4F7" stroke-width="4.2" />
+</svg>

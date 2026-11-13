@@ -1,6 +1,8 @@
 /**
  * Membuat ikon PNG PWA tanpa dependensi tambahan.
- * Desain: atom bergaya neon di atas latar gelap, selaras dengan token aplikasi.
+ * Desain: dua kartu unsur bertumpuk (tabel periodik) dengan satu kartu terangkat
+ * berisi huruf P dan pita aksen, di atas latar gelap yang selaras dengan token
+ * aplikasi. Bukan orbit atom agar berbeda dari ikon sains generik.
  *
  * Jalankan: node scripts/generate-icons.mjs
  */
@@ -13,10 +15,17 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const outDir = resolve(root, 'public/icons');
 
 const BG = [15, 16, 22];
-const ACCENT = [176, 224, 230];
-const SUCCESS = [143, 227, 176];
+const CARD = [23, 27, 38];
+const ACCENT = [169, 220, 232];
 const NOBLE = [217, 201, 255];
-const CORE = [244, 244, 247];
+const INK = [244, 244, 247];
+
+// Geometri dalam ruang 64x64 agar sama persis dengan public/favicon.svg dan
+// komponen BrandMark di header.
+const FRONT = { cx: 38.5, cy: 36, hw: 15.5, hh: 17, r: 9, angle: 0 };
+const BACK = { cx: 30.5, cy: 28, hw: 13, hh: 15, r: 8, angle: -8 };
+const BAR_H = 4.6;
+const P = { stemX: 36.7, top: 28, bottom: 47.5, thickness: 4.2, bowlR: 5.6, bowlCy: 35.6 };
 
 const CRC_TABLE = new Uint32Array(256);
 for (let n = 0; n < 256; n += 1) {
@@ -82,50 +91,88 @@ function blend(pixel, index, color, alpha) {
   pixel[index + 3] = 255;
 }
 
-function renderIcon(size, scale) {
+/** Jarak bertanda ke persegi membulat (negatif di dalam), dengan rotasi. */
+function sdRoundRect(x, y, shape) {
+  const rad = (-shape.angle * Math.PI) / 180;
+  const dx = x - shape.cx;
+  const dy = y - shape.cy;
+  const px = dx * Math.cos(rad) - dy * Math.sin(rad);
+  const py = dx * Math.sin(rad) + dy * Math.cos(rad);
+  const qx = Math.abs(px) - shape.hw + shape.r;
+  const qy = Math.abs(py) - shape.hh + shape.r;
+  return (
+    Math.hypot(Math.max(qx, 0), Math.max(qy, 0)) + Math.min(Math.max(qx, qy), 0) - shape.r
+  );
+}
+
+const fillAlpha = (d, aa) => 1 - smoothstep(-aa, aa, d);
+const strokeAlpha = (d, halfWidth, aa) => 1 - smoothstep(halfWidth - aa, halfWidth + aa, Math.abs(d));
+
+function renderIcon(size, { scale = 1, square = false, border = true } = {}) {
   const pixels = Buffer.alloc(size * size * 4);
-  const aa = (2 / size) * 1.15;
-  const orbits = [
-    { angle: 0, half: 0.026, color: ACCENT },
-    { angle: 60, half: 0.024, color: SUCCESS },
-    { angle: 120, half: 0.022, color: NOBLE },
-  ];
+  const aa = (1.1 * 64) / size;
+  const bgShape = { cx: 32, cy: 32, hw: 32, hh: 32, r: square ? 0 : 14, angle: 0 };
+  const borderShape = { cx: 32, cy: 32, hw: 30.6, hh: 30.6, r: 12.4, angle: 0 };
+  const barBottom = FRONT.cy - FRONT.hh + BAR_H;
+  const stemHalf = P.thickness / 2;
 
   for (let py = 0; py < size; py += 1) {
     for (let px = 0; px < size; px += 1) {
       const index = (py * size + px) * 4;
-      const x = ((px + 0.5) / size) * 2 - 1;
-      const y = ((py + 0.5) / size) * 2 - 1;
+      const rawX = ((px + 0.5) / size) * 64;
+      const rawY = ((py + 0.5) / size) * 64;
+      // Skala konten di sekitar pusat untuk varian maskable.
+      const x = (rawX - 32) / scale + 32;
+      const y = (rawY - 32) / scale + 32;
 
-      // Latar + glow lembut di tengah.
+      // Latar penuh (tidak ikut diskalakan agar maskable tetap menutup tepi).
       pixels[index] = BG[0];
       pixels[index + 1] = BG[1];
       pixels[index + 2] = BG[2];
       pixels[index + 3] = 255;
-      const radial = Math.hypot(x, y) / 1.15;
-      blend(pixels, index, ACCENT, (1 - smoothstep(0, 1, radial)) * 0.1);
 
-      const ix = x / scale;
-      const iy = y / scale;
-
-      for (const orbit of orbits) {
-        const rad = (orbit.angle * Math.PI) / 180;
-        const u = ix * Math.cos(rad) + iy * Math.sin(rad);
-        const v = -ix * Math.sin(rad) + iy * Math.cos(rad);
-        const a = 0.62;
-        const b = 0.235;
-        const f = (u / a) ** 2 + (v / b) ** 2;
-        const gx = (2 * u) / (a * a);
-        const gy = (2 * v) / (b * b);
-        const gradient = Math.max(Math.hypot(gx, gy), 1e-6);
-        const distance = Math.abs(f - 1) / gradient;
-        const alpha = 1 - smoothstep(orbit.half - aa, orbit.half + aa, distance);
-        blend(pixels, index, orbit.color, alpha * 0.88);
+      const dBg = sdRoundRect(rawX, rawY, bgShape);
+      if (dBg > 0) {
+        pixels[index + 3] = Math.round(255 * (1 - smoothstep(0, aa, dBg)));
+        if (pixels[index + 3] === 0) continue;
       }
 
-      const d = Math.hypot(ix, iy);
-      blend(pixels, index, ACCENT, (1 - smoothstep(0, 0.34, d)) * 0.18);
-      blend(pixels, index, CORE, 1 - smoothstep(0.082 - aa * 1.4, 0.082 + aa * 1.4, d));
+      if (border) {
+        blend(
+          pixels,
+          index,
+          [255, 255, 255],
+          strokeAlpha(sdRoundRect(rawX, rawY, borderShape), 0.6, aa) * 0.06,
+        );
+      }
+
+      const dBack = sdRoundRect(x, y, BACK);
+      blend(pixels, index, NOBLE, fillAlpha(dBack, aa) * 0.09);
+      blend(pixels, index, NOBLE, strokeAlpha(dBack, 1, aa) * 0.85);
+
+      const dFront = sdRoundRect(x, y, FRONT);
+      blend(pixels, index, CARD, fillAlpha(dFront, aa));
+
+      // Pita aksen di tepi atas kartu, mengikuti lengkung sudut kartu.
+      const dBar = Math.max(dFront, y - barBottom);
+      blend(pixels, index, ACCENT, fillAlpha(dBar, aa));
+
+      blend(pixels, index, ACCENT, strokeAlpha(dFront, 1, aa) * 0.95);
+
+      // Huruf P: batang + mangkuk setengah lingkaran di kanan.
+      const stem = sdRoundRect(x, y, {
+        cx: P.stemX,
+        cy: (P.top + P.bottom) / 2,
+        hw: stemHalf,
+        hh: (P.bottom - P.top) / 2,
+        r: stemHalf,
+        angle: 0,
+      });
+      const bowl = Math.max(
+        Math.abs(Math.hypot(x - P.stemX, y - P.bowlCy) - P.bowlR) - stemHalf,
+        P.stemX - x,
+      );
+      blend(pixels, index, INK, Math.max(fillAlpha(stem, aa), fillAlpha(bowl, aa)));
     }
   }
 
@@ -133,15 +180,15 @@ function renderIcon(size, scale) {
 }
 
 const outputs = [
-  ['icon-192.png', 192, 0.94],
-  ['icon-512.png', 512, 0.94],
-  ['icon-maskable-512.png', 512, 0.72],
-  ['apple-touch-icon.png', 180, 0.9],
+  ['icon-192.png', 192, { scale: 1 }],
+  ['icon-512.png', 512, { scale: 1 }],
+  ['icon-maskable-512.png', 512, { scale: 0.72, square: true, border: false }],
+  ['apple-touch-icon.png', 180, { scale: 1, square: true, border: false }],
 ];
 
 mkdirSync(outDir, { recursive: true });
-for (const [name, size, scale] of outputs) {
+for (const [name, size, options] of outputs) {
   const file = resolve(outDir, name);
-  writeFileSync(file, renderIcon(size, scale));
+  writeFileSync(file, renderIcon(size, options));
   console.log(`ikon ${name} (${size}x${size}) -> ${file}`);
 }

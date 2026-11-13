@@ -84,6 +84,28 @@ Tampilan jelajah sepenuhnya berupa tabel 2D. Rute Lab, Tantangan, dan Tentang di
 lazy (`React.lazy` + `Suspense`), sehingga unduhan awal hanya berisi tabel 2D, panel
 unsur, dan shell aplikasi.
 
+### Identitas visual
+
+Mark PeriodikLab adalah **dua kartu unsur bertumpuk**: kartu belakang berupa garis
+putih-ungu yang dimiringkan −8°, kartu depan berlatar solid dengan pita aksen di tepi
+atas dan huruf **P**. Bahasa visualnya mengikuti kartu unsur di tabel, bukan orbit atom
+yang generik: satu unsur diambil dari tabel untuk diuji di laboratorium.
+
+| Berkas | Kegunaan |
+|---|---|
+| `public/logo.svg` | mark 64×64 dengan latar transparan |
+| `public/favicon.svg` | favicon vektor, latar gelap membulat |
+| `public/logo-lockup.svg` | mark + wordmark untuk materi promosi |
+| `src/ui/BrandMark.tsx` | mark inline di header, memakai token tema |
+| `public/icons/*.png` | ikon PWA, dihasilkan `npm run icons` |
+
+Palet tetap: latar `#0F1016`, badan kartu `#171B26`, pita `#A9DCE8` (kategori
+transisi), garis kartu belakang `#D9C9FF` (gas mulia), dan tinta `#F4F4F7`. Header
+memakai token `--cat-transition`, `--cat-noble`, `--surface-solid`, dan `--text`
+sehingga mark otomatis menyesuaikan tema gelap/terang. Ikon PNG dirender secara
+prosedural (rounded-rect SDF, tanpa dependency) oleh `scripts/generate-icons.mjs`;
+varian maskable memakai latar penuh dan konten di dalam safe zone 80%.
+
 ### Performa & aksesibilitas
 
 - Tabel 2D pada desktop memenuhi lebar dan tinggi layar tanpa scroll; di layar kecil
@@ -98,7 +120,7 @@ unsur, dan shell aplikasi.
 - Di layar kecil (≤1023px) tidak ada zoom: memilih unsur cukup memunculkan bottom
   sheet deskripsi tanpa menggeser tabel, dan setelah panel ditutup posisi scroll
   tetap seperti sebelumnya (tidak kembali ke tampilan awal).
-- Bundle awal **100,1 KB gzip** menurut gate budget (laporan build: 104,0 KB gzip);
+- Bundle awal **87,1 KB gzip** menurut gate budget (laporan build: 90,5 KB gzip);
   batas **450 KB**. Rute Lab, Tantangan, dan Tentang dimuat lazy.
 - Coverage `src/core/chemistry`: **100% baris**, **96,8% branch** (ambang 90/85).
 - Audit axe-core pada 7 tampilan desktop/mobile dan 10 pemeriksaan tambahan
