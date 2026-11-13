@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="300" height="80" viewBox="0 0 300 80" role="img" aria-label="PeriodikLab">
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="80" viewBox="0 0 256 80" role="img" aria-label="PeriodikLab">
   <defs>
     <clipPath id="lockup-card">
       <rect x="23" y="19" width="31" height="34" rx="9" />
     </clipPath>
   </defs>
-  <rect width="300" height="80" rx="18" fill="#0F1016" />
-  <rect x="1.25" y="1.25" width="297.5" height="77.5" rx="16.75" fill="none" stroke="#FFFFFF" stroke-opacity="0.05" />
+  <rect width="256" height="80" rx="18" fill="#0F1016" />
+  <rect x="1.25" y="1.25" width="253.5" height="77.5" rx="16.75" fill="none" stroke="#FFFFFF" stroke-opacity="0.05" />
   <g transform="translate(11 8) scale(0.9)">
     <rect x="17.5" y="13" width="26" height="30" rx="8" transform="rotate(-8 30.5 28)" fill="#D9C9FF" fill-opacity="0.09" stroke="#D9C9FF" stroke-opacity="0.85" stroke-width="2" />
     <rect x="23" y="19" width="31" height="34" rx="9" fill="#171B26" stroke="#A9DCE8" stroke-width="2" />
