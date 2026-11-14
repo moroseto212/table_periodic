@@ -187,7 +187,7 @@ export default function QuizScreen({
       <div className="quiz quiz--pick">
         <header className="quiz__head">
           <div>
-            <h1>Tantangan</h1>
+            <h1>Tantangan Kimia</h1>
             <p>Soal orisinal, umpan balik langsung, dan pembahasan setiap jawaban.</p>
             {focusSymbol && (
               <button
@@ -282,6 +282,9 @@ export default function QuizScreen({
     const percent = Math.round((correct / Math.max(queue.length, 1)) * 100);
     return (
       <div className="quiz quiz--done">
+        <h1 className="sr-only">
+          Hasil Tantangan Kimia Tingkat {level.charAt(0).toUpperCase() + level.slice(1)}
+        </h1>
         <div className="score">
           <span className="score__kicker">Selesai</span>
           <p className="score__value">
@@ -339,6 +342,9 @@ export default function QuizScreen({
 
   return (
     <div className="quiz quiz--run">
+      <h1 className="sr-only">
+        Tantangan Kimia Tingkat {level.charAt(0).toUpperCase() + level.slice(1)}
+      </h1>
       <div className="quiz__progress" aria-hidden="true">
         <span style={{ width: `${(index / queue.length) * 100}%` }} />
       </div>

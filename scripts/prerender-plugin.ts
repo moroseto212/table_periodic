@@ -51,6 +51,15 @@ const STATE_LABELS: Record<string, string> = {
  */
 const DEFAULT_SITE = 'https://periodiclab.my.id';
 
+const SITE_NAME = 'PeriodikLab';
+const REPO_URL = 'https://github.com/moroseto212/table_periodic';
+
+/** Tanggal pembaruan konten. Naikkan manual saat isi halaman berubah. */
+const CONTENT_UPDATED = '2026-11-14';
+
+const OG_IMAGE = { path: '/og/periodiclab-1200x630.png', width: 1200, height: 630 };
+const OG_IMAGE_ALT = 'PeriodikLab — tabel periodik interaktif 118 unsur berbahasa Indonesia';
+
 const escapeHtml = (value: string): string =>
   value
     .replace(/&/g, '&amp;')
@@ -98,6 +107,8 @@ interface PageMeta {
   intro: string[];
   facts?: Fact[];
   groups?: LinkGroup[];
+  breadcrumb?: { name: string; path: string }[];
+  noindex?: boolean;
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 }
 
@@ -110,23 +121,47 @@ const NAV: LinkItem[] = [
 
 function buildHead(meta: PageMeta, site: string, preloads: string[] = []): string {
   const url = `${site}${meta.path === '/' ? '/' : meta.path}`;
-  const image = `${site}/icons/icon-512.png`;
+  const image = `${site}${OG_IMAGE.path}`;
   const tags = [
     `<title>${escapeHtml(meta.title)}</title>`,
     `<meta name="description" content="${escapeHtml(meta.description)}" />`,
-    `<link rel="canonical" href="${escapeHtml(url)}" />`,
+    meta.noindex
+      ? '<meta name="robots" content="noindex, follow" />'
+      : '<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />',
+  ];
+
+  if (!meta.noindex) {
+    tags.push(
+      `<link rel="canonical" href="${escapeHtml(url)}" />`,
+      `<link rel="alternate" hreflang="id" href="${escapeHtml(url)}" />`,
+      `<link rel="alternate" hreflang="x-default" href="${escapeHtml(url)}" />`,
+    );
+  }
+
+  tags.push(
     '<meta property="og:type" content="website" />',
-    '<meta property="og:site_name" content="PeriodikLab" />',
+    `<meta property="og:site_name" content="${SITE_NAME}" />`,
     '<meta property="og:locale" content="id_ID" />',
     `<meta property="og:title" content="${escapeHtml(meta.title)}" />`,
     `<meta property="og:description" content="${escapeHtml(meta.description)}" />`,
     `<meta property="og:url" content="${escapeHtml(url)}" />`,
     `<meta property="og:image" content="${escapeHtml(image)}" />`,
-    '<meta property="og:image:width" content="512" />',
-    '<meta property="og:image:height" content="512" />',
-    '<meta property="og:image:alt" content="Logo PeriodikLab" />',
-    '<meta name="twitter:card" content="summary" />',
-  ];
+    '<meta property="og:image:type" content="image/png" />',
+    `<meta property="og:image:width" content="${OG_IMAGE.width}" />`,
+    `<meta property="og:image:height" content="${OG_IMAGE.height}" />`,
+    `<meta property="og:image:alt" content="${escapeHtml(OG_IMAGE_ALT)}" />`,
+    '<meta name="twitter:card" content="summary_large_image" />',
+    `<meta name="twitter:title" content="${escapeHtml(meta.title)}" />`,
+    `<meta name="twitter:description" content="${escapeHtml(meta.description)}" />`,
+    `<meta name="twitter:image" content="${escapeHtml(image)}" />`,
+    `<meta name="twitter:image:alt" content="${escapeHtml(OG_IMAGE_ALT)}" />`,
+  );
+
+  // Diisi lewat env saat Search Console memberi nilai verifikasi.
+  const verification = process.env.GOOGLE_SITE_VERIFICATION?.trim();
+  if (verification) {
+    tags.push(`<meta name="google-site-verification" content="${escapeHtml(verification)}" />`);
+  }
 
   if (meta.jsonLd) {
     const data = Array.isArray(meta.jsonLd) ? meta.jsonLd : [meta.jsonLd];
@@ -179,12 +214,25 @@ function renderBody(meta: PageMeta, base: string): string {
     )
     .join('\n      ');
 
+  const crumbs = meta.breadcrumb?.length
+    ? `<nav class="seo__crumbs" aria-label="Breadcrumb"><ol>${meta.breadcrumb
+        .map((item, index) => {
+          const last = index === meta.breadcrumb!.length - 1;
+          const label = escapeHtml(item.name);
+          return last
+            ? `<li><span aria-current="page">${label}</span></li>`
+            : `<li><a href="${escapeHtml(href(item.path))}">${label}</a></li>`;
+        })
+        .join('')}</ol></nav>`
+    : '';
+
   return `<div class="seo">
       <header class="seo__bar">
         <a class="seo__brand" href="${escapeHtml(base)}">PeriodikLab</a>
         <nav class="seo__nav" aria-label="Navigasi utama">${nav}</nav>
       </header>
       <main class="seo__main">
+        ${crumbs}
         <h1>${escapeHtml(meta.heading)}</h1>
         ${meta.intro.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join('\n        ')}
         ${facts}
@@ -197,9 +245,12 @@ function renderBody(meta: PageMeta, base: string): string {
 const STRIP_PATTERNS: RegExp[] = [
   /<title>[\s\S]*?<\/title>\s*/gi,
   /<meta\s+name="description"[^>]*>\s*/gi,
+  /<meta\s+name="robots"[^>]*>\s*/gi,
   /<meta\s+property="og:[^"]+"[^>]*>\s*/gi,
-  /<meta\s+name="twitter:card"[^>]*>\s*/gi,
+  /<meta\s+name="twitter:[^"]+"[^>]*>\s*/gi,
+  /<meta\s+name="google-site-verification"[^>]*>\s*/gi,
   /<link\s+rel="canonical"[^>]*>\s*/gi,
+  /<link\s+rel="alternate"\s+hreflang="[^"]+"[^>]*>\s*/gi,
 ];
 
 function renderPage(
@@ -294,23 +345,44 @@ function buildPages(
         {
           '@context': 'https://schema.org',
           '@type': 'WebApplication',
-          name: 'PeriodikLab',
+          name: SITE_NAME,
           applicationCategory: 'EducationalApplication',
           operatingSystem: 'Web',
+          browserRequirements: 'Membutuhkan JavaScript dan browser modern.',
           inLanguage: 'id',
           url: `${site}/`,
           description:
             'Tabel periodik interaktif dengan laboratorium reaksi dan tantangan kimia.',
           isAccessibleForFree: true,
           offers: { '@type': 'Offer', price: '0', priceCurrency: 'IDR' },
+          featureList: [
+            'Tabel periodik 118 unsur',
+            'Laboratorium reaksi dengan stoikiometri',
+            'Tantangan kimia tiga tingkat',
+            'Bisa dipasang sebagai aplikasi (PWA)',
+          ],
+          screenshot: `${site}${OG_IMAGE.path}`,
+          dateModified: CONTENT_UPDATED,
+          author: {
+            '@type': 'Organization',
+            name: SITE_NAME,
+            url: `${site}/`,
+            sameAs: [REPO_URL],
+          },
         },
         {
           '@context': 'https://schema.org',
           '@type': 'WebSite',
-          name: 'PeriodikLab',
+          name: SITE_NAME,
           alternateName: 'PeriodikLab — Tabel Periodik & Lab Kimia',
           url: `${site}/`,
           inLanguage: 'id',
+          publisher: {
+            '@type': 'Organization',
+            name: SITE_NAME,
+            url: `${site}/`,
+            sameAs: [REPO_URL],
+          },
         },
       ],
     },
@@ -330,6 +402,10 @@ function buildPages(
         { label: 'Reaksi terkurasi', value: String(reactions.length) },
         { label: 'Batas atom', value: '24 per percobaan' },
         { label: 'Kondisi', value: 'panas, katalis, tekanan' },
+      ],
+      breadcrumb: [
+        { name: 'Tabel periodik', path: '/' },
+        { name: 'Laboratorium', path: '/lab' },
       ],
       groups: [
         {
@@ -380,6 +456,10 @@ function buildPages(
         { label: 'Tingkat', value: '3' },
         { label: 'Soal per sesi', value: '10' },
         { label: 'Kurikulum', value: 'Merdeka & GCSE' },
+      ],
+      breadcrumb: [
+        { name: 'Tabel periodik', path: '/' },
+        { name: 'Tantangan', path: '/tantangan' },
       ],
       groups: [
         {
@@ -449,6 +529,11 @@ function buildPages(
           { label: 'Pembahasan', value: 'ya, tiap soal' },
           { label: 'Penyimpanan', value: 'lokal di perangkat' },
         ],
+        breadcrumb: [
+          { name: 'Tabel periodik', path: '/' },
+          { name: 'Tantangan', path: '/tantangan' },
+          { name: label, path: `/tantangan/${level}` },
+        ],
         groups: [
           {
             heading: 'Tingkat lain',
@@ -510,6 +595,10 @@ function buildPages(
         { label: 'Reaksi', value: String(reactions.length) },
         { label: 'Lisensi', value: 'lihat halaman sumber' },
         { label: 'Data pribadi', value: 'tidak dikumpulkan' },
+      ],
+      breadcrumb: [
+        { name: 'Tabel periodik', path: '/' },
+        { name: 'Tentang', path: '/tentang' },
       ],
       groups: [
         {
@@ -642,6 +731,10 @@ function buildPages(
       heading: `${element.name} (${element.symbol})`,
       intro,
       facts,
+      breadcrumb: [
+        { name: 'Tabel periodik', path: '/' },
+        { name: `${element.name} (${element.symbol})`, path: `/unsur/${element.symbol}` },
+      ],
       groups,
       jsonLd: [
         {
@@ -652,7 +745,50 @@ function buildPages(
           identifier: element.symbol,
           atomicNumber: element.z,
           url: `${site}/unsur/${element.symbol}`,
-          isPartOf: { '@type': 'WebSite', name: 'PeriodikLab', url: `${site}/` },
+          inLanguage: 'id',
+          description: element.summary,
+          additionalProperty: [
+            {
+              '@type': 'PropertyValue',
+              name: 'Massa atom',
+              value: element.mass,
+              unitText: 'u',
+            },
+            { '@type': 'PropertyValue', name: 'Kategori', value: category },
+            {
+              '@type': 'PropertyValue',
+              name: 'Golongan',
+              value: element.group != null ? String(element.group) : 'lantanida/aktinida',
+            },
+            { '@type': 'PropertyValue', name: 'Periode', value: String(element.period) },
+            { '@type': 'PropertyValue', name: 'Blok', value: element.block },
+            { '@type': 'PropertyValue', name: 'Wujud pada suhu kamar', value: state },
+            {
+              '@type': 'PropertyValue',
+              name: 'Konfigurasi elektron',
+              value: element.electronConfig,
+            },
+            ...(element.discoveredYear != null
+              ? [
+                  {
+                    '@type': 'PropertyValue',
+                    name: 'Tahun ditemukan',
+                    value: String(element.discoveredYear),
+                  },
+                ]
+              : []),
+          ],
+          isPartOf: {
+            '@type': 'WebSite',
+            name: SITE_NAME,
+            url: `${site}/`,
+            publisher: {
+              '@type': 'Organization',
+              name: SITE_NAME,
+              url: `${site}/`,
+              sameAs: [REPO_URL],
+            },
+          },
         },
         breadcrumbJsonLd(site, [
           { name: 'Tabel periodik', path: '/' },
@@ -713,6 +849,7 @@ export function prerender(root = process.cwd(), base = '/'): void {
         title: 'Halaman tidak ditemukan — PeriodikLab',
         description: 'Halaman yang Anda cari tidak tersedia. Kembali ke tabel periodik.',
         heading: 'Halaman tidak ditemukan',
+        noindex: true,
         intro: [
           'Alamat yang Anda buka tidak tersedia di PeriodikLab. Gunakan tautan di bawah untuk kembali ke tabel periodik, laboratorium, atau tantangan.',
         ],
@@ -733,12 +870,11 @@ export function prerender(root = process.cwd(), base = '/'): void {
     'utf8',
   );
 
-  const today = new Date().toISOString().slice(0, 10);
   const urls = pages
     .map((page) => {
       const loc = `${site}${page.path}`;
       const priority = page.path === '/' ? '1.0' : page.path.startsWith('/unsur/') ? '0.7' : '0.8';
-      return `  <url>\n    <loc>${escapeHtml(loc)}</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>${priority}</priority>\n  </url>`;
+      return `  <url>\n    <loc>${escapeHtml(loc)}</loc>\n    <lastmod>${CONTENT_UPDATED}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>${priority}</priority>\n  </url>`;
     })
     .join('\n');
   writeFileSync(

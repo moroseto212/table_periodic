@@ -75,6 +75,8 @@ export default defineConfig({
         // lewat navigateFallback, jadi 125 HTML prerender tidak perlu diunduh
         // saat service worker memasang (menghemat ~900 KB pada kunjungan pertama).
         globPatterns: ['index.html', '**/*.{js,css,svg,png,json,woff2}'],
+        // Gambar OG hanya dipakai crawler/sosial, tidak perlu ikut precache offline.
+        globIgnores: ['og/**'],
         navigateFallback: asset('index.html'),
         navigateFallbackDenylist: [/^\/api\//],
         cleanupOutdatedCaches: true,

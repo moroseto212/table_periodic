@@ -327,13 +327,22 @@ function HintBar() {
 }
 
 function ExploreScreen() {
+  const route = useRoute();
+  const routeSymbol = segments(route.path)[1];
+  const routeElement = routeSymbol
+    ? elements.find((el) => el.symbol === routeSymbol)
+    : null;
   const select = useAppStore((s) => s.select);
   const selected = useAppStore((s) => s.selected);
   const element = selected ? elements.find((el) => el.symbol === selected) : null;
 
   return (
     <>
-      <h1 className="sr-only">Tabel periodik interaktif PeriodikLab</h1>
+      <h1 className="sr-only">
+        {routeElement
+          ? `${routeElement.name} (${routeElement.symbol}) — unsur nomor atom ${routeElement.z}`
+          : 'Tabel periodik interaktif PeriodikLab'}
+      </h1>
       <div className="stage">
         <Table2D />
       </div>

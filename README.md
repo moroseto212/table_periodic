@@ -160,11 +160,12 @@ Hosting statis harus mengarahkan rute yang tidak punya file ke `index.html`
 
 - `dist/unsur/<simbol>/index.html` untuk 118 unsur (judul, deskripsi, canonical, JSON-LD)
 - `dist/lab`, `dist/tantangan`, `dist/tantangan/<level>`, `dist/tentang`
+- `dist/og/periodiclab-1200x630.png` (gambar OG/Twitter)
 - `dist/sitemap.xml`, `dist/robots.txt`, `dist/404.html`
 - `dist/manifest.webmanifest`, `dist/sw.js`
 
-Setiap halaman hasil prerender sudah memuat `<h1>`, ringkasan beberapa paragraf,
-fakta singkat, dan tautan internal (navigasi, indeks unsur, tingkat
+Setiap halaman hasil prerender sudah memuat `<h1>`, breadcrumb, ringkasan beberapa
+paragraf, fakta singkat, dan tautan internal (navigasi, indeks unsur, tingkat
 tantangan). Konten itu tampil sebelum JavaScript siap, lalu diganti aplikasi React.
 
 ### Domain utama
@@ -174,6 +175,26 @@ Canonical, `og:url`, sitemap, dan robots.txt menunjuk ke satu domain utama:
 cermin GitHub Pages, sehingga sinyal peringkat tidak terpecah. Untuk mengganti
 domain, ubah env `SITE_URL` di proyek Vercel (dan `DEFAULT_SITE` di
 `scripts/prerender-plugin.ts` sebagai nilai cadangan).
+
+`vercel.json` menetapkan `trailingSlash: false` (satu URL per halaman) dan
+mengalihkan host lama `table-periodic-moroseto.vercel.app` ke domain utama
+dengan 308. Halaman 404 memakai `noindex, follow` dan tanpa canonical.
+
+### SEO
+
+- Meta robots: `index, follow, max-image-preview:large, max-snippet:-1`,
+  `canonical`, `hreflang` `id` + `x-default`, Open Graph lengkap, dan
+  `twitter:card=summary_large_image`.
+- JSON-LD per halaman: `WebSite`, `WebApplication`, `LearningResource`, `Quiz`,
+  `ChemicalSubstance` (dengan `additionalProperty` massa atom, golongan,
+  periode, blok, wujud, konfigurasi elektron, tahun ditemukan), `AboutPage`,
+  dan `BreadcrumbList`.
+- `lastmod` sitemap memakai konstanta `CONTENT_UPDATED` di
+  `scripts/prerender-plugin.ts`. Naikkan tanggal itu setiap isi halaman berubah.
+- Verifikasi Search Console: isi env `GOOGLE_SITE_VERIFICATION` di Vercel
+  (Production), lalu build ulang. Tag verifikasi ikut tertulis di semua halaman.
+- Gambar OG dibuat sekali dari kartu HTML 1200×630 dan disimpan di
+  `public/og/periodiclab-1200x630.png`. Perbarui manual bila teks kartu berubah.
 
 ### GitHub Pages (dinonaktifkan)
 

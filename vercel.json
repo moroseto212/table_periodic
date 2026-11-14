@@ -1,0 +1,28 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "table-periodic-moroseto\\.vercel\\.app"
+        }
+      ],
+      "destination": "https://periodiclab.my.id/",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "table-periodic-moroseto\\.vercel\\.app"
+        }
+      ],
+      "destination": "https://periodiclab.my.id/:path*",
+      "permanent": true
+    }
+  ]
+}

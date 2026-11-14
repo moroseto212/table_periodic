@@ -337,7 +337,7 @@ export default function LabScreen({ initial }: { initial: string | null }) {
       <section className="lab__bench" aria-label="Meja kerja laboratorium">
         <header className="lab__head">
           <div>
-            <h1>Laboratorium</h1>
+            <h1>Laboratorium Reaksi</h1>
             <p>
               Susun atom, atur kondisi bila perlu, lalu reaksikan. Chamber mencocokkan rasio atom,
               bukan molekul.
