@@ -171,10 +171,13 @@ tantangan). Konten itu tampil sebelum JavaScript siap, lalu diganti aplikasi Rea
 ### Domain utama
 
 Canonical, `og:url`, sitemap, dan robots.txt menunjuk ke satu domain utama:
-`https://periodiclab.my.id`. Vercel adalah satu-satunya host publik; tidak ada
+`https://periodiclab.web.id`. Vercel adalah satu-satunya host publik; tidak ada
 cermin GitHub Pages, sehingga sinyal peringkat tidak terpecah. Untuk mengganti
 domain, ubah env `SITE_URL` di proyek Vercel (dan `DEFAULT_SITE` di
 `scripts/prerender-plugin.ts` sebagai nilai cadangan).
+
+Domain lama `periodiclab.my.id` sudah dilepas dari proyek: domain itu tidak lagi
+menyajikan situs dan tidak dialihkan, jadi semua trafik hanya lewat domain utama.
 
 `vercel.json` menetapkan `trailingSlash: false` (satu URL per halaman) dan
 mengalihkan host lama `table-periodic-moroseto.vercel.app` ke domain utama

@@ -49,7 +49,7 @@ const STATE_LABELS: Record<string, string> = {
  * Hanya ada satu host publik agar sinyal peringkat tidak terpecah.
  * Ubah lewat env SITE_URL bila perlu.
  */
-const DEFAULT_SITE = 'https://periodiclab.my.id';
+const DEFAULT_SITE = 'https://periodiclab.web.id';
 
 const SITE_NAME = 'PeriodikLab';
 const REPO_URL = 'https://github.com/moroseto212/table_periodic';

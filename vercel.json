@@ -10,7 +10,7 @@
           "value": "table-periodic-moroseto\\.vercel\\.app"
         }
       ],
-      "destination": "https://periodiclab.my.id/",
+      "destination": "https://periodiclab.web.id/",
       "permanent": true
     },
     {
@@ -21,7 +21,7 @@
           "value": "table-periodic-moroseto\\.vercel\\.app"
         }
       ],
-      "destination": "https://periodiclab.my.id/:path*",
+      "destination": "https://periodiclab.web.id/:path*",
       "permanent": true
     }
   ]
