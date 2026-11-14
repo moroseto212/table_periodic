@@ -4,6 +4,7 @@ import { elements } from '../../core/data/elements';
 import { categoryColors, categoryInkColors, categoryLabels } from '../../ui/tokens';
 import { useAppStore } from '../../app/store';
 import { navigate } from '../../app/router';
+import { groupPath, periodPath } from '../../content/categories';
 
 const GHS_LABELS: Record<string, string> = {
   GHS02: 'Mudah terbakar',
@@ -92,6 +93,16 @@ function SummaryTab({ element }: { element: Element }) {
           onClick={() => navigate(`/tantangan?unsur=${element.symbol}`)}
         >
           Tantang saya
+        </button>
+        <button
+          type="button"
+          className="btn"
+          onClick={() => navigate(groupPath(element.category))}
+        >
+          Semua {categoryLabels[element.category].toLowerCase()}
+        </button>
+        <button type="button" className="btn" onClick={() => navigate(periodPath(element.period))}>
+          Periode {element.period}
         </button>
       </div>
     </div>

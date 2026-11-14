@@ -2,6 +2,18 @@ import { mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import type { Plugin } from 'vite';
+import {
+  CATEGORY_LABELS as GUIDE_CATEGORY_LABELS,
+  CATEGORY_ORDER,
+  buildGuidePages,
+  elementDetailSections,
+  elementDetails,
+  groupPath,
+  periodPath,
+  type GuideElement,
+  type GuideFaq,
+  type GuideSection,
+} from '../src/content/guides.ts';
 
 interface ElementRow {
   z: number;
@@ -106,6 +118,8 @@ interface PageMeta {
   heading: string;
   intro: string[];
   facts?: Fact[];
+  sections?: GuideSection[];
+  faq?: GuideFaq[];
   groups?: LinkGroup[];
   breadcrumb?: { name: string; path: string }[];
   noindex?: boolean;
@@ -116,6 +130,7 @@ const NAV: LinkItem[] = [
   { path: '/', label: 'Tabel periodik' },
   { path: '/lab', label: 'Laboratorium' },
   { path: '/tantangan', label: 'Tantangan' },
+  { path: '/daftar-unsur', label: 'Daftar unsur' },
   { path: '/tentang', label: 'Tentang' },
 ];
 
@@ -198,6 +213,52 @@ function renderBody(meta: PageMeta, base: string): string {
         .join('')}</dl>`
     : '';
 
+  const sections = (meta.sections ?? [])
+    .map((section) => {
+      const paragraphs = (section.paragraphs ?? [])
+        .map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`)
+        .join('\n        ');
+      const items = section.items?.length
+        ? `<dl class="seo__facts">${section.items
+            .map(
+              (item) =>
+                `<div><dt>${escapeHtml(item.label)}</dt><dd>${escapeHtml(item.value)}</dd></div>`,
+            )
+            .join('')}</dl>`
+        : '';
+      const list = section.list?.length
+        ? `<ul class="seo__links">${section.list
+            .map(
+              (item) =>
+                `<li><a href="${escapeHtml(href(item.path))}">${escapeHtml(item.label)}</a>${
+                  item.hint ? ` <span>${escapeHtml(item.hint)}</span>` : ''
+                }</li>`,
+            )
+            .join('')}</ul>`
+        : '';
+      return `<section class="seo__section">
+        <h2>${escapeHtml(section.heading)}</h2>
+        ${paragraphs}
+        ${items}
+        ${list}
+      </section>`;
+    })
+    .join('\n      ');
+
+  const faq = meta.faq?.length
+    ? `<section class="seo__faq">
+        <h2>Tanya jawab</h2>
+        ${meta.faq
+          .map(
+            (item) =>
+              `<details><summary>${escapeHtml(item.question)}</summary><p>${escapeHtml(
+                item.answer,
+              )}</p></details>`,
+          )
+          .join('\n        ')}
+      </section>`
+    : '';
+
   const groups = (meta.groups ?? [])
     .map(
       (group) => `<section class="seo__group">
@@ -236,6 +297,8 @@ function renderBody(meta: PageMeta, base: string): string {
         <h1>${escapeHtml(meta.heading)}</h1>
         ${meta.intro.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join('\n        ')}
         ${facts}
+        ${sections}
+        ${faq}
         ${groups}
         <p class="seo__more"><a href="${escapeHtml(href('/'))}">Buka tabel periodik interaktif</a> — semua fitur berjalan di browser dan bisa dipasang sebagai aplikasi.</p>
       </main>
@@ -339,6 +402,29 @@ function buildPages(
             path: `/unsur/${element.symbol}`,
             label: `${element.symbol} · ${element.name}`,
           })),
+        },
+        {
+          heading: 'Jelajahi menurut golongan',
+          items: CATEGORY_ORDER.map((category) => ({
+            path: groupPath(category),
+            label: GUIDE_CATEGORY_LABELS[category],
+          })),
+        },
+        {
+          heading: 'Jelajahi menurut periode',
+          items: [1, 2, 3, 4, 5, 6, 7].map((period) => ({
+            path: periodPath(period),
+            label: `Periode ${period}`,
+            hint: `${elements.filter((element) => element.period === period).length} unsur`,
+          })),
+        },
+        {
+          heading: 'Belajar kimia',
+          items: [
+            { path: '/daftar-unsur', label: 'Daftar 118 unsur' },
+            { path: '/konfigurasi-elektron', label: 'Konfigurasi elektron & Aufbau' },
+            { path: '/tanya-jawab', label: 'Tanya jawab kimia dasar' },
+          ],
         },
       ],
       jsonLd: [
@@ -714,12 +800,35 @@ function buildPages(
     }
 
     groups.push({
+      heading: 'Posisi di tabel periodik',
+      items: [
+        {
+          path: groupPath(element.category as keyof typeof GUIDE_CATEGORY_LABELS),
+          label: `${GUIDE_CATEGORY_LABELS[element.category as keyof typeof GUIDE_CATEGORY_LABELS]}`,
+          hint: 'semua unsur segolongan',
+        },
+        {
+          path: periodPath(element.period),
+          label: `Periode ${element.period}`,
+          hint: 'unsur seperiode',
+        },
+        { path: '/daftar-unsur', label: 'Daftar 118 unsur' },
+        { path: '/konfigurasi-elektron', label: 'Konfigurasi elektron' },
+      ],
+    });
+
+    groups.push({
       heading: 'Coba di laboratorium',
       items: [
         { path: '/lab', label: 'Laboratorium reaksi', hint: 'susun atom dari unsur ini' },
         { path: '/tantangan', label: 'Tantangan kimia', hint: 'uji pemahaman' },
       ],
     });
+
+    const sections = elementDetailSections(
+      element as unknown as GuideElement,
+      elementDetails[element.symbol],
+    );
 
     pages.push({
       path: `/unsur/${element.symbol}`,
@@ -731,6 +840,7 @@ function buildPages(
       heading: `${element.name} (${element.symbol})`,
       intro,
       facts,
+      sections,
       breadcrumb: [
         { name: 'Tabel periodik', path: '/' },
         { name: `${element.name} (${element.symbol})`, path: `/unsur/${element.symbol}` },
@@ -798,6 +908,16 @@ function buildPages(
     });
   }
 
+  pages.push(
+    ...buildGuidePages(elements as unknown as GuideElement[], site).map((page) => ({
+      ...page,
+      jsonLd: [
+        ...(Array.isArray(page.jsonLd) ? page.jsonLd : page.jsonLd ? [page.jsonLd] : []),
+        breadcrumbJsonLd(site, page.breadcrumb),
+      ],
+    })),
+  );
+
   return pages;
 }
 
@@ -832,6 +952,15 @@ export function prerender(root = process.cwd(), base = '/'): void {
       return [...preload(/^QuizScreen-.*\.js$/), ...preload(/^quiz-.*\.js$/)];
     }
     if (path === '/tentang') return [...preload(/^AboutScreen-.*\.js$/), ...preload(/^data-.*\.js$/)];
+    if (
+      path.startsWith('/golongan') ||
+      path.startsWith('/periode') ||
+      path === '/daftar-unsur' ||
+      path === '/konfigurasi-elektron' ||
+      path === '/tanya-jawab'
+    ) {
+      return preload(/^GuideScreen-.*\.js$/);
+    }
     return [];
   };
 

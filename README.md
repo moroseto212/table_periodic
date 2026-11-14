@@ -38,6 +38,11 @@ Tanpa variabel itu, build tetap berhasil tetapi memakai placeholder
 | `/tantangan` | Tantangan | Kuis 3 level, pembahasan, ulangi soal salah |
 | `/tantangan/:level` | Tantangan | Langsung mulai paket `dasar` / `menengah` / `mahir` |
 | `/tentang` | Tentang | Sumber & sitasi, lisensi, disclaimer, privasi, diagnostik error |
+| `/daftar-unsur` | Panduan | Indeks 118 unsur menurut nomor atom dan kategori |
+| `/golongan/:slug` | Panduan | 10 halaman golongan/kategori: ciri, tren, daftar anggota |
+| `/periode/:n` | Panduan | 7 halaman periode: pengisian kulit, tren, daftar unsur |
+| `/konfigurasi-elektron` | Panduan | Aturan Aufbau/Pauli/Hund + konfigurasi 118 unsur |
+| `/tanya-jawab` | Panduan | 10 pertanyaan umum kimia dengan jawaban singkat |
 
 Di layar sempit (≤ 720px) keempat mode tampil sebagai navigasi yang menetap di
 bagian bawah layar (ikon + label), sedangkan di desktop tetap di baris atas.
@@ -58,6 +63,8 @@ src/features/table2d/         tabel semantik, tata letak, responsif untuk deskto
 src/features/lab/             workbench reaksi (lazy-loaded)
 src/features/quiz/            alur tantangan (lazy-loaded)
 src/features/about/           sumber, lisensi, disclaimer, diagnostik (lazy-loaded)
+src/features/guide/           halaman panduan golongan/periode/indeks (lazy-loaded)
+src/content/                  konten 20 unsur populer + teks halaman panduan
 src/app/                      store Zustand, router pushState, PWA, error tracker
 src/ui/                       token warna, hook media query, rumus kimia, status koneksi
 .github/workflows/ci.yml      lint + typecheck + coverage + build + cek data
@@ -80,9 +87,9 @@ Status "Mode offline" / "Siap offline" muncul di toolbar.
 Peramban yang mendukung instalasi memunculkan banner **Pasang PeriodikLab**; sinyal
 `beforeinstallprompt` ditangkap dan diteruskan ke tombol pasang. Saat service worker
 menemukan versi baru, banner berganti menjadi **Muat ulang** untuk menerapkan pembaruan.
-Tampilan jelajah sepenuhnya berupa tabel 2D. Rute Lab, Tantangan, dan Tentang dimuat
-lazy (`React.lazy` + `Suspense`), sehingga unduhan awal hanya berisi tabel 2D, panel
-unsur, dan shell aplikasi.
+Tampilan jelajah sepenuhnya berupa tabel 2D. Rute Lab, Tantangan, Tentang, dan
+Panduan dimuat lazy (`React.lazy` + `Suspense`), sehingga unduhan awal hanya berisi
+tabel 2D, panel unsur, dan shell aplikasi.
 
 ### Identitas visual
 
@@ -160,13 +167,17 @@ Hosting statis harus mengarahkan rute yang tidak punya file ke `index.html`
 
 - `dist/unsur/<simbol>/index.html` untuk 118 unsur (judul, deskripsi, canonical, JSON-LD)
 - `dist/lab`, `dist/tantangan`, `dist/tantangan/<level>`, `dist/tentang`
+- `dist/daftar-unsur`, `dist/konfigurasi-elektron`, `dist/tanya-jawab`,
+  `dist/golongan/<slug>`, `dist/periode/<n>` (20 halaman panduan tambahan)
 - `dist/og/periodiclab-1200x630.png` (gambar OG/Twitter)
 - `dist/sitemap.xml`, `dist/robots.txt`, `dist/404.html`
 - `dist/manifest.webmanifest`, `dist/sw.js`
 
 Setiap halaman hasil prerender sudah memuat `<h1>`, breadcrumb, ringkasan beberapa
 paragraf, fakta singkat, dan tautan internal (navigasi, indeks unsur, tingkat
-tantangan). Konten itu tampil sebelum JavaScript siap, lalu diganti aplikasi React.
+tantangan). Dua puluh unsur paling dicari mendapat bagian kegunaan, sifat penting,
+sejarah, senyawa umum, dan data terukur; halaman golongan/periode menautkan seluruh
+anggotanya. Konten itu tampil sebelum JavaScript siap, lalu diganti aplikasi React.
 
 ### Domain utama
 
@@ -190,8 +201,9 @@ dengan 308. Halaman 404 memakai `noindex, follow` dan tanpa canonical.
   `twitter:card=summary_large_image`.
 - JSON-LD per halaman: `WebSite`, `WebApplication`, `LearningResource`, `Quiz`,
   `ChemicalSubstance` (dengan `additionalProperty` massa atom, golongan,
-  periode, blok, wujud, konfigurasi elektron, tahun ditemukan), `AboutPage`,
-  dan `BreadcrumbList`.
+  periode, blok, wujud, konfigurasi elektron, tahun ditemukan), `CollectionPage`,
+  `ItemList` (indeks 118 unsur), `FAQPage` (tanya jawab), `AboutPage`,
+  dan `BreadcrumbList`. Sitemap memuat 145 URL.
 - `lastmod` sitemap memakai konstanta `CONTENT_UPDATED` di
   `scripts/prerender-plugin.ts`. Naikkan tanggal itu setiap isi halaman berubah.
 - Verifikasi Search Console: isi env `GOOGLE_SITE_VERIFICATION` di Vercel

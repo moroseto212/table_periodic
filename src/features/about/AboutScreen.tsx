@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 import { elements, reactions, species } from '../../core/data';
 import { quizItems } from '../../core/data/quiz';
 import { clearErrors, readErrors } from '../../app/error-tracker';
+import { navigate } from '../../app/router';
 
 const SOURCE_LINKS: Record<string, string> = {
   NIST: 'https://webbook.nist.gov/chemistry/',
@@ -103,6 +104,30 @@ export default function AboutScreen() {
           (MIT), yang merangkum Wikipedia dan PubChem. Baris yang dikurasi manual dipertahankan
           saat perluasan data.
         </p>
+      </section>
+
+      <section className="about__card" aria-labelledby="about-panduan">
+        <h2 id="about-panduan">Panduan belajar</h2>
+        <p>
+          Selain tabel interaktif, tersedia halaman referensi yang bisa dibaca langsung tanpa
+          JavaScript: indeks seluruh unsur, ringkasan tiap golongan dan periode, aturan konfigurasi
+          elektron, serta tanya jawab kimia dasar.
+        </p>
+        <div className="about__actions">
+          <button
+            type="button"
+            className="btn btn--primary"
+            onClick={() => navigate('/daftar-unsur')}
+          >
+            Daftar 118 unsur
+          </button>
+          <button type="button" className="btn" onClick={() => navigate('/konfigurasi-elektron')}>
+            Konfigurasi elektron
+          </button>
+          <button type="button" className="btn" onClick={() => navigate('/tanya-jawab')}>
+            Tanya jawab
+          </button>
+        </div>
       </section>
 
       <section className="about__card" aria-labelledby="about-lisensi">

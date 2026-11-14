@@ -10,10 +10,12 @@ import { ConnectionStatus } from './ui/ConnectionStatus';
 import { PwaBanner } from './ui/PwaBanner';
 import { BrandMark } from './ui/BrandMark';
 import type { ElementCategory } from './core/chemistry/types';
+import { guideMeta } from './content/guide-meta';
 
 const LabScreen = lazy(() => import('./features/lab/LabScreen'));
 const QuizScreen = lazy(() => import('./features/quiz/QuizScreen'));
 const AboutScreen = lazy(() => import('./features/about/AboutScreen'));
+const GuideScreen = lazy(() => import('./features/guide/GuideScreen'));
 
 const MODES = [
   { id: '', label: 'Jelajah', path: '/' },
@@ -67,6 +69,9 @@ function clip(text: string, max = 155): string {
 }
 
 function metaFor(path: string) {
+  const guide = guideMeta(path);
+  if (guide) return guide;
+
   const parts = segments(path);
   const mode = parts[0] ?? '';
 
@@ -435,6 +440,12 @@ function BottomNav() {
 export default function App() {
   const route = useRoute();
   const mode = segments(route.path)[0] ?? '';
+  const isGuide =
+    mode === 'golongan' ||
+    mode === 'periode' ||
+    mode === 'daftar-unsur' ||
+    mode === 'konfigurasi-elektron' ||
+    mode === 'tanya-jawab';
   const theme = useAppStore((s) => s.theme);
   const select = useAppStore((s) => s.select);
   const closePanel = useAppStore((s) => s.closePanel);
@@ -477,8 +488,9 @@ export default function App() {
             <QuizScreen focusSymbol={route.search.get('unsur')} path={route.path} />
           ) : null}
           {mode === 'tentang' ? <AboutScreen /> : null}
+          {isGuide ? <GuideScreen path={route.path} /> : null}
         </Suspense>
-        {!['', 'unsur', 'lab', 'tantangan', 'tentang'].includes(mode) && (
+        {!['', 'unsur', 'lab', 'tantangan', 'tentang'].includes(mode) && !isGuide && (
           <div className="empty-route">
             <h1>Halaman tidak ditemukan</h1>
             <button type="button" className="btn btn--primary" onClick={() => navigate('/')}>
